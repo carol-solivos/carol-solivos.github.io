@@ -41,13 +41,13 @@ a {
 }
 
 #btn1 {
-	border-top: 4px solid #555;
+	border-top: 5px solid #555;
 	padding-bottom: 5px;
 }
 
 #btn2 {
 	color: #42C8C3;
-	border-top: 4px solid #42C8C3;
+	border-top: 5px solid #42C8C3;
 	padding-bottom: 5px;
 }
 
@@ -58,7 +58,7 @@ a {
 
 #btn3 {
 	color: #6CAE21;
-	border-bottom: 4px solid #6CAE21;
+	border-bottom: 5px solid #6CAE21;
 
 }
 
@@ -69,7 +69,7 @@ a {
 
 #btn4 {
 	color: #F74B61;
-	border-bottom: 4px solid #F74B61;
+	border-bottom: 5px solid #F74B61;
 
 }
 
