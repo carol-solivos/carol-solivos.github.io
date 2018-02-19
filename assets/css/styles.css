@@ -1,0 +1,98 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+	color: #555;
+}
+
+a {
+	color: #42C8C3;
+	text-decoration: none;
+}
+
+.menu {
+	height: 10vh;
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn {
+	width: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color .2s;
+}
+
+.btn:hover {
+	cursor: pointer;
+	transition: background-color .4s;
+}
+
+#btn1:hover {
+	color: white;
+	background-color: #555; 
+}
+
+#btn1 {
+	border-top: 4px solid #555;
+	padding-bottom: 5px;
+}
+
+#btn2 {
+	color: #42C8C3;
+	border-top: 4px solid #42C8C3;
+	padding-bottom: 5px;
+}
+
+#btn2:hover {
+	color: white;
+	background-color: #42C8C3; 
+}
+
+#btn3 {
+	color: #6CAE21;
+	border-bottom: 4px solid #6CAE21;
+
+}
+
+#btn3:hover {
+	color: white;
+	background-color: #6CAE21; 
+}
+
+#btn4 {
+	color: #F74B61;
+	border-bottom: 4px solid #F74B61;
+
+}
+
+#btn4:hover {
+	color: white;
+	background-color: #F74B61; 
+}
+
+.inicio {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+}
+
+.foto img {
+	width: 300px;
+	height: auto;
+}
+
+.inicio div {
+	padding: 10px;
+}
+
+
+/*colores celeste #42C8C3  rosa #F74B61   verde #7A9C53
