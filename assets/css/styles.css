@@ -94,5 +94,24 @@ a {
 	padding: 10px;
 }
 
+#portafolio {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+	width: 100vw;
+	padding: 10px 20px;
+}
+
+#portafolio img {
+	height: 200px;
+	width: 200px;
+	object-fit: cover;
+	margin: 10px;
+}
+
+
+
 
 /*colores celeste #42C8C3  rosa #F74B61   verde #7A9C53
