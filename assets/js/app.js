@@ -16,16 +16,16 @@ $(document).ready(function() {
   $('#btn2').click(() => {    
     $('#container').html(`<section id="portafolio">
       <div class="carousel">
-        <a class="carousel-item" href="#one!"><img src="assets/img/3.jpg"></a>
-        <a class="carousel-item" href="#two!"><img src="assets/img/3.jpg"></a>
-        <a class="carousel-item" href="#three!"><img src="assets/img/3.jpg"></a>
-        <a class="carousel-item" href="#four!"><img src="assets/img/3.jpg"></a>
-        <a class="carousel-item" href="#five!"><img src="assets/img/3.jpg"></a>
+        <a class="carousel-item" href="#one!"><img src="assets/img/imag-portafolio-reevolution.jpg"></a>
+        <a class="carousel-item" href="#two!"><img src="assets/img/imag-portafolio-millefiori.jpg"></a>
+        <a class="carousel-item" href="#three!"><img src="assets/img/imag-portafolio-pmg.jpg"></a>
+        <a class="carousel-item" href="#four!"><img src="assets/img/imag-portafolio-saysa.jpg"></a>
+        <a class="carousel-item" href="#five!"><img src="assets/img/imag-portafolio-bici.jpg"></a>
       </div>
     </section>`);
     $('.carousel').carousel({
-      dist:-30,
-      padding: 60
+      dist:-80,
+      shift: 120,
     });
   });
   $('#btn3').click(() => {
@@ -222,3 +222,12 @@ function hideOverlay(event) {
   // }); 
       
   //termina codigo cardify
+
+
+
+
+
+
+  // http://www.pamelagrant.cl/index.php/reevolution
+
+  // http://www.pamelagrant.cl/index.php/hydra-matte-landing

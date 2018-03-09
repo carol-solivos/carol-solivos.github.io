@@ -18,7 +18,8 @@ a {
 
 #container {
   height: 80vh;
-  padding-top: 10vh;  
+  padding-top: 7vh;
+  padding-bottom: 7vh;    
 }
 
 /*botones*/
@@ -112,7 +113,6 @@ a {
 
 #portafolio {
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 80vh;
   width: 100%;
@@ -129,6 +129,11 @@ a {
   height: 80vh;
   width: 100%;
   padding: 10px 20px;
+}
+
+.carousel .carousel-item {
+width:40vw !important;
+height: 60vh !important;
 }
 
 
