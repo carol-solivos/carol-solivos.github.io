@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  
   $('#btn1').click(() => {
     $('#container').html(`<section id="inicio">
       <div class="foto">
@@ -12,19 +13,28 @@ $(document).ready(function() {
       </div>
     </section>`);
   });
-  $('#btn2').click(() => {
-    $('#container').html('porta');
+  $('#btn2').click(() => {    
+    $('#container').html(`<section id="portafolio">
+      <div class="carousel">
+        <a class="carousel-item" href="#one!"><img src="assets/img/3.jpg"></a>
+        <a class="carousel-item" href="#two!"><img src="assets/img/3.jpg"></a>
+        <a class="carousel-item" href="#three!"><img src="assets/img/3.jpg"></a>
+        <a class="carousel-item" href="#four!"><img src="assets/img/3.jpg"></a>
+        <a class="carousel-item" href="#five!"><img src="assets/img/3.jpg"></a>
+      </div>
+    </section>`);
+    $('.carousel').carousel({
+      dist:-30,
+      padding: 60
+    });
   });
   $('#btn3').click(() => {
-    $('#container').html(`<section id="portafolio">
-      <div class="imgs">
-        <img src="assets/img/3.jpg" alt="">
-      </div>  
-    </section>`);
+    $('#container').html(`asd`);
   });
   $('#btn4').click(() => {
     $('#container').html('cotacto');
   });
+
 });
 
 function hover() {
