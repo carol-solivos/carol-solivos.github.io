@@ -1,6 +1,8 @@
 $(document).ready(function() {
   // inicio
-  $('#btn1').click(() => {
+  
+  $('#btn1').click(firstView);
+  function firstView() {
     $('#container').html(`<section id="inicio">
       <div class="foto">
         <img src="assets/img/perfil.jpg" alt="">
@@ -12,7 +14,8 @@ $(document).ready(function() {
         <a href="#"><i class="fa fa-arrow-right"></i> Aquí puedes ver mi trabajo</a>
       </div>
     </section>`);
-  });
+  };
+  firstView();
   // portafolio
   $('#btn2').click(() => {    
     $('#container').html(`<section id="portafolio">
