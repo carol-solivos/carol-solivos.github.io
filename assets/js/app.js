@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  
+  // inicio
   $('#btn1').click(() => {
     $('#container').html(`<section id="inicio">
       <div class="foto">
@@ -13,6 +13,7 @@ $(document).ready(function() {
       </div>
     </section>`);
   });
+  // portafolio
   $('#btn2').click(() => {    
     $('#container').html(`<section id="portafolio">
       <div class="carousel">
@@ -24,15 +25,50 @@ $(document).ready(function() {
       </div>
     </section>`);
     $('.carousel').carousel({
-      dist:-80,
-      shift: 120,
+      dist:-60,
+      indicators: true
     });
   });
+  // sobremi
   $('#btn3').click(() => {
-    $('#container').html(`asd`);
+    $('#container').html(`<section id="sobreMi">
+      <div class="izq">
+        <img src="assets/img/perfil.jpg" alt="">
+        <a href="#" class="waves-effect waves-light btn">Bio</a>
+        <a href="#" class="waves-effect waves-light btn">Skills</a>
+        <a href="#" class="waves-effect waves-light btn">Curriculum</a>
+      </div>
+      <div class="der">
+        <h4>Hi</h4>
+        <p>
+          Desde que empecé a diseñar sitios web descubrí que el
+          código me entretiene y me motiva a seguir
+          investigando. He profundizado mis conocimientos en
+          programación y desarrollo web, primero de forma
+          autodidacta y luego en Laboratoria, un bootcamp
+          intensivo para especializarse como Front end.
+          Actualmente trabajo de forma independiente, con
+          clientes propios o colaborando con otros profesionales.
+        </p>
+      </div>
+    </section>`);
   });
+  // contacto
   $('#btn4').click(() => {
-    $('#container').html('cotacto');
+    $('#container').html(`<section id="contacto">
+      <div class="izq">
+        <h4>Hablemos!</h4>
+        <h5><i class="fa fa-arrow-left"></i>correo</h5>
+        <h5><i class="fa fa-arrow-left"></i>correo</h5>
+        <h5><i class="fa fa-linkedin"></i> correo</h5>
+      </div>
+      <div class="der">
+        <div class="container">
+          <canvas></canvas>
+          <p>Click &amp; drag to rotate</p>
+        </div>
+      </div>
+    </section>`);
   });
 
 });

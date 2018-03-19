@@ -17,20 +17,33 @@ a {
 }
 
 #container {
-  height: 80vh;
-  padding-top: 7vh;
-  padding-bottom: 7vh;    
+  height: 100vh;
+  padding-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#menu div{
+  height: 45px;
+  width: 100%;
 }
 
 /*botones*/
 
 .btnM {
-  height: 10vh;
-	width: 150px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 	transition: background-color .2s;
+  padding-bottom: 8px;
 }
 
 .btnM:hover {
@@ -44,16 +57,11 @@ a {
 }
 
 #btn1 {
-  position: fixed;
-  top: 0;
 	border-top: 5px solid #555;
 	padding-bottom: 5px;
 }
 
 #btn2 {
-  position: fixed;
-  top: 0;
-  right: 0;
 	color: #42C8C3;
 	border-top: 5px solid #42C8C3;
 	padding-bottom: 5px;
@@ -65,10 +73,8 @@ a {
 }
 
 #btn3 {
-  position: fixed;
-  bottom: 0;
 	color: #6CAE21;
-	border-bottom: 5px solid #6CAE21;
+	border-top: 5px solid #6CAE21;
 
 }
 
@@ -78,11 +84,8 @@ a {
 }
 
 #btn4 {
-  position: fixed;
-  bottom: 0;
-  right: 0;
 	color: #F74B61;
-	border-bottom: 5px solid #F74B61;
+	border-top: 5px solid #F74B61;
 
 }
 
@@ -120,13 +123,39 @@ a {
 }
 
 #sobreMi {
-  height: 80vh;
+  display: flex;
+  justify-content: center;
   width: 100%;
   padding: 10px 20px;
 }
 
+#sobreMi .izq {
+  width: 30%;
+}
+
+#sobreMi .izq img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#sobreMi .der {
+  width: 70%;
+}
+
+#contacto .izq {
+  width: 40%;
+}
+
+#contacto .der {
+  width: 60%;
+}
+
 #contacto {
-  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   padding: 10px 20px;
 }
@@ -134,7 +163,45 @@ a {
 .carousel .carousel-item {
 width:40vw !important;
 height: 60vh !important;
+min-width: 250px;
+min-height: 250px;
 }
+
+.indicator-item {
+  background-color: rgba(66, 200, 195, .3) !important;
+  height: 12px !important;
+  width: 12px !important;
+}
+
+.indicator-item.active {
+  background-color: #42C8C3 !important;
+  height: 14px !important;
+  width: 14px !important;
+}
+
+.carousel {
+  height: 80vh !important;
+}
+
+
+/*probando animar imag*/
+
+
+
+
+/*fondo gradient*/
+
+
+/*termina prueba img*/
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  cursor: move;
+}
+
+
+
 
 
 
