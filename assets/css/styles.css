@@ -156,6 +156,10 @@ a {
 
 #contacto .izq {
   width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 #contacto .der {
@@ -167,7 +171,7 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 40px;
 }
 
 .carousel .carousel-item {
