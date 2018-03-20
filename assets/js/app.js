@@ -98,24 +98,24 @@ $(document).ready(function() {
 function markMenu() {
   if($('#container').attr('value') === 'inicio') {
     resetMenu();
-    $('#btn1').css('background-color', '#555');
+    $('#btn1').css({'background-color': '#555', 'color': 'white'});
   };
   if($('#container').attr('value') === 'portafolio') {
     resetMenu();
-    $('#btn2').attr('background-color', '#42C8C3');
+    $('#btn2').css({'background-color': '#42C8C3', 'color': 'white'});
   };
   if($('#container').attr('value') === 'sobreMi') {
     resetMenu();
-    $('#btn3').css('background-color', '#6CAE21');
+    $('#btn3').css({'background-color': '#6CAE21', 'color': 'white'});
   };
   if($('#container').attr('value') === 'contacto') {
     resetMenu();
-    $('#btn4').css('background-color', '#F74B61');
+    $('#btn4').css({'background-color': '#F74B61', 'color': 'white'});
   };
 }
 
 function resetMenu() {
-  $('.btnM').css('background-color', '');
+  $('.btnM').css({'background-color': '', 'color': ''});
 }
 
 function hover() {
