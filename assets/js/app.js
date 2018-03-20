@@ -53,6 +53,17 @@ $(document).ready(function() {
           Actualmente trabajo de forma independiente, con
           clientes propios o colaborando con otros profesionales.
         </p>
+        <div class="icons">
+          <a href="#"><i class="fab fa-joomla"></i></a>
+          <a href="#"><i class="fab fa-js"></i></a>
+          <a href="#"><i class="fab fa-sass"></i></a>
+          <a href="#"><i class="fab fa-wordpress"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-html5"></i></a>
+          <a href="#"><i class="fab fa-css3"></i></a>
+          <a href="#"><i class="fab fa-node-js"></i></a>
+          <a href="#"><i class="fab fa-trello"></i></a>
+        </div>
       </div>
     </section>`);
   });
