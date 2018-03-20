@@ -2,9 +2,9 @@ $(document).ready(function() {
   // inicio
   
   $('#btn1').click(firstView);
-  $('#container').attr('value', 'inicio');
-  markMenu();
   function firstView() {
+    $('#container').attr('value', 'inicio');
+    markMenu();
     $('#container').html(`<section id="inicio">
       <div class="foto">
         <img src="assets/img/perfil.jpg" alt="">
@@ -97,17 +97,25 @@ $(document).ready(function() {
 
 function markMenu() {
   if($('#container').attr('value') === 'inicio') {
-    $('#btn1').css('background-color', 'black');
+    resetMenu();
+    $('#btn1').css('background-color', '#555');
   };
   if($('#container').attr('value') === 'portafolio') {
-    $('#btn2').css('background-color', 'black');
+    resetMenu();
+    $('#btn2').attr('background-color', '#42C8C3');
   };
   if($('#container').attr('value') === 'sobreMi') {
-    $('#btn3').css('background-color', 'black');
+    resetMenu();
+    $('#btn3').css('background-color', '#6CAE21');
   };
   if($('#container').attr('value') === 'contacto') {
-    $('#btn4').css('background-color', 'black');
+    resetMenu();
+    $('#btn4').css('background-color', '#F74B61');
   };
+}
+
+function resetMenu() {
+  $('.btnM').css('background-color', '');
 }
 
 function hover() {
