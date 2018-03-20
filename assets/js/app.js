@@ -2,6 +2,8 @@ $(document).ready(function() {
   // inicio
   
   $('#btn1').click(firstView);
+  $('#container').attr('value', 'inicio');
+  markMenu();
   function firstView() {
     $('#container').html(`<section id="inicio">
       <div class="foto">
@@ -17,7 +19,9 @@ $(document).ready(function() {
   };
   firstView();
   // portafolio
-  $('#btn2').click(() => {    
+  $('#btn2').click(() => {
+    $('#container').attr('value', 'portafolio');
+    markMenu(); 
     $('#container').html(`<section id="portafolio">
       <div class="carousel">
         <a class="carousel-item" href="#one!"><img src="assets/img/imag-portafolio-reevolution.jpg"></a>
@@ -34,6 +38,8 @@ $(document).ready(function() {
   });
   // sobremi
   $('#btn3').click(() => {
+    $('#container').attr('value', 'sobreMi');
+    markMenu();
     $('#container').html(`<section id="sobreMi">
       <div class="izq">
         <img src="assets/img/perfil.jpg" alt="">
@@ -69,6 +75,8 @@ $(document).ready(function() {
   });
   // contacto
   $('#btn4').click(() => {
+    $('#container').attr('value', 'contacto');
+    markMenu();
     $('#container').html(`<section id="contacto">
       <div class="izq">
         <h4>Hablemos!</h4>
@@ -86,6 +94,21 @@ $(document).ready(function() {
   });
 
 });
+
+function markMenu() {
+  if($('#container').attr('value') === 'inicio') {
+    $('#btn1').css('background-color', 'black');
+  };
+  if($('#container').attr('value') === 'portafolio') {
+    $('#btn2').css('background-color', 'black');
+  };
+  if($('#container').attr('value') === 'sobreMi') {
+    $('#btn3').css('background-color', 'black');
+  };
+  if($('#container').attr('value') === 'contacto') {
+    $('#btn4').css('background-color', 'black');
+  };
+}
 
 function hover() {
   $('#images img').hover(function() {
