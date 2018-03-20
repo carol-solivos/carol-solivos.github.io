@@ -177,10 +177,15 @@ a {
 .carousel .carousel-item {
 width:40% !important;
 height: 60% !important;
-min-width: 250px;
-min-height: 250px;
-max-width: 650px;
-max-height: 650px;
+margin-top: -20px;
+min-width: 200px;
+min-height: 200px;
+}
+
+.carousel .carousel-item img{
+
+max-width: 450px;
+max-height: 450px;
 }
 
 .indicator-item {

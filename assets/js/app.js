@@ -15,7 +15,7 @@ $(document).ready(function() {
       </div>
     </section>`);
   };
-  // firstView();
+  firstView();
   // portafolio
   $('#btn2').click(() => {    
     $('#container').html(`<section id="portafolio">
@@ -61,15 +61,15 @@ $(document).ready(function() {
     $('#container').html(`<section id="contacto">
       <div class="izq">
         <h4>Hablemos!</h4>
-        <h5><i class="fa fa-arrow-left"></i>correo</h5>
-        <h5><i class="fa fa-arrow-left"></i>correo</h5>
-        <h5><i class="fa fa-linkedin"></i> correo</h5>
+        <p><a href="mailto:carol.solivos@gmail.com"><i class="fa fa-envelope"></i> carol.solivos@gmail.com</a></p>
+        <p><i class="fa fa-mobile"></i> +569 767 50 110</p>
+        <p><i class="fa fa-linkedin"></i> Linkedin</p>
       </div>
       <div class="der">
-        <div class="container">
+        <!-- <div class="container">
           <canvas></canvas>
           <p>Click &amp; drag to rotate</p>
-        </div>
+        </div> -->
       </div>
     </section>`);
   });
