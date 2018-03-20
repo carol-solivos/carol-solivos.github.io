@@ -1,6 +1,9 @@
 $(document).ready(function() {
   // inicio
-  
+  $('.carousel').carousel({
+      dist:-60,
+      indicators: true
+    });
   $('#btn1').click(firstView);
   function firstView() {
     $('#container').attr('value', 'inicio');
@@ -17,7 +20,7 @@ $(document).ready(function() {
       </div>
     </section>`);
   };
-  firstView();
+  // firstView();
   // portafolio
   $('#btn2').click(() => {
     $('#container').attr('value', 'portafolio');
@@ -40,7 +43,7 @@ $(document).ready(function() {
   $('#btn3').click(() => {
     $('#container').attr('value', 'sobreMi');
     markMenu();
-    $('#container').html(`<section id="sobreMi">
+    $('#container').fadeIn("slow").html(`<section id="sobreMi">
       <div class="izq">
         <img src="assets/img/perfil.jpg" alt="">
         <a href="#" class="waves-effect waves-light btn">Bio</a>
@@ -95,6 +98,7 @@ $(document).ready(function() {
 
 });
 
+// cambia los estilos del menú
 function markMenu() {
   if($('#container').attr('value') === 'inicio') {
     resetMenu();
@@ -118,79 +122,6 @@ function resetMenu() {
   $('.btnM').css({'background-color': '', 'color': ''});
 }
 
-function hover() {
-  $('#images img').hover(function() {
-    $(this).css('opacity', '0.5');
-  }, function() {
-    $(this).css('opacity', '1');
-  });
-};
-
-function showOverlay() {
-$(this).find('.text').show();
-// estilos de los textos de figcaption
-$(this).find('.text').css({'position': 'absolute',
-  'top': '50%',
-  'left': '50%',
-  'transform': 'translateX(-50%) translateY(-50%)',
-  'margin': '0',
-  'width': '100%',
-  'text-align': 'center',
-  'font-size': '1.5em',
-  'transition': 'all 1s ease-in-out'
-});
-// estilos de las imagenes
-$(this).find('img').css({'filter': 'brightness(10%)', 
-  '-webkit-filter': 'brightness(30%)',
-  '-moz-filter': 'brightness(30%)', 
-  '-o-filter': 'brightness(30%)',
-  '-ms-filter': 'brightness(30%)',
-  'filter': 'grayscale(30%)',
-  // 'border': '5px solid green',
-  'transition': 'all 1s ease-in-out'
-});
-
-// estilo del contenedor padre, div de columnas
-$(this).parent().css({
-  'position': 'relative',
-  'z-index': '1',
-  '-webkit-transition': 'all 1s ease; /* Safari and Chrome */',
-  '-moz-transition': 'all 1s ease; /* Firefox */',
-  '-ms-transition': 'all 1s ease; /* IE 9 */',
-  '-o-transition': 'all 1s ease; /* Opera */',
-  'transition': 'all 1s ease',
-  '-webkit-transform': 'scale(1.2)',
-  '-moz-transform': 'scale(1.2)',
-  '-ms-transform': 'scale(1.2)',
-  '-o-transform': 'scale(1.2)',
-  'transform': 'scale(1.2)',
-  'transition': 'all 1s ease'
-});
-};
-
-function hideOverlay(event) {
-  // esconder el texto
-  $(this).find('.text').hide();
-  // delvolver el contenedor a su estado inicial
-  $(this).parent().css({'position': 'relative',
-    'z-index': '0',
-    '-moz-transform': 'scale(1.0)',
-    '-ms-transform': 'scale(1.0)',
-    '-o-transform': 'scale(1.0)',
-    'transform': 'scale(1.0)',
-    '-webkit-transition': 'all 1s ease; /* Safari and Chrome */',
-    '-moz-transition': 'all 1s ease; /* Firefox */',
-    '-ms-transition': 'all 1s ease; /* IE 9 */',
-    '-o-transition': 'all 1s ease; /* Opera */',
-    'transition': 'all 1s ease'
-  });
-  $(this).find('figure').css({'display': 'none', 
-    'background-color': 'transparent'
-  });
-  $(this).find('img').css({'filter': 'brightness(100%)', 
-    '-webkit-filter': 'brightness(100%)'
-  });
-};
 
 
   //empieza codigo foodmap
