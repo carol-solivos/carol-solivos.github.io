@@ -15,7 +15,7 @@ $(document).ready(function() {
       </div>
     </section>`);
   };
-  firstView();
+  // firstView();
   // portafolio
   $('#btn2').click(() => {    
     $('#container').html(`<section id="portafolio">
@@ -42,7 +42,7 @@ $(document).ready(function() {
         <a href="#" class="waves-effect waves-light btn">Curriculum</a>
       </div>
       <div class="der">
-        <h4>Hi</h4>
+        <h4>Sobre mí</h4>
         <p>
           Desde que empecé a diseñar sitios web descubrí que el
           código me entretiene y me motiva a seguir

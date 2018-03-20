@@ -18,7 +18,7 @@ a {
 
 #container {
   height: 100vh;
-  padding-top: 45px;
+  padding-top: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,11 +126,20 @@ a {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 40px;
 }
 
 #sobreMi .izq {
   width: 30%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sobreMi .izq a{
+  width: 50%;
+  margin:10px;
 }
 
 #sobreMi .izq img{
@@ -138,6 +147,7 @@ a {
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 #sobreMi .der {
@@ -161,10 +171,12 @@ a {
 }
 
 .carousel .carousel-item {
-width:40vw !important;
-height: 60vh !important;
+width:40% !important;
+height: 60% !important;
 min-width: 250px;
 min-height: 250px;
+max-width: 650px;
+max-height: 650px;
 }
 
 .indicator-item {
@@ -180,7 +192,7 @@ min-height: 250px;
 }
 
 .carousel {
-  height: 80vh !important;
+  height: 90vh !important;
 }
 
 
