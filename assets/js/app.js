@@ -27,11 +27,36 @@ $(document).ready(function() {
     markMenu(); 
     $('#container').html(`<section id="portafolio">
       <div class="carousel">
-        <a class="carousel-item" href="#one!"><img src="assets/img/imag-portafolio-reevolution.jpg"></a>
-        <a class="carousel-item" href="#two!"><img src="assets/img/imag-portafolio-millefiori.jpg"></a>
-        <a class="carousel-item" href="#three!"><img src="assets/img/imag-portafolio-pmg.jpg"></a>
-        <a class="carousel-item" href="#four!"><img src="assets/img/imag-portafolio-saysa.jpg"></a>
-        <a class="carousel-item" href="#five!"><img src="assets/img/imag-portafolio-bici.jpg"></a>
+        <a class="carousel-item" href="http://www.pamelagrant.cl/index.php/reevolution" target="_blank">
+          <div class="overlay">
+            <h5>Mini Sitio Reevolution</h5>
+            <p>Diseño de layout, animaciones, HTML, CSS, Joomla, diseño responsivo.</p>
+          </div>
+          <img src="assets/img/imag-portafolio-reevolution.jpg"></a>
+        <a class="carousel-item" href="http://www.millefiori.cl/" target="_blank">
+          <div class="overlay">
+            <h5>Sitio Web Millefiori</h5>
+            <p>Diseño de layout, animaciones, HTML, CSS, Joomla, diseño responsivo.</p>
+          </div>
+          <img src="assets/img/imag-portafolio-millefiori.jpg"></a>
+        <a class="carousel-item" href="#three!">
+          <div class="overlay">
+            <h5>First Panel</h5>
+            <p>adsfasdf asd asd asd asd</p>
+          </div>
+          <img src="assets/img/imag-portafolio-pmg.jpg"></a>
+        <a class="carousel-item" href="#four!">
+          <div class="overlay">
+            <h5>First Panel</h5>
+            <p>adsfasdf asd asd asd asd</p>
+          </div>
+          <img src="assets/img/imag-portafolio-saysa.jpg"></a>
+        <a class="carousel-item" href="#five!">
+          <div class="overlay">
+            <h5>First Panel</h5>
+            <p>adsfasdf asd asd asd asd</p>
+          </div>
+          <img src="assets/img/imag-portafolio-bici.jpg"></a>
       </div>
     </section>`);
     $('.carousel').carousel({
@@ -81,18 +106,17 @@ $(document).ready(function() {
     $('#container').attr('value', 'contacto');
     markMenu();
     $('#container').html(`<section id="contacto">
-      <div class="izq">
-        <h4>Hablemos!</h4>
-        <p><a href="mailto:carol.solivos@gmail.com"><i class="fa fa-envelope"></i> carol.solivos@gmail.com</a></p>
+      <div class="izq">        
+        <svg viewBox="0 0 2000 500">
+          <text text-anchor="middle" x="50%" y="50%">hablemos!</text>
+        </svg>
+        <div class="contactText">
+          <p><a href="mailto:carol.solivos@gmail.com"><i class="fa fa-envelope"></i> carol.solivos@gmail.com</a></p>
         <p><i class="fa fa-mobile"></i> +569 767 50 110</p>
-        <p><i class="fa fa-linkedin"></i> Linkedin</p>
-      </div>
-      <div class="der">
-        <!-- <div class="container">
-          <canvas></canvas>
-          <p>Click &amp; drag to rotate</p>
-        </div> -->
-      </div>
+        <p><a href="https://github.com/carol-solivos"><i class="fab fa-github"></i> github.com/carol-solivos</a></p>
+        <p><a href="https://cl.linkedin.com/in/carol-sepulveda-olivos"><i class="fab fa-linkedin"></i> cl.linkedin.com/in/carol-sepulveda-olivos</a></p> 
+        </div>             
+      </div>   
     </section>`);
   });
 

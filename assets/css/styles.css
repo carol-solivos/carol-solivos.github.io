@@ -9,16 +9,21 @@
 body {
 	font-family: 'Ubuntu', sans-serif;
 	color: #555;
+  background-image: url('../img/fondo-portafolio.jpg');
+  background-size: cover;
 }
 
 a {
-	color: #42C8C3;
+	color: #555 !important;
 	text-decoration: none;
+}
+
+a:hover {
+  color: #42C8C3 !important;
 }
 
 #container {
   height: 100vh;
-  padding-top: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,35 +162,35 @@ a {
   width: 70%;
 }
 
+#contacto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
 #contacto .izq {
-  width: 40%;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
-#contacto .der {
-  width: 60%;
+#contacto p svg {
+  color: #42C8C3 !important;
 }
 
-#contacto {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 10px 40px;
-  flex-wrap: wrap;
-}
-
-.carousel {
-  height: 90vh !important;
+.contactText {
+  text-align: center;
+  margin-top: -30px;
+  z-index: 10;
 }
 
 .carousel .carousel-item {
-  position: relative;
-  width:40% !important;
-  height: 70% !important;
+  position: relative;   
   margin-top: -20px;
   min-width: 240px;
   min-height: 240px;
@@ -212,13 +217,13 @@ a {
 }
 
 .overlay {
-  background-color: rgba(22, 89, 180, .8);
+  background-color: rgba(20, 20, 20, .9);
   position: absolute;
   bottom: 0px;
   color: white;
-  height: 30%;
   width: 100%;
   min-height: 100px;
+  padding: 0 20px;
 }
 
 .icons {
@@ -236,14 +241,129 @@ a {
 
 /*termina prueba img*/
 
-canvas {
-  display: block;
-  margin: 0 auto;
-  cursor: move;
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+#containera {
+  color:#999;
+  text-transform: uppercase;
+  font-size:36px;
+  font-weight:bold;
+  padding-top:200px;  
+  position:fixed;
+  width:100%;
+  bottom:45%;
+  display:block;
+  font-family: 'Roboto';
 }
 
+#flip {
+  height:50px;
+  overflow:hidden;
+}
 
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
 
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background:#42c58a;
+}
+#flip div:first-child div {
+  background:#4ec7f3;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+
+/*animacion del contacto*/
+#contacto .izq p {
+  margin-bottom: 1em;
+}
+
+@media only screen {
+  body {
+    background-position: 40% 100%;
+  }
+  .carousel {
+    height: 60vh !important;
+  }
+  .carousel .carousel-item {
+    height: 60% !important;
+    width:70% !important; 
+  }
+  svg {
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+  }
+  .overlay {
+    height: 70%;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  body {
+    background-position: 40% 60%;
+  }
+  .carousel {
+    height: 90vh !important;
+  }
+   .carousel .carousel-item {
+    width:40% !important; 
+    height: 70% !important;
+  }
+  svg {
+    width: 80%;
+    height: 80%;
+    margin-top: 0;
+  }
+  .overlay {
+    height: 30%;
+  }
+}
+
+svg {
+  position: relative;
+  font: 20em Ubuntu;
+  letter-spacing: 0.15em;
+}
+
+svg text {
+  fill: #F74B61;
+  stroke: #111;
+  fill-opacity: 1;
+  stroke-width: 0;
+  stroke-dasharray: 100% 0;
+  animation: stroke-offset 3s ease-out;
+}
+
+@keyframes stroke-offset {
+  0% {
+    fill-opacity: 0;
+    stroke-width: 0;
+    stroke-dasharray: 0% 100%;
+  }
+  25% {
+    stroke-width: 3px;
+  }
+  50% {
+    fill-opacity: 0;
+  }
+  75% {
+    stroke-width: 3px;
+  }
+  100% {
+    stroke-width: 0;
+  }
+}
 
 
 
