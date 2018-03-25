@@ -11,22 +11,25 @@ body {
 	color: #555;
   background-image: url('../img/fondo-portafolio.jpg');
   background-size: cover;
-}
-
-a {
-	color: #555 !important;
-	text-decoration: none;
-}
-
-a:hover {
-  color: #42C8C3 !important;
-}
+  transition: background-image 1s;
+  background-attachment: fixed;
+} 
 
 #container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 40px;
+}
+
+#contacto a {
+	color: #555 !important;
+	text-decoration: none;
+}
+
+#contacto a:hover {
+  color: #42C8C3 !important;
 }
 
 #menu {
@@ -127,6 +130,7 @@ a:hover {
   height: 80vh;
   width: 100%;
   padding: 10px 20px;
+  margin-bottom: 80px;
 }
 
 #sobreMi {
@@ -134,28 +138,25 @@ a:hover {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
-  padding: 10px 40px;
+  width: 70%;
 }
 
-#sobreMi .izq {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+#sobreMi h4, #sobreMi h5 {
+  color: #6CAE21 !important;
+} 
+
+#sobreMi a {
+  color: #555 !important;
+} 
+
+#sobreMi a:hover {
+  color: #6CAE21 !important;
 }
 
-#sobreMi .izq a{
-  width: 50%;
-  margin:10px;
-}
-
-#sobreMi .izq img{
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 10px;
+#sobreMi #pdf a svg {
+  font-size: 30px;
+  padding-left: 10px;
+  width: 40px;
 }
 
 #sobreMi .der {
@@ -181,12 +182,6 @@ a:hover {
 
 #contacto p svg {
   color: #42C8C3 !important;
-}
-
-.contactText {
-  text-align: center;
-  margin-top: -30px;
-  z-index: 10;
 }
 
 .carousel .carousel-item {
@@ -301,11 +296,20 @@ a:hover {
   }
   svg {
     width: 100%;
+    max-width: 700px;
     height: 100%;
     margin-top: 5%;
   }
   .overlay {
     height: 70%;
+  }
+  .contactText {
+    text-align: center;
+    margin-top: 0;
+    z-index: 10;
+  }
+  #sobreMi {
+    padding-top: 60px;
   }
 }
 
@@ -314,11 +318,11 @@ a:hover {
     background-position: 40% 60%;
   }
   .carousel {
-    height: 90vh !important;
+    height: 70vh !important;
   }
    .carousel .carousel-item {
     width:40% !important; 
-    height: 70% !important;
+    height: 80% !important;
   }
   svg {
     width: 80%;
@@ -327,6 +331,17 @@ a:hover {
   }
   .overlay {
     height: 30%;
+  }
+  .contactText {
+    margin-top: -30px;
+  }
+  #sobreMi {
+    margin-bottom: 80px;
+    padding-top: 0;
+    min-width: 900px;
+  }
+  .contacto {
+    margin-bottom: 80px;
   }
 }
 
@@ -368,4 +383,4 @@ svg text {
 
 
 
-/*colores celeste #42C8C3  rosa #F74B61   verde #7A9C53
+/*colores celeste #42C8C3  rosa #F74B61   verde #6CAE21

@@ -68,36 +68,36 @@ $(document).ready(function() {
   $('#btn3').click(() => {
     $('#container').attr('value', 'sobreMi');
     markMenu();
-    $('#container').fadeIn("slow").html(`<section id="sobreMi">
-      <div class="izq">
-        <img src="assets/img/perfil.jpg" alt="">
-        <a href="#" class="waves-effect waves-light btn">Bio</a>
-        <a href="#" class="waves-effect waves-light btn">Skills</a>
-        <a href="#" class="waves-effect waves-light btn">Curriculum</a>
-      </div>
+    $('#container').fadeIn("slow").html(`<section id="sobreMi">      
       <div class="der">
-        <h4>Sobre mí</h4>
+        <h4>Creatividad y persistencia</h4>
         <p>
           Desde que empecé a diseñar sitios web descubrí que el
           código me entretiene y me motiva a seguir
           investigando. He profundizado mis conocimientos en
           programación y desarrollo web, primero de forma
-          autodidacta y luego en Laboratoria, un bootcamp
-          intensivo para especializarse como Front end.
+          autodidacta y luego un 
+          intensivo para especializarme como Front end.
           Actualmente trabajo de forma independiente, con
-          clientes propios o colaborando con otros profesionales.
+          clientes propios y colaborando con otros profesionales.
         </p>
+        <br>
+        <h5>Skills</h5>
         <div class="icons">
-          <a href="#"><i class="fab fa-joomla"></i></a>
           <a href="#"><i class="fab fa-js"></i></a>
-          <a href="#"><i class="fab fa-sass"></i></a>
-          <a href="#"><i class="fab fa-wordpress"></i></a>
-          <a href="#"><i class="fab fa-github"></i></a>
           <a href="#"><i class="fab fa-html5"></i></a>
           <a href="#"><i class="fab fa-css3"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-joomla"></i></a>
+          <a href="#"><i class="fab fa-wordpress"></i></a>        
+          <a href="#"><i class="fab fa-sass"></i></a>          
           <a href="#"><i class="fab fa-node-js"></i></a>
           <a href="#"><i class="fab fa-trello"></i></a>
         </div>
+        <br>
+        <div id="pdf">
+          <a href="assets/cvitae_4_18.pdf" target="_blank">Si quieres saber mas detalles de mis estudios y trabajos puedes ver mi CV aquí  <i class="fas fa-file-alt"></i></a>
+        </div>        
       </div>
     </section>`);
   });
@@ -127,143 +127,25 @@ function markMenu() {
   if($('#container').attr('value') === 'inicio') {
     resetMenu();
     $('#btn1').css({'background-color': '#555', 'color': 'white'});
+    $('body').css('background-image', 'url("./assets/img/fondo-portafolio.jpg")');
   };
   if($('#container').attr('value') === 'portafolio') {
     resetMenu();
     $('#btn2').css({'background-color': '#42C8C3', 'color': 'white'});
+    $('body').css('background-image', 'url("./assets/img/fondo-portafolio-azul.jpg")');
   };
   if($('#container').attr('value') === 'sobreMi') {
     resetMenu();
     $('#btn3').css({'background-color': '#6CAE21', 'color': 'white'});
+    $('body').css('background-image', 'url("./assets/img/fondo-portafolio-verde.jpg")');
   };
   if($('#container').attr('value') === 'contacto') {
     resetMenu();
     $('#btn4').css({'background-color': '#F74B61', 'color': 'white'});
+    $('body').css('background-image', "url('./assets/img/fondo-portafolio-rosa.jpg')");
   };
 }
 
 function resetMenu() {
   $('.btnM').css({'background-color': '', 'color': ''});
 }
-
-
-
-  //empieza codigo foodmap
-  // $(function todos() {
-  //   $('#images').text('');
-  //   var cafes1;
-  //   var comidaRapida1;
-  //   var restaurantes1;
-  //   for (var i = 0; i < data.cafes.length; i++) {
-  //     cafes1 = data.cafes[i];
-  //     comidaRapida1 = data.comidaRapida[i];
-  //     restaurantes1 = data.restaurantes[i];
-  //     $('#images').append('<img class="imgs" data-type="restaurant" src="assets/images/' + cafes1 + '">');
-  //     $('#images').append('<img class="imgs" data-type="restaurant" src="assets/images/' + comidaRapida1 + '">');
-  //     $('#images').append('<img class="imgs" data-type="restaurant" src="assets/images/' + restaurantes1 + '">');
-  //   }
-  //   $('#todos').click(todos);
-  //   hover();
-  //   click();
-  // });  
-  // $('#cafe').click(function() {
-  //   $('#images').text('');
-  //   var cafes;
-  //   for (var i = 0; i < data.cafes.length; i++) {
-  //     cafes = data.cafes[i];
-  //     $('#images').append('<img class="imgs" data-type="cafe" src="assets/images/' + cafes + '">');
-  //   }
-  //   hover();
-  //   click();
-  // });
-  // $('#restaurante').click(function() {
-  //   $('#images').text('');
-  //   var restaurante;
-  //   for (var i = 0; i < data.restaurantes.length; i++) {
-  //     restaurante = data.restaurantes[i];
-  //     $('#images').append('<img class="imgs" data-type="restaurant" src="assets/images/' + restaurante + '">');
-  //   }
-  //   hover();
-  //   click();
-  // });
-  // $('#rapida').click(function() {
-  //   $('#images').text('');
-  //   var comidaRapida;
-  //   for (var i = 0; i < data.comidaRapida.length; i++) {
-  //     comidaRapida = data.comidaRapida[i];
-  //     $('#images').append('<img class="imgs" data-type="bakery" src="assets/images/' + comidaRapida + '">');
-  //   }
-  //   hover();
-  //   click();
-  // });
-  // function hover() {
-  //   $('#images img').hover(function() {
-  //     $(this).css('opacity', '0.5');
-  //   }, function() {
-  //     $(this).css('opacity', '1');
-  //   });
-  // };
-  // function click() {
-  //   $('#images img').click(function() {
-  //     $(this).attr('data-toggle', 'modal');
-  //     $(this).attr('data-target', '#myModal');
-  //   });
-  // };
-  //termina codigo foodmap
-
-  //empieza codigo cardify
-  // $(function cardify() {
-  //   let imgs = $('#portafolio').find('img');
-  //   imgs.wrap('<figure></figure>');
-  //   let figure = $('#portafolio').find('figure');
-  //   figure.css({
-  //     'width': '100%',
-  //     'display': 'inline-block', 
-  //     'text-align': 'center',
-  //     'margin-top': '3em',
-  //     'color': 'white'
-  //   });  
-  //   imgs.css({
-  //     'width': '100%',
-  //     'object-fit': 'cover', 
-  //     'height': '12em',
-  //     'margin': '1em 0'    
-  //   });
-  //   $('#portafolio').find('img').each(function(index, element) {
-  //     var text = $(element).attr('alt');
-  //     $(element).after('<figcaption class="text">' + text + '</figcaption>');
-  //   });
-  //   let figCaption = $('#portafolio').find('.text');
-  //   figCaption.css({'position': 'absolute',
-  //     'top': '50%',
-  //     'left': '50%',
-  //     'display': 'none',
-  //     'transform': 'translateX(-50%) translateY(-50%)',
-  //     'margin': '0',
-  //     'width': '100%',
-  //     'text-align': 'center',
-  //     'font-size': '1.5em',
-  //     'transition': 'all 1s ease-in-out'
-  //   });
-  //   figure.parent().css({'position': 'relative',
-  //     'z-index': '1', 
-  //     '-webkit-transition': 'all 1s ease; /* Safari and Chrome */',
-  //     '-moz-transition': 'all 1s ease; /* Firefox */',
-  //     '-ms-transition': 'all 1s ease; /* IE 9 */',
-  //     '-o-transition': 'all 1s ease; /* Opera */',
-  //     'transition': 'all 1s ease'
-  //   });
-  //   figure.mouseover(showOverlay);
-  //   figure.mouseleave(hideOverlay);
-  // }); 
-      
-  //termina codigo cardify
-
-
-
-
-
-
-  // http://www.pamelagrant.cl/index.php/reevolution
-
-  // http://www.pamelagrant.cl/index.php/hydra-matte-landing
