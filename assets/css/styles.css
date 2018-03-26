@@ -111,18 +111,44 @@ body {
 	justify-content: center;
 	align-items: center;
   flex-wrap: wrap;
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   padding: 10px 20px;
+  margin-bottom: 100px;
+}
+
+.intro h5, .intro #seeMore {
+  padding-left: 10px;
 }
 
 .foto img {
-	width: 300px;
-	height: auto;
+	width: 250px;
+	height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px;
 }
 
-#inicio div {
+#seeMore {
+  color: #42C8C3;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+#seeMore:hover {
+  color: #F74B61;
+}
+
+.foto {
 	padding: 10px;
+}
+
+.intro span {
+  color: #F74B61;
+}
+
+.intro {
+  text-align: left;
 }
 
 /*portafolio*/
@@ -338,63 +364,34 @@ svg text {
   }
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
-
-.animationInit {
-  margin:0px;
-  font-family:'Roboto';
-  text-align:center;
+/*animacion inicio*/
+.animationInit svg {
+  position: relative;
+  font: 8em Ubuntu;
+  letter-spacing: 0.15em;
 }
 
-#containerInicioAnim {
-  color:#999;
-  text-transform: uppercase;
-  font-size:36px;
-  font-weight:bold;
-  padding-top:200px;  
-  position:fixed;
-  width:100%;
-  bottom:45%;
-  display:block;
+.animationInit svg text {
+  fill: #42C8C3;
+  stroke: #111;
+  fill-opacity: 1;
+  stroke-width: 0;
+  stroke-dasharray: 100% 0;
+  animation: stroke-offset 3s ease-out;
 }
 
-#flip {
-  height:50px;
-  overflow:hidden;
+.apellido svg {
+  position: relative;
+  font: 3.5em Ubuntu;
+  letter-spacing: 0.15em;
 }
 
-#flip > div > div {
-  color:#fff;
-  padding:4px 12px;
-  height:45px;
-  margin-bottom:45px;
-  display:inline-block;
+.apellido svg text {
+  fill: #42C8C3;
+  stroke: #111;
+  fill-opacity: 1;
+  stroke-width: 0;
+  stroke-dasharray: 100% 0;
+  animation: stroke-offset 3s ease-out;
 }
-
-#flip div:first-child {
-  animation: show 5s linear infinite;
-}
-
-#flip div div {
-  background:#42c58a;
-}
-#flip div:first-child div {
-  background:#4ec7f3;
-}
-#flip div:last-child div {
-  background:#DC143C;
-}
-
-@keyframes show {
-  0% {margin-top:-270px;}
-  5% {margin-top:-180px;}
-  33% {margin-top:-180px;}
-  38% {margin-top:-90px;}
-  66% {margin-top:-90px;}
-  71% {margin-top:0px;}
-  99.99% {margin-top:0px;}
-  100% {margin-top:-270px;}
-}
-
-
 /*colores celeste #42C8C3  rosa #F74B61   verde #6CAE21

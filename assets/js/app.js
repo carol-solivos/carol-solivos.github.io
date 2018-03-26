@@ -13,16 +13,25 @@ $(document).ready(function() {
         <img src="assets/img/perfil.jpg" alt="">
       </div>
       <div class="intro">
-        <h1>Carol Sepúlveda Olivos</h1>
-        <h4>Desarrolladora Front-end & Diseñadora Gráfica</h4>
+        <div class="animationInit">
+          <svg viewBox="82 -45 502 102">
+          <text text-anchor="middle" x="50%" y="50%">Carol</text>
+        </svg>
+        </div>
+        <div class="apellido">
+          <svg viewBox="0 -20 530 70">
+          <text text-anchor="middle" x="50%" y="50%">Sepúlveda Olivos</text>
+        </svg>
+        </div>
+        <h5> Desarrolladora Front-end <span>&</span> Diseñadora Gráfica</h5>
         <br>
-        <a href="#"><i class="fa fa-arrow-right"></i> Aquí puedes ver mi trabajo</a>
+        <div id="seeMore"><i class="fa fa-arrow-right"></i> Aquí puedes ver mi trabajo</div>           
       </div>
     </section>`);
   };
-  // firstView();
+  firstView();
   // portafolio
-  $('#btn2').click(() => {
+  $('#btn2, #seeMore').click(() => {
     $('#container').attr('value', 'portafolio');
     markMenu(); 
     $('#container').html(`<section id="portafolio">
