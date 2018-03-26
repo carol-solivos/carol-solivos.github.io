@@ -14,7 +14,7 @@ $(document).ready(function() {
       </div>
       <div class="intro">
         <div class="animationInit">
-          <svg viewBox="82 -45 502 102">
+          <svg viewBox="75 -45 502 102">
           <text text-anchor="middle" x="50%" y="50%">Carol</text>
         </svg>
         </div>
