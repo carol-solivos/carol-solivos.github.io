@@ -26,37 +26,56 @@ $(document).ready(function() {
     $('#container').attr('value', 'portafolio');
     markMenu(); 
     $('#container').html(`<section id="portafolio">
-      <div class="carousel">
-        <a class="carousel-item" href="http://www.pamelagrant.cl/index.php/reevolution" target="_blank">
+      <div class="carousel">            
+        <a class="carousel-item" href="http://www.saysa.cl/" target="_blank">
           <div class="overlay">
-            <h5>Mini Sitio Reevolution</h5>
-            <p>Diseño de layout, animaciones, HTML, CSS, Joomla, diseño responsivo.</p>
+            <h5>Sitio Saysa</h5>
+            <p>Wordpress, diseño y desarrollo, animaciones, HTML, CSS y responsive. <span>Ver más ></span></p>
           </div>
-          <img src="assets/img/imag-portafolio-reevolution.jpg"></a>
+          <img src="assets/img/imag-portafolio-saysa.jpg">
+        </a>
+        <a class="carousel-item" href="http://www.pamelagrant.cl/index.php/hydra-matte-landing" target="_blank">
+          <div class="overlay">
+            <h5>Landing Pamela Grant</h5>
+            <p>Joomla, diseño layout y desarrollo. <span>Ver más ></span></p>
+          </div>
+          <img src="assets/img/imag-portafolio-pmg.jpg">
+        </a>     
         <a class="carousel-item" href="http://www.millefiori.cl/" target="_blank">
           <div class="overlay">
             <h5>Sitio Web Millefiori</h5>
-            <p>Diseño de layout, animaciones, HTML, CSS, Joomla, diseño responsivo.</p>
+            <p>Diseño de layout, animaciones, HTML, CSS, Joomla, diseño responsivo. <span>Ver más ></span></p>
           </div>
-          <img src="assets/img/imag-portafolio-millefiori.jpg"></a>
-        <a class="carousel-item" href="#three!">
+          <img src="assets/img/imag-portafolio-millefiori.jpg">
+        </a>
+        <a class="carousel-item" href="https://github.com/carol-solivos/nasa-share" target="_blank">
           <div class="overlay">
-            <h5>First Panel</h5>
-            <p>adsfasdf asd asd asd asd</p>
+            <h5>Nasa Share</h5>
+            <p>Aquí puedes ver las imágenes que entrega la NASA diariamente. <span>Ver más ></span></p>
           </div>
-          <img src="assets/img/imag-portafolio-pmg.jpg"></a>
-        <a class="carousel-item" href="#four!">
+          <img src="assets/img/imag-portafolio-nasa.jpg">
+        </a>
+        <a class="carousel-item" href="https://github.com/carol-solivos/cardify" target="_blank">
           <div class="overlay">
-            <h5>First Panel</h5>
-            <p>adsfasdf asd asd asd asd</p>
+            <h5>Cardify</h5>
+            <p>Librería npmjs para agregar automáticamente efecto hover con Jquery <span>Ver más ></span></p>
           </div>
-          <img src="assets/img/imag-portafolio-saysa.jpg"></a>
-        <a class="carousel-item" href="#five!">
+          <img src="assets/img/imag-portafolio-cardify.jpg">
+        </a>        
+        <a class="carousel-item" href="http://www.pamelagrant.cl/index.php/reevolution" target="_blank">
           <div class="overlay">
-            <h5>First Panel</h5>
-            <p>adsfasdf asd asd asd asd</p>
+            <h5>Mini Sitio Reevolution</h5>
+            <p>Diseño de layout, animaciones, HTML, CSS, Joomla, diseño responsivo. <span>Ver más ></span></p>
           </div>
-          <img src="assets/img/imag-portafolio-bici.jpg"></a>
+          <img src="assets/img/imag-portafolio-reevolution.jpg">
+        </a>
+        <a class="carousel-item" href="https://github.com/carol-solivos/EASY-VRECO" target="_blank">
+          <div class="overlay">
+            <h5>Geolocation</h5>
+            <p>Ejercicio Geolocation utilizando API de Google Maps, Javascript, CSS y HTML. <span>Ver más ></span></p>
+          </div>
+          <img src="assets/img/imag-portafolio-bici.jpg">
+        </a>
       </div>
     </section>`);
     $('.carousel').carousel({

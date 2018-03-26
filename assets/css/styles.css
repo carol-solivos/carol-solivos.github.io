@@ -36,6 +36,7 @@ body {
   position: fixed;
   display: flex;
   justify-content: space-around;
+  flex-wrap: nowrap;
   width: 100%;
   background-color: white;
 }
@@ -124,6 +125,7 @@ body {
 	padding: 10px;
 }
 
+/*portafolio*/
 #portafolio {
   display: flex;
   align-items: center;
@@ -133,12 +135,12 @@ body {
   margin-bottom: 80px;
 }
 
+/*sobre mi*/
 #sobreMi {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  width: 70%;
+  flex-wrap: wrap;  
 }
 
 #sobreMi h4, #sobreMi h5 {
@@ -163,6 +165,7 @@ body {
   width: 70%;
 }
 
+/*contacto*/
 #contacto {
   display: flex;
   flex-wrap: wrap;
@@ -184,6 +187,11 @@ body {
   color: #42C8C3 !important;
 }
 
+#contacto .izq p {
+  margin-bottom: 1em;
+}
+
+/*carrusel*/
 .carousel .carousel-item {
   position: relative;   
   margin-top: -20px;
@@ -221,66 +229,12 @@ body {
   padding: 0 20px;
 }
 
+.overlay span {
+  color: #42C8C3;
+}
+
 .icons {
   font-size: 60px;
-}
-
-
-/*probando animar imag*/
-
-
-
-
-/*fondo gradient*/
-
-
-/*termina prueba img*/
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
-
-#containera {
-  color:#999;
-  text-transform: uppercase;
-  font-size:36px;
-  font-weight:bold;
-  padding-top:200px;  
-  position:fixed;
-  width:100%;
-  bottom:45%;
-  display:block;
-  font-family: 'Roboto';
-}
-
-#flip {
-  height:50px;
-  overflow:hidden;
-}
-
-#flip > div > div {
-  color:#fff;
-  padding:4px 12px;
-  height:45px;
-  margin-bottom:45px;
-  display:inline-block;
-}
-
-#flip div:first-child {
-  animation: show 5s linear infinite;
-}
-
-#flip div div {
-  background:#42c58a;
-}
-#flip div:first-child div {
-  background:#4ec7f3;
-}
-#flip div:last-child div {
-  background:#DC143C;
-}
-
-/*animacion del contacto*/
-#contacto .izq p {
-  margin-bottom: 1em;
 }
 
 @media only screen {
@@ -309,13 +263,15 @@ body {
     z-index: 10;
   }
   #sobreMi {
-    padding-top: 60px;
+    margin-top: 300px;
+    width: 100%;
+    margin-bottom: 80px;
   }
 }
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 650px) {
   body {
-    background-position: 40% 60%;
+    background-position: 40% 30%;
   }
   .carousel {
     height: 70vh !important;
@@ -336,8 +292,9 @@ body {
     margin-top: -30px;
   }
   #sobreMi {
-    margin-bottom: 80px;
-    padding-top: 0;
+    width: 70%;
+    margin-bottom: 100px;
+    margin-top: 0;
     min-width: 900px;
   }
   .contacto {
@@ -345,6 +302,7 @@ body {
   }
 }
 
+/*animacion contacto*/
 svg {
   position: relative;
   font: 20em Ubuntu;
@@ -380,7 +338,63 @@ svg text {
   }
 }
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
 
+.animationInit {
+  margin:0px;
+  font-family:'Roboto';
+  text-align:center;
+}
+
+#containerInicioAnim {
+  color:#999;
+  text-transform: uppercase;
+  font-size:36px;
+  font-weight:bold;
+  padding-top:200px;  
+  position:fixed;
+  width:100%;
+  bottom:45%;
+  display:block;
+}
+
+#flip {
+  height:50px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background:#42c58a;
+}
+#flip div:first-child div {
+  background:#4ec7f3;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
 
 
 /*colores celeste #42C8C3  rosa #F74B61   verde #6CAE21
