@@ -6,7 +6,7 @@ $(document).ready(function() {
     });
   $('#btn1').click(firstView);
   function firstView() {
-    $('#container').attr('value', 'inicio');
+    $('#container').attr('value', 'inicio');    
     markMenu();
     $('#container').html(`<section id="inicio">
       <div class="foto">
@@ -28,10 +28,12 @@ $(document).ready(function() {
         <div id="seeMore"><i class="fa fa-arrow-right"></i> Aquí puedes ver mi trabajo</div>           
       </div>
     </section>`);
+    $('#seeMore').click(portfolio); 
   };
   firstView();
   // portafolio
-  $('#btn2, #seeMore').click(() => {
+  $('#btn2').click(portfolio); 
+  function portfolio() {
     $('#container').attr('value', 'portafolio');
     markMenu(); 
     $('#container').html(`<section id="portafolio">
@@ -91,7 +93,7 @@ $(document).ready(function() {
       dist:-60,
       indicators: true
     });
-  });
+  };
   // sobremi
   $('#btn3').click(() => {
     $('#container').attr('value', 'sobreMi');
