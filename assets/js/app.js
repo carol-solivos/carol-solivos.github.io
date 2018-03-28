@@ -157,22 +157,18 @@ function markMenu() {
   if($('#container').attr('value') === 'inicio') {
     resetMenu();
     $('#btn1').css({'background-color': '#555', 'color': 'white'});
-    $('body').css('background-image', 'url("./assets/img/fondo-portafolio.jpg")');
   };
   if($('#container').attr('value') === 'portafolio') {
     resetMenu();
     $('#btn2').css({'background-color': '#42C8C3', 'color': 'white'});
-    $('body').css('background-image', 'url("./assets/img/fondo-portafolio-azul.jpg")');
   };
   if($('#container').attr('value') === 'sobreMi') {
     resetMenu();
     $('#btn3').css({'background-color': '#6CAE21', 'color': 'white'});
-    $('body').css('background-image', 'url("./assets/img/fondo-portafolio-verde.jpg")');
   };
   if($('#container').attr('value') === 'contacto') {
     resetMenu();
     $('#btn4').css({'background-color': '#F74B61', 'color': 'white'});
-    $('body').css('background-image', "url('./assets/img/fondo-portafolio-rosa.jpg')");
   };
 }
 

@@ -20,16 +20,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
-}
-
-#contacto a {
-	color: #555 !important;
-	text-decoration: none;
-}
-
-#contacto a:hover {
-  color: #42C8C3 !important;
+  padding-top: 50px;
 }
 
 #menu {
@@ -111,7 +102,6 @@ body {
 	justify-content: center;
 	align-items: center;
   flex-wrap: wrap;
-  height: 100vh;
   width: 100%;
   padding: 10px 20px;
   margin-bottom: 100px;
@@ -141,6 +131,7 @@ body {
 
 .foto {
 	padding: 10px;
+  margin-bottom: -30px;
 }
 
 .intro span {
@@ -198,7 +189,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 10px;
+  margin-bottom: 60px;
 }
 
 #contacto .izq {
@@ -215,6 +206,15 @@ body {
 
 #contacto .izq p {
   margin-bottom: 1em;
+}
+
+#contacto a {
+  color: #555 !important;
+  text-decoration: none;
+}
+
+#contacto a:hover {
+  color: #42C8C3 !important;
 }
 
 /*carrusel*/
@@ -271,7 +271,7 @@ body {
     height: 60vh !important;
   }
   .carousel .carousel-item {
-    height: 60% !important;
+    height: 70% !important;
     width:70% !important; 
   }
   svg {
@@ -289,9 +289,15 @@ body {
     z-index: 10;
   }
   #sobreMi {
-    margin-top: 300px;
     width: 100%;
     margin-bottom: 80px;
+    margin-top: 350px;
+  }
+  #inicio {
+    margin-top: 50px;
+  }
+  .animationInit {
+    margin-bottom: -20px;
   }
 }
 
@@ -325,6 +331,12 @@ body {
   }
   .contacto {
     margin-bottom: 80px;
+  }
+  #inicio {
+    margin-top: 0;
+  }
+  .animationInit {
+    margin-bottom: -0;
   }
 }
 
