@@ -9,22 +9,20 @@
 body {
 	font-family: 'Ubuntu', sans-serif;
 	color: #555;
-  background-image: url('../img/fondo-portafolio.jpg');
+  /* background-image: url('../img/fondo-portafolio.jpg'); */
   background-size: cover;
   transition: background-image 1s;
   background-attachment: fixed;
 } 
 
-#container {
+section {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 50px;
+  padding-top: 64px;
 }
 
 #menu {
   position: fixed;
+  z-index: 10000;
   display: flex;
   justify-content: space-around;
   flex-wrap: nowrap;
@@ -33,18 +31,20 @@ body {
 }
 
 #menu div{
-  height: 45px;
   width: 100%;
 }
 
 /*botones*/
+#menu .btnM.active {
+	color: white;
+}
 
 .btnM {
   display: flex;
   justify-content: center;
   align-items: center;
 	transition: background-color .2s;
-  padding-bottom: 8px;
+	padding-bottom: 5px;
 }
 
 .btnM:hover {
@@ -52,20 +52,24 @@ body {
 	transition: background-color .4s;
 }
 
+#btn1 {
+	color: #555;
+	border-top: 5px solid #555;
+}
+#btn1.active {
+  background: #555;
+}
 #btn1:hover {
 	color: white;
 	background-color: #555; 
 }
 
-#btn1 {
-	border-top: 5px solid #555;
-	padding-bottom: 5px;
-}
-
 #btn2 {
 	color: #42C8C3;
 	border-top: 5px solid #42C8C3;
-	padding-bottom: 5px;
+}
+#btn2.active {
+  background: #42C8C3;
 }
 
 #btn2:hover {
@@ -76,7 +80,9 @@ body {
 #btn3 {
 	color: #6CAE21;
 	border-top: 5px solid #6CAE21;
-
+}
+#btn3.active {
+  background: #6CAE21;
 }
 
 #btn3:hover {
@@ -87,7 +93,9 @@ body {
 #btn4 {
 	color: #F74B61;
 	border-top: 5px solid #F74B61;
-
+}
+#btn4.active {
+  background: #F74B61;
 }
 
 #btn4:hover {
@@ -104,7 +112,7 @@ body {
   flex-wrap: wrap;
   width: 100%;
   padding: 10px 20px;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
 }
 
 .intro h5, .intro #seeMore {
