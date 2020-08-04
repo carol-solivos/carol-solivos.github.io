@@ -190,6 +190,12 @@ section {
   width: 40px;
 }
 
+#sobreMi h4 img {
+  width: 32px;
+  vertical-align: middle;
+  padding-bottom: 4px;
+  }
+
 #sobreMi .der {
   width: 70%;
 }
