@@ -16,7 +16,6 @@ body {
 } 
 
 section {
-  height: 100vh;
   padding-top: 64px;
 }
 
@@ -30,7 +29,7 @@ section {
   background-color: white;
 }
 
-#menu div{
+#menu a {
   width: 100%;
 }
 
@@ -110,13 +109,18 @@ section {
 	justify-content: center;
 	align-items: center;
   flex-wrap: wrap;
-  width: 100%;
-  padding: 10px 20px;
   /* margin-bottom: 100px; */
 }
 
 .intro h5, .intro #seeMore {
-  padding-left: 10px;
+  padding-left: 22px;
+}
+
+.foto div {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 0 60px;
 }
 
 .foto img {
@@ -135,11 +139,6 @@ section {
 
 #seeMore:hover {
   color: #F74B61;
-}
-
-.foto {
-	padding: 10px;
-  margin-bottom: -30px;
 }
 
 .intro span {
@@ -190,6 +189,12 @@ section {
   width: 70%;
 }
 
+.icon-fa {
+  color: #42C8C3;
+  height: 24px;
+  width: 24px !important;
+}
+
 /*contacto*/
 #contacto {
   display: flex;
@@ -206,10 +211,6 @@ section {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-}
-
-#contacto p svg {
-  color: #42C8C3 !important;
 }
 
 #contacto .izq p {
@@ -301,9 +302,6 @@ section {
     margin-bottom: 80px;
     margin-top: 350px;
   }
-  #inicio {
-    margin-top: 50px;
-  }
   .animationInit {
     margin-bottom: -20px;
   }
@@ -339,9 +337,6 @@ section {
   }
   .contacto {
     margin-bottom: 80px;
-  }
-  #inicio {
-    margin-top: 0;
   }
   .animationInit {
     margin-bottom: -0;
