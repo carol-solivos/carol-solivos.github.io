@@ -13,20 +13,24 @@ body {
   background-size: cover;
   transition: background-image 1s;
   background-attachment: fixed;
-} 
+  padding-top: 64px;
+}
 
 section {
-  padding-top: 64px;
+  padding: 60px 0;
 }
 
 #menu {
   position: fixed;
+  top: 0;
   z-index: 10000;
   display: flex;
   justify-content: space-around;
   flex-wrap: nowrap;
   width: 100%;
   background-color: white;
+  height: 60px;
+  box-shadow: 4px 4px 10px rgba(120, 120,120, .3);
 }
 
 #menu a {
@@ -43,7 +47,8 @@ section {
   justify-content: center;
   align-items: center;
 	transition: background-color .2s;
-	padding-bottom: 5px;
+  padding-bottom: 5px;
+  height: 100%;
 }
 
 .btnM:hover {
