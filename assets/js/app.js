@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // smooth scroll
-    $("#menu a").on('click', function(event) {
+    $("#menu a, #seeMore a").on('click', function(event) {
       if (this.hash !== "") {
         event.preventDefault();
         var hash = this.hash;

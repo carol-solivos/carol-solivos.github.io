@@ -142,6 +142,17 @@ section {
   cursor: pointer;
 }
 
+#seeMore svg {
+  position: relative;
+  top: 0;
+  transition: all .6s;
+}
+
+#seeMore:hover svg {
+  top: 5px;
+  transition: all .6s;
+}
+
 #seeMore:hover {
   color: #F74B61;
 }
@@ -194,7 +205,7 @@ section {
   width: 32px;
   vertical-align: middle;
   padding-bottom: 4px;
-  }
+}
 
 #sobreMi .der {
   width: 70%;
@@ -368,6 +379,34 @@ svg text {
   stroke-width: 0;
   stroke-dasharray: 100% 0;
   animation: stroke-offset 3s ease-out;
+}
+
+#sobreMi h4 img {
+  animation: beating 6s infinite;
+}
+
+@keyframes beating {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(.8);
+  }
+  45% {
+    transform: scale(.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(.8);
+  }
+  95% {
+    transform: scale(.8);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes stroke-offset {
