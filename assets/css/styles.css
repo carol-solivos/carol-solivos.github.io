@@ -17,7 +17,7 @@ body {
 }
 
 section {
-  padding: 60px 0;
+  padding: 80px 30px 40px;
 }
 
 #menu {
@@ -167,12 +167,7 @@ section {
 
 /*portafolio*/
 #portafolio {
-  display: flex;
-  align-items: center;
-  height: 80vh;
-  width: 100%;
-  padding: 10px 20px;
-  margin-bottom: 80px;
+
 }
 
 /*sobre mi*/
@@ -180,7 +175,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;  
+  flex-wrap: wrap; 
 }
 
 #sobreMi h4, #sobreMi h5 {
@@ -208,7 +203,9 @@ section {
 }
 
 #sobreMi .der {
-  width: 70%;
+  width: 70%; 
+  max-width: 750px;
+  text-align: justify;
 }
 
 .icon-fa {
@@ -319,10 +316,14 @@ section {
     margin-top: 0;
     z-index: 10;
   }
+
+  .contactText svg {
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
   #sobreMi {
-    width: 100%;
-    margin-bottom: 80px;
-    margin-top: 350px;
+
   }
   .animationInit {
     margin-bottom: -20px;
@@ -351,15 +352,6 @@ section {
   .contactText {
     margin-top: -30px;
   }
-  #sobreMi {
-    width: 70%;
-    margin-bottom: 100px;
-    margin-top: 0;
-    min-width: 900px;
-  }
-  .contacto {
-    margin-bottom: 80px;
-  }
   .animationInit {
     margin-bottom: -0;
   }
@@ -382,7 +374,7 @@ svg text {
 }
 
 #sobreMi h4 img {
-  animation: beating 6s infinite;
+  animation: beating 5s infinite;
 }
 
 @keyframes beating {
