@@ -14,10 +14,24 @@ body {
   transition: background-image 1s;
   background-attachment: fixed;
   padding-top: 64px;
+  transition: background-color 1s ease;
 }
 
 section {
   padding: 80px 30px 40px;
+}
+
+.color-grey {
+  background-color: #4DCF42;
+}
+.color-cyan {
+  background-color: #FAEB33;
+}
+.color-green {
+  background-color: #F19031;
+}
+.color-magenta {
+  background-color: #F2293A;
 }
 
 #menu {
