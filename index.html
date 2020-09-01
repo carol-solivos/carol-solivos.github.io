@@ -19,6 +19,27 @@
     <a href="#sobreMi"><div id="btn3" class="btnM">Sobre mí</div>  </a>
     <a href="#contacto"><div id="btn4" class="btnM">Contacto</div></a>
 	</header>
+
+	<div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+					<!-- Modal Structure -->
+		<div id="modal1" class="modal">
+			<div class="modal-content">
+				<h4>Modal Header</h4>
+				<p>A bunch of text</p>
+			</div>
+			<div class="modal-footer">
+				<a href="http://www.saysa.cl/">asdf</a>
+				<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+			</div>
+		</div>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
 	<!-- sección inicio -->
 	<section id="inicio">
 		<div class="foto">
@@ -48,13 +69,20 @@
 	<!-- seccion portafolio -->
 	<section id="portafolio">
 		<div class="carousel">            
-			<a class="carousel-item" href="http://www.saysa.cl/" target="_blank">
+			<a class="carousel-item modal-trigger" href="#modal1">
 				<div class="overlay">
 					<h5>Sitio Saysa</h5>
 					<p>Wordpress, diseño y desarrollo, animaciones, HTML, CSS y responsive. <span>Ver más ></span></p>
 				</div>
 				<img src="assets/img/imag-portafolio-saysa.jpg">
 			</a>
+			<a class="carousel-item" href="https://carol-solivos.github.io/oraculo-diario/" target="_blank">
+				<div class="overlay">
+					<h5>Oráculo</h5>
+					<p>Un sabio consejo en tu camino... <span>Ver más ></span></p>
+				</div>
+				<img src="assets/img/oracle.png">
+			</a>  
 			<a class="carousel-item" href="http://www.pamelagrant.cl/index.php/hydra-matte-landing" target="_blank">
 				<div class="overlay">
 					<h5>Landing Pamela Grant</h5>
@@ -75,14 +103,7 @@
 					<p>Aquí puedes ver las imágenes que entrega la NASA diariamente. <span>Ver más ></span></p>
 				</div>
 				<img src="assets/img/imag-portafolio-nasa.jpg">
-			</a>
-			<a class="carousel-item" href="https://github.com/carol-solivos/cardify" target="_blank">
-				<div class="overlay">
-					<h5>Cardify</h5>
-					<p>Librería npmjs para agregar automáticamente efecto hover con Jquery <span>Ver más ></span></p>
-				</div>
-				<img src="assets/img/imag-portafolio-cardify.jpg">
-			</a>        
+			</a>      
 			<a class="carousel-item" href="http://www.pamelagrant.cl/index.php/reevolution" target="_blank">
 				<div class="overlay">
 					<h5>Mini Sitio Reevolution</h5>
