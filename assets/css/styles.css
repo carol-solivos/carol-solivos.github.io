@@ -9,29 +9,47 @@
 body {
 	font-family: 'Ubuntu', sans-serif;
 	color: #555;
-  /* background-image: url('../img/fondo-portafolio.jpg'); */
+  background-image: url('../img/fondo-portafolio.jpg');
   background-size: cover;
-  transition: background-image 1s;
   background-attachment: fixed;
-  padding-top: 64px;
-  transition: background-color 1s ease;
+  -moz-transition: background-image 1s ease-in-out;
+  -webkit-transition: background-image 1s ease-in-out;
+  -o-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
 }
 
 section {
   padding: 80px 30px 40px;
+  height: calc(100vh - 60px);
 }
 
 .color-grey {
-  background-color: #4DCF42;
+  background-image: url('../img/fondo-portafolio-azul.jpg');
+  -moz-transition: background-image 1s ease-in-out;
+  -webkit-transition: background-image 1s ease-in-out;
+  -o-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
 }
 .color-cyan {
-  background-color: #FAEB33;
+  background-image: url('../img/fondo-portafolio.jpg');
+  -moz-transition: background-image 1s ease-in-out;
+  -webkit-transition: background-image 1s ease-in-out;
+  -o-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
 }
 .color-green {
-  background-color: #F19031;
+  background-image: url('../img/fondo-portafolio-rosa.jpg');
+  -moz-transition: background-image 1s ease-in-out;
+  -webkit-transition: background-image 1s ease-in-out;
+  -o-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
 }
 .color-magenta {
-  background-color: #F2293A;
+  background-image: url('../img/fondo-portafolio-verde.jpg');
+  -moz-transition: background-image 1s ease-in-out;
+  -webkit-transition: background-image 1s ease-in-out;
+  -o-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
 }
 
 #menu {

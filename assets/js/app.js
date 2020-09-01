@@ -52,6 +52,7 @@ $(window).scroll(function() {
        
       // Add class of currently active div
       $body.addClass('color-' + $(this).data('color'));
+      markMenu($(this).data('active'));
     }
   });    
   
