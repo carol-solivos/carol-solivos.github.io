@@ -1,0 +1,493 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  color: #555;
+  background-image: url("../img/fondo-portafolio.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  -moz-transition: background-image 1s ease-in-out;
+  -webkit-transition: background-image 1s ease-in-out;
+  -o-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
+}
+
+section {
+  padding: 80px 30px 40px;
+  height: calc(100vh - 60px);
+}
+
+.color-grey {
+  background-image: url("../img/fondo-portafolio-azul.jpg");
+  -moz-transition: background-image 1s ease-in-out;
+  -webkit-transition: background-image 1s ease-in-out;
+  -o-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
+}
+
+.color-cyan {
+  background-image: url("../img/fondo-portafolio.jpg");
+  -moz-transition: background-image 1s ease-in-out;
+  -webkit-transition: background-image 1s ease-in-out;
+  -o-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
+}
+
+.color-green {
+  background-image: url("../img/fondo-portafolio-rosa.jpg");
+  -moz-transition: background-image 1s ease-in-out;
+  -webkit-transition: background-image 1s ease-in-out;
+  -o-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
+}
+
+.color-magenta {
+  background-image: url("../img/fondo-portafolio-verde.jpg");
+  -moz-transition: background-image 1s ease-in-out;
+  -webkit-transition: background-image 1s ease-in-out;
+  -o-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  width: 100%;
+  background-color: white;
+  height: 60px;
+  box-shadow: 4px 4px 10px rgba(120, 120, 120, 0.3);
+}
+
+#menu a {
+  width: 100%;
+}
+
+/*botones*/
+#menu .btnMenu.active {
+  color: white;
+}
+
+.btnMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+  padding-bottom: 5px;
+  height: 100%;
+}
+
+.btnMenu:hover {
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+#btn1 {
+  color: #555;
+  border-top: 5px solid #555;
+}
+
+#btn1.active {
+  background: #555;
+}
+
+#btn1:hover {
+  color: white;
+  background-color: #555;
+}
+
+#btn2 {
+  color: #42C8C3;
+  border-top: 5px solid #42C8C3;
+}
+
+#btn2.active {
+  background: #42C8C3;
+}
+
+#btn2:hover {
+  color: white;
+  background-color: #42C8C3;
+}
+
+#btn3 {
+  color: #6CAE21;
+  border-top: 5px solid #6CAE21;
+}
+
+#btn3.active {
+  background: #6CAE21;
+}
+
+#btn3:hover {
+  color: white;
+  background-color: #6CAE21;
+}
+
+#btn4 {
+  color: #F74B61;
+  border-top: 5px solid #F74B61;
+}
+
+#btn4.active {
+  background: #F74B61;
+}
+
+#btn4:hover {
+  color: white;
+  background-color: #F74B61;
+}
+
+/*secciones*/
+#inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* margin-bottom: 100px; */
+}
+
+.intro h5, .intro #seeMore {
+  padding-left: 22px;
+}
+
+.foto div {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 0 60px;
+}
+
+.foto img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px;
+}
+
+#seeMore {
+  color: #42C8C3;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+#seeMore svg {
+  position: relative;
+  top: 0;
+  transition: all 0.6s;
+}
+
+#seeMore:hover svg {
+  top: 5px;
+  transition: all 0.6s;
+}
+
+#seeMore:hover {
+  color: #F74B61;
+}
+
+.intro span {
+  color: #F74B61;
+}
+
+.intro {
+  text-align: left;
+}
+
+/*sobre mi*/
+#sobreMi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#sobreMi h4, #sobreMi h5 {
+  color: #6CAE21 !important;
+}
+
+#sobreMi a {
+  color: #555 !important;
+}
+
+#sobreMi a:hover {
+  color: #6CAE21 !important;
+}
+
+#sobreMi #pdf a svg {
+  font-size: 30px;
+  padding-left: 10px;
+  width: 40px;
+}
+
+#sobreMi h4 img {
+  width: 32px;
+  vertical-align: middle;
+  padding-bottom: 4px;
+}
+
+#sobreMi .der {
+  width: 70%;
+  max-width: 750px;
+  text-align: justify;
+}
+
+.icon-fa {
+  color: #42C8C3;
+  height: 24px;
+  width: 24px !important;
+}
+
+/*contacto*/
+#contacto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+#contacto .izq {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contacto .izq p {
+  margin-bottom: 1em;
+}
+
+#contacto a {
+  color: #555 !important;
+  text-decoration: none;
+}
+
+#contacto a:hover {
+  color: #42C8C3 !important;
+}
+
+/*carrusel*/
+.carousel .carousel-item {
+  position: relative;
+  margin-top: -20px;
+  min-width: 240px;
+  min-height: 240px;
+  max-width: 450px;
+  max-height: 450px;
+}
+
+.carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.indicator-item {
+  background-color: rgba(66, 200, 195, 0.3) !important;
+  height: 12px !important;
+  width: 12px !important;
+}
+
+.indicator-item.active {
+  background-color: #42C8C3 !important;
+  height: 14px !important;
+  width: 14px !important;
+}
+
+.overlay {
+  background-color: rgba(20, 20, 20, 0.9);
+  position: absolute;
+  bottom: 0px;
+  color: white;
+  width: 100%;
+  min-height: 100px;
+  padding: 0 20px;
+}
+
+.overlay span {
+  color: #42C8C3;
+}
+
+.icons {
+  font-size: 60px;
+}
+
+@media only screen {
+  body {
+    background-position: 40% 100%;
+  }
+
+  .carousel {
+    height: 60vh !important;
+  }
+
+  .carousel .carousel-item {
+    height: 70% !important;
+    width: 70% !important;
+  }
+
+  svg {
+    width: 100%;
+    max-width: 700px;
+    height: 100%;
+    margin-top: 5%;
+  }
+
+  .overlay {
+    height: 70%;
+  }
+
+  .contactText {
+    text-align: center;
+    margin-top: 0;
+    z-index: 10;
+  }
+
+  .contactText svg {
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  .animationInit {
+    margin-bottom: -20px;
+  }
+}
+@media only screen and (min-width: 650px) {
+  body {
+    background-position: 40% 30%;
+  }
+
+  .carousel {
+    height: 70vh !important;
+  }
+
+  .carousel .carousel-item {
+    width: 40% !important;
+    height: 80% !important;
+  }
+
+  svg {
+    width: 80%;
+    height: 80%;
+    margin-top: 0;
+  }
+
+  .overlay {
+    height: 30%;
+  }
+
+  .contactText {
+    margin-top: -30px;
+  }
+
+  .animationInit {
+    margin-bottom: 0;
+  }
+}
+/*animacion contacto*/
+svg {
+  position: relative;
+  font: 20em Ubuntu;
+  letter-spacing: 0.15em;
+}
+
+svg text {
+  fill: #F74B61;
+  stroke: #111;
+  fill-opacity: 1;
+  stroke-width: 0;
+  stroke-dasharray: 100% 0;
+  animation: stroke-offset 3s ease-out;
+}
+
+#sobreMi h4 img {
+  animation: beating 5s infinite;
+}
+
+@keyframes beating {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.8);
+  }
+  45% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.8);
+  }
+  95% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes stroke-offset {
+  0% {
+    fill-opacity: 0;
+    stroke-width: 0;
+    stroke-dasharray: 0% 100%;
+  }
+  25% {
+    stroke-width: 3px;
+  }
+  50% {
+    fill-opacity: 0;
+  }
+  75% {
+    stroke-width: 3px;
+  }
+  100% {
+    stroke-width: 0;
+  }
+}
+/*animacion inicio*/
+.animationInit svg {
+  position: relative;
+  font: 8em Ubuntu;
+  letter-spacing: 0.15em;
+}
+
+.animationInit svg text {
+  fill: #42C8C3;
+  stroke: #111;
+  fill-opacity: 1;
+  stroke-width: 0;
+  stroke-dasharray: 100% 0;
+  animation: stroke-offset 3s ease-out;
+}
+
+.apellido svg {
+  position: relative;
+  font: 3.5em Ubuntu;
+  letter-spacing: 0.15em;
+}
+
+.apellido svg text {
+  fill: #42C8C3;
+  stroke: #111;
+  fill-opacity: 1;
+  stroke-width: 0;
+  stroke-dasharray: 100% 0;
+  animation: stroke-offset 3s ease-out;
+}
+
+/*# sourceMappingURL=main.css.map */

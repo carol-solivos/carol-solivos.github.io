@@ -70,11 +70,11 @@ section {
 }
 
 /*botones*/
-#menu .btnM.active {
+#menu .btnMenu.active {
 	color: white;
 }
 
-.btnM {
+.btnMenu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,7 +83,7 @@ section {
   height: 100%;
 }
 
-.btnM:hover {
+.btnMenu:hover {
 	cursor: pointer;
 	transition: background-color .4s;
 }
@@ -476,4 +476,3 @@ svg text {
   stroke-dasharray: 100% 0;
   animation: stroke-offset 3s ease-out;
 }
-/*colores celeste #42C8C3  rosa #F74B61   verde #6CAE21
