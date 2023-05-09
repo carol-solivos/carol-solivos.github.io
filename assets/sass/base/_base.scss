@@ -9,135 +9,128 @@
 body {
 	font-family: 'Ubuntu', sans-serif;
 	color: #555;
-  background-image: url('../img/fondo-portafolio.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  -moz-transition: background-image 1s ease-in-out;
-  -webkit-transition: background-image 1s ease-in-out;
-  -o-transition: background-image 1s ease-in-out;
-  transition: background-image 1s ease-in-out;
 }
 
-section {
-  padding: 80px 30px 40px;
-  height: calc(100vh - 60px);
-}
+// section {
+//   padding: 80px 30px 40px;
+//   height: calc(100vh - 60px);
+// }
 
-.color-grey {
-  background-image: url('../img/fondo-portafolio-azul.jpg');
-  -moz-transition: background-image 1s ease-in-out;
-  -webkit-transition: background-image 1s ease-in-out;
-  -o-transition: background-image 1s ease-in-out;
-  transition: background-image 1s ease-in-out;
-}
-.color-cyan {
-  background-image: url('../img/fondo-portafolio.jpg');
-  -moz-transition: background-image 1s ease-in-out;
-  -webkit-transition: background-image 1s ease-in-out;
-  -o-transition: background-image 1s ease-in-out;
-  transition: background-image 1s ease-in-out;
-}
-.color-green {
-  background-image: url('../img/fondo-portafolio-rosa.jpg');
-  -moz-transition: background-image 1s ease-in-out;
-  -webkit-transition: background-image 1s ease-in-out;
-  -o-transition: background-image 1s ease-in-out;
-  transition: background-image 1s ease-in-out;
-}
-.color-magenta {
-  background-image: url('../img/fondo-portafolio-verde.jpg');
-  -moz-transition: background-image 1s ease-in-out;
-  -webkit-transition: background-image 1s ease-in-out;
-  -o-transition: background-image 1s ease-in-out;
-  transition: background-image 1s ease-in-out;
-}
+// .color-grey {
+//   background-image: url('../img/fondo-portafolio-azul.jpg');
+//   -moz-transition: background-image 1s ease-in-out;
+//   -webkit-transition: background-image 1s ease-in-out;
+//   -o-transition: background-image 1s ease-in-out;
+//   transition: background-image 1s ease-in-out;
+// }
+// .color-cyan {
+//   background-image: url('../img/fondo-portafolio.jpg');
+//   -moz-transition: background-image 1s ease-in-out;
+//   -webkit-transition: background-image 1s ease-in-out;
+//   -o-transition: background-image 1s ease-in-out;
+//   transition: background-image 1s ease-in-out;
+// }
+// .color-green {
+//   background-image: url('../img/fondo-portafolio-rosa.jpg');
+//   -moz-transition: background-image 1s ease-in-out;
+//   -webkit-transition: background-image 1s ease-in-out;
+//   -o-transition: background-image 1s ease-in-out;
+//   transition: background-image 1s ease-in-out;
+// }
+// .color-magenta {
+//   background-image: url('../img/fondo-portafolio-verde.jpg');
+//   -moz-transition: background-image 1s ease-in-out;
+//   -webkit-transition: background-image 1s ease-in-out;
+//   -o-transition: background-image 1s ease-in-out;
+//   transition: background-image 1s ease-in-out;
+// }
 
-#menu {
-  position: fixed;
-  top: 0;
-  z-index: 10000;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: nowrap;
-  width: 100%;
-  background-color: white;
-  height: 60px;
-  box-shadow: 4px 4px 10px rgba(120, 120,120, .3);
-}
+// #menu {
+//   position: fixed;
+//   top: 0;
+//   z-index: 10000;
+//   display: flex;
+//   justify-content: space-around;
+//   flex-wrap: nowrap;
+//   width: 100%;
+//   background-color: white;
+//   height: 60px;
+//   box-shadow: 4px 4px 10px rgba(120, 120,120, .3);
+// }
 
-#menu a {
-  width: 100%;
-}
+// #menu a {
+//   width: 100%;
+// }
 
-/*botones*/
-#menu .btnMenu.active {
-	color: white;
-}
+// /*botones*/
+// #menu .btnMenu.active {
+// 	color: white;
+// }
 
-.btnMenu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-	transition: background-color .2s;
-  padding-bottom: 5px;
-  height: 100%;
-}
+// .btnMenu {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// 	transition: background-color .2s;
+//   padding-bottom: 5px;
+//   height: 100%;
+// }
 
-.btnMenu:hover {
-	cursor: pointer;
-	transition: background-color .4s;
-}
+// .btnMenu:hover {
+// 	cursor: pointer;
+// 	transition: background-color .4s;
+// }
 
-#btn1 {
-	color: #555;
-	border-top: 5px solid #555;
-}
-#btn1.active {
-  background: #555;
-}
-#btn1:hover {
-	color: white;
-	background-color: #555; 
-}
+// #btn1 {
+// 	color: #555;
+// 	border-top: 5px solid #555;
+// }
+// #btn1.active {
+//   background: #555;
+// }
+// #btn1:hover {
+// 	color: white;
+// 	background-color: #555; 
+// }
 
-#btn2 {
-	color: #42C8C3;
-	border-top: 5px solid #42C8C3;
-}
-#btn2.active {
-  background: #42C8C3;
-}
+// #btn2 {
+// 	color: #42C8C3;
+// 	border-top: 5px solid #42C8C3;
+// }
+// #btn2.active {
+//   background: #42C8C3;
+// }
 
-#btn2:hover {
-	color: white;
-	background-color: #42C8C3; 
-}
+// #btn2:hover {
+// 	color: white;
+// 	background-color: #42C8C3; 
+// }
 
-#btn3 {
-	color: #6CAE21;
-	border-top: 5px solid #6CAE21;
-}
-#btn3.active {
-  background: #6CAE21;
-}
+// #btn3 {
+// 	color: #6CAE21;
+// 	border-top: 5px solid #6CAE21;
+// }
+// #btn3.active {
+//   background: #6CAE21;
+// }
 
-#btn3:hover {
-	color: white;
-	background-color: #6CAE21; 
-}
+// #btn3:hover {
+// 	color: white;
+// 	background-color: #6CAE21; 
+// }
 
-#btn4 {
-	color: #F74B61;
-	border-top: 5px solid #F74B61;
-}
-#btn4.active {
-  background: #F74B61;
-}
+// #btn4 {
+// 	color: #F74B61;
+// 	border-top: 5px solid #F74B61;
+// }
+// #btn4.active {
+//   background: #F74B61;
+// }
 
-#btn4:hover {
-	color: white;
-	background-color: #F74B61; 
-}
+// #btn4:hover {
+// 	color: white;
+// 	background-color: #F74B61; 
+// }
 
 /*secciones*/
 
