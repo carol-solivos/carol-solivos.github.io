@@ -1,0 +1,6 @@
+.#{$prefix}_file {
+    display: grid;
+    grid-template-rows: 100px min-content;
+    justify-items: center;
+    padding: 1rem;
+}

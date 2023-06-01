@@ -1,0 +1,32 @@
+// font-family: 'VT323';
+
+@font-face {
+    font-family: "VT323";
+    src: url("../fonts/VT323-Regular.ttf");
+    font-weight: 500;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Regular.ttf");
+    font-weight: 400;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Bold.ttf");
+    font-weight: 700;
+    font-display: fallback;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'VT323', sans-serif;
+}
+
+.#{$prefix}_text {
+    &--VT323 {
+        font-family: 'VT323', sans-serif;
+    }
+}

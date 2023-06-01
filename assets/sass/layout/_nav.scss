@@ -1,0 +1,60 @@
+.#{$prefix}_nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: $color-purple;
+    border: 2px solid $color-border;
+    &__title {
+        background-color: $color-dark;
+        color: $color-light;
+        padding: 0.2rem 1rem;
+    }
+    &__options {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1rem;
+        position: absolute;
+        right: 1rem;
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            color: $color-dark;
+            h3 {
+                margin: 0;
+                color: $color-dark;
+            }
+            img {
+                margin-right: 0.3rem;
+            }
+        }
+        &__lang {
+            &__check {
+                max-width: 1rem;
+            }
+        }
+        
+    }
+    .dropdown-menu {
+        border: 2px solid $color-border;
+        border-radius: 0;
+        padding: 0;
+        li {
+            a {
+                display: inline-flex;
+                align-items: center;
+                font-family: 'VT323', sans-serif;
+                font-size: 1.5rem;
+                min-height: 3rem;
+                &:hover {
+                    background-color: $color-primary;
+                    color: $color-light;
+                }
+            }
+            &:not(:last-child) {
+                border-bottom: 2px solid $color-border;
+            }
+        }
+    }
+}
