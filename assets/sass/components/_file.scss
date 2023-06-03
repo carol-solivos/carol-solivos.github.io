@@ -3,4 +3,42 @@
     grid-template-rows: 100px min-content;
     justify-items: center;
     padding: 1rem;
+    gap: 1rem;
+    &__icon {
+        width: 100%;
+        &--projects {
+            position: relative;
+            &__doc {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &__cog {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-124%);
+                bottom: -8%;
+            }
+            &__pen {
+                position: absolute;
+                left: 50%;
+                transform: translateX(120%);
+            }
+        }
+    }
+    &:hover {
+        .#{$prefix}_file {
+            &__icon {
+                &--projects {
+                    &__cog {
+                        img {
+                            animation: spin 5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+    }
 }

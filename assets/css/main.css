@@ -1,3 +1,11 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +42,7 @@ main {
 }
 .cso_auto-fill {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   align-items: stretch;
   gap: 30px;
   width: 100%;
@@ -45,6 +53,11 @@ main {
   align-items: stretch;
   gap: 30px;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .cso_auto-fill {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 }
 
 #sobreMi h4 img {
@@ -155,8 +168,33 @@ h1, h2, h3, h4 {
   grid-template-rows: 100px min-content;
   justify-items: center;
   padding: 1rem;
+  gap: 1rem;
 }
-
+.cso_file__icon {
+  width: 100%;
+}
+.cso_file__icon--projects {
+  position: relative;
+}
+.cso_file__icon--projects__doc {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.cso_file__icon--projects__cog {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-124%);
+  bottom: -8%;
+}
+.cso_file__icon--projects__pen {
+  position: absolute;
+  left: 50%;
+  transform: translateX(120%);
+}
+.cso_file:hover .cso_file__icon--projects__cog img {
+  animation: spin 5s;
+}
 .cso_nav {
   display: flex;
   align-items: center;
