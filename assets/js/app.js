@@ -1,21 +1,28 @@
 let enJSON;
 let esJSON;
+let langstart = "es";
 
 fetch("./assets/js/translate/en.json")
   .then((res) => res.json())
   .then((data) => {
     enJSON = data;
+    if (langstart === "en") {
+      setLang();
+    }
 });
 fetch("./assets/js/translate/es.json")
   .then((res) => res.json())
   .then((data) => {
     esJSON = data;
+    if (langstart === "es") {
+      setLang();
+    }
 });
 
 function setLang() {
-  let translateList = document.getElementsByClassName("cs_translate");
+  let translateList = document.querySelectorAll('[data-translate]');
   for (let item of translateList) {
-    item.innerHTML = data[item.dataset.translate];
+    langstart === "es" ? item.innerHTML = esJSON[item.dataset.translate] : item.innerHTML = enJSON[item.dataset.translate];
   }
 }
 
