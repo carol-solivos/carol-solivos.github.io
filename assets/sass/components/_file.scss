@@ -30,9 +30,19 @@
         .#{$prefix}_file {
             &__icon {
                 &--projects {
+                    &__doc {
+                        img {
+                            animation: plop 0.5s;
+                        }
+                    }
                     &__cog {
                         img {
-                            animation: spin 5s;
+                            animation: spin 3s;
+                        }
+                    }
+                    &__pen {
+                        img {
+                            animation: pencil 2s;
                         }
                     }
                 }

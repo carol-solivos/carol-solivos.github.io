@@ -2,6 +2,11 @@ body {
 	color: $color-dark;
   background-color: $color-secondary !important;
   height: 100vh;
+  cursor: url('/assets/img/icons/ico-arrow-old.svg'),auto;
+}
+
+a, button {
+  cursor: url('/assets/img/icons/ico-cursor-hand.svg'), auto !important;
 }
 
 main {

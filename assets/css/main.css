@@ -6,6 +6,38 @@
     transform: rotate(360deg);
   }
 }
+@keyframes plop {
+  0% {
+    transform: scale(0.6);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: bottom;
+  }
+}
+@keyframes pencil {
+  0% {
+    transform: rotate(0deg) translate(0px, 0px);
+    transform-origin: bottom;
+  }
+  20% {
+    transform: rotate(30deg) translate(-35px, 12px);
+    transform-origin: bottom;
+  }
+  50% {
+    transform: rotate(30deg) translate(0px, -5px);
+    transform-origin: bottom;
+  }
+  80% {
+    transform: rotate(30deg) translate(-30px, 32px);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: rotate(0deg) translate(0px, 0px);
+    transform-origin: bottom;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +50,11 @@ body {
   color: #111;
   background-color: #ECECEC !important;
   height: 100vh;
+  cursor: url("/assets/img/icons/ico-arrow-old.svg"), auto;
+}
+
+a, button {
+  cursor: url("/assets/img/icons/ico-cursor-hand.svg"), auto !important;
 }
 
 main {
@@ -192,8 +229,14 @@ h1, h2, h3, h4 {
   left: 50%;
   transform: translateX(120%);
 }
+.cso_file:hover .cso_file__icon--projects__doc img {
+  animation: plop 0.5s;
+}
 .cso_file:hover .cso_file__icon--projects__cog img {
-  animation: spin 5s;
+  animation: spin 3s;
+}
+.cso_file:hover .cso_file__icon--projects__pen img {
+  animation: pencil 2s;
 }
 .cso_nav {
   display: flex;
