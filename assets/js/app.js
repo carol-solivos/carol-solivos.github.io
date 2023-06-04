@@ -1,12 +1,19 @@
 let enJSON;
 let esJSON;
-let langstart = "es";
+let currentLang = "es";
+let enBtn = document.getElementById("csoEn");
+let esBtn = document.getElementById("csoEs");
+let enIcon = document.getElementsByClassName("cso-en");
+let esIcon = document.getElementsByClassName("cso-es");
+
+esBtn.addEventListener("click", function(){changeLang("es")}, false);
+enBtn.addEventListener("click", function(){changeLang("en")}, false);
 
 fetch("./assets/js/translate/en.json")
   .then((res) => res.json())
   .then((data) => {
     enJSON = data;
-    if (langstart === "en") {
+    if (currentLang === "en") {
       setLang();
     }
 });
@@ -14,7 +21,7 @@ fetch("./assets/js/translate/es.json")
   .then((res) => res.json())
   .then((data) => {
     esJSON = data;
-    if (langstart === "es") {
+    if (currentLang === "es") {
       setLang();
     }
 });
@@ -22,8 +29,25 @@ fetch("./assets/js/translate/es.json")
 function setLang() {
   let translateList = document.querySelectorAll('[data-translate]');
   for (let item of translateList) {
-    langstart === "es" ? item.innerHTML = esJSON[item.dataset.translate] : item.innerHTML = enJSON[item.dataset.translate];
+    if (currentLang === "en") {
+      item.innerHTML = enJSON[item.dataset.translate];
+      enIcon[0].classList.add('cso_show');
+      enIcon[1].classList.add('cso_show');
+      esIcon[0].classList.remove('cso_show');
+      esIcon[1].classList.remove('cso_show');
+    } else {
+      item.innerHTML = esJSON[item.dataset.translate];
+      esIcon[0].classList.add('cso_show');
+      esIcon[1].classList.add('cso_show');
+      enIcon[0].classList.remove('cso_show');
+      enIcon[1].classList.remove('cso_show');
+    }
   }
+}
+
+function changeLang(lang) {
+  currentLang = lang;
+  setLang();
 }
 
 function markMenu(btn) {

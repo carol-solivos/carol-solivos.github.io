@@ -16,9 +16,6 @@ main {
 }
 
 .#{$prefix} {
-  &_show {
-    display: flex;
-  }
   &_auto {
     &-fit {
       display: grid;

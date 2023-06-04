@@ -1,5 +1,7 @@
 {
+    "title": "Carol's Portfolio",
     "profession": "Front-end Developer",
     "projects": "Projects",
-    "title": "Carol Sepúlveda Portfolio"
+    "skills": "Skills",
+    "about": "About me"
 }

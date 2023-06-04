@@ -63,9 +63,6 @@ main {
   height: 90%;
 }
 
-.cso_show {
-  display: flex;
-}
 .cso_auto-fit {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -274,6 +271,12 @@ h1, h2, h3, h4 {
 .cso_nav__options .dropdown-toggle img {
   margin-right: 0.3rem;
 }
+.cso_nav__options__lang div {
+  display: none;
+}
+.cso_nav__options__lang div.cso_show {
+  display: flex;
+}
 .cso_nav__options__lang__check {
   max-width: 1rem;
 }
@@ -285,6 +288,7 @@ h1, h2, h3, h4 {
 .cso_nav .dropdown-menu li a {
   display: inline-flex;
   align-items: center;
+  gap: 0.5rem;
   font-family: "VT323", sans-serif;
   font-size: 1.5rem;
   min-height: 3rem;
@@ -292,6 +296,15 @@ h1, h2, h3, h4 {
 .cso_nav .dropdown-menu li a:hover {
   background-color: #0095E9;
   color: #fff;
+}
+.cso_nav .dropdown-menu li a .cso_nav__options__lang__check {
+  display: none;
+}
+.cso_nav .dropdown-menu li a.cso_show .cso_nav__options__lang__check {
+  display: inline-flex;
+}
+.cso_nav .dropdown-menu li a h3 {
+  margin: 0;
 }
 .cso_nav .dropdown-menu li:not(:last-child) {
   border-bottom: 2px solid #111;

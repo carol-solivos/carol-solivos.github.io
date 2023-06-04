@@ -30,6 +30,12 @@
             }
         }
         &__lang {
+            div {
+                display: none;
+                &.cso_show {
+                    display: flex;
+                }
+            }
             &__check {
                 max-width: 1rem;
             }
@@ -44,12 +50,24 @@
             a {
                 display: inline-flex;
                 align-items: center;
+                gap: 0.5rem;
                 font-family: 'VT323', sans-serif;
                 font-size: 1.5rem;
                 min-height: 3rem;
                 &:hover {
                     background-color: $color-primary;
                     color: $color-light;
+                }
+                .#{$prefix}_nav__options__lang__check {
+                    display: none;
+                }
+                &.cso_show {
+                    .#{$prefix}_nav__options__lang__check {
+                        display: inline-flex;
+                    }
+                }
+                h3 {
+                    margin: 0;
                 }
             }
             &:not(:last-child) {
