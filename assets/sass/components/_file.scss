@@ -26,7 +26,8 @@
             }
         }
     }
-    &:hover {
+    &:hover, &:active {
+        cursor: url('/assets/img/icons/ico-cursor-hand.svg'), auto !important;
         .#{$prefix}_file {
             &__icon {
                 &--projects {

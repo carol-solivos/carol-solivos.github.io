@@ -5,6 +5,9 @@ let enBtn = document.getElementById("csoEn");
 let esBtn = document.getElementById("csoEs");
 let enIcon = document.getElementsByClassName("cso-en");
 let esIcon = document.getElementsByClassName("cso-es");
+// modals
+let modalTriggers = document.querySelectorAll('[data-modal]');
+let modalProject = document.getElementById("modalProject");
 
 esBtn.addEventListener("click", function(){changeLang("es")}, false);
 enBtn.addEventListener("click", function(){changeLang("en")}, false);
@@ -50,33 +53,35 @@ function changeLang(lang) {
   setLang();
 }
 
-function markMenu(btn) {
-  let btnMenu = document.getElementsByClassName('btnMenu');
-  let btnID = document.getElementById(btn);
-
-  for (let btn of btnMenu) {
-    btn.classList.remove('active');
-  }
-  btnID.classList.add('active');
+for (let item of modalTriggers) {
+  item.addEventListener("click", function(){showModal(item.dataset.modal)}, false);
 }
 
-const sections = document.getElementsByClassName("panel");
-
-const animation = (entries, observador) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      console.log(entry.target, entry.target.dataset.active);
-      markMenu(entry.target.dataset.active);
-    }
-  });
-};
-
-const observador = new IntersectionObserver(animation, {
-  root: null,
-  rootMargin: "50px",
-  threshold: 0.3,
-});
-
-for (let section of sections) {
-  observador.observe(section);
+function showModal(modalId) {
+  document.getElementById(modalId).classList.add("cso_show")
 }
+
+function closeModal(modalId) {
+  document.getElementById(modalId).classList.remove("cso_show")
+}
+
+// const sections = document.getElementsByClassName("panel");
+
+// const animation = (entries, observador) => {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       console.log(entry.target, entry.target.dataset.active);
+//       markMenu(entry.target.dataset.active);
+//     }
+//   });
+// };
+
+// const observador = new IntersectionObserver(animation, {
+//   root: null,
+//   rootMargin: "50px",
+//   threshold: 0.3,
+// });
+
+// for (let section of sections) {
+//   observador.observe(section);
+// }

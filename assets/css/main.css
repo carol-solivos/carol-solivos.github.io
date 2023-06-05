@@ -38,6 +38,15 @@
     transform-origin: bottom;
   }
 }
+@keyframes modal {
+  0% {
+    transform: translate(0, -5px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -95,6 +104,10 @@ main {
   .cso_auto-fill {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
+}
+
+#csoMain {
+  min-height: 450px;
 }
 
 #sobreMi h4 img {
@@ -229,20 +242,69 @@ h1, h2, h3, h4 {
   left: 50%;
   transform: translateX(120%);
 }
-.cso_file:hover .cso_file__icon--projects__doc img {
+.cso_file:hover, .cso_file:active {
+  cursor: url("/assets/img/icons/ico-cursor-hand.svg"), auto !important;
+}
+.cso_file:hover .cso_file__icon--projects__doc img, .cso_file:active .cso_file__icon--projects__doc img {
   animation: plop 0.5s;
 }
-.cso_file:hover .cso_file__icon--projects__cog img {
+.cso_file:hover .cso_file__icon--projects__cog img, .cso_file:active .cso_file__icon--projects__cog img {
   animation: spin 3s;
 }
-.cso_file:hover .cso_file__icon--projects__pen img {
+.cso_file:hover .cso_file__icon--projects__pen img, .cso_file:active .cso_file__icon--projects__pen img {
   animation: pencil 2s;
+}
+.cso_modal {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 94vh;
+  width: 96vw;
+  background-color: #fff;
+  z-index: 10;
+  animation: modal 0.3s;
+}
+.cso_modal.cso_show {
+  display: block;
+}
+.cso_modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  background-color: #0095E9;
+  border: 2px solid #111;
+}
+.cso_modal__header__title {
+  background-color: #111;
+  color: #fff;
+  padding: 0.2rem 1rem;
+}
+.cso_modal__header__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  border: 4px solid #111;
+  background-color: #fff;
+  height: 60px;
+  width: 60px;
+  cursor: url("/assets/img/icons/ico-cursor-hand.svg"), auto !important;
+}
+.cso_modal__header__close img {
+  width: 50%;
 }
 .cso_nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 2;
   background-color: #7690EC;
   border: 2px solid #111;
 }
