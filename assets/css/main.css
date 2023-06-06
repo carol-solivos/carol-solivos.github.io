@@ -61,6 +61,7 @@ body {
   background-color: #ECECEC !important;
   height: 100vh;
   cursor: url("/assets/img/icons/ico-arrow-old.svg"), auto;
+  font-family: "Courier New", Courier, monospace !important;
 }
 
 a, button {
@@ -70,7 +71,7 @@ a, button {
 main {
   display: flex;
   align-items: center;
-  height: 90%;
+  height: calc(90% - 67px);
 }
 
 .cso_auto-fit {
@@ -206,7 +207,7 @@ main {
   font-weight: 700;
   font-display: fallback;
 }
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5 {
   font-family: "VT323", sans-serif;
 }
 
@@ -263,10 +264,12 @@ h1, h2, h3, h4, h5, p {
   transform: translate(-50%, -50%);
   height: 92vh;
   width: 96vw;
-  background-color: #fff;
   z-index: 10;
 }
 .cso_modal__container {
+  background-color: #fff;
+  border: 2px solid #111;
+  height: 100%;
   animation: modal 0.3s;
 }
 .cso_modal.cso_show {
@@ -279,14 +282,15 @@ h1, h2, h3, h4, h5, p {
   position: sticky;
   top: 0;
   background-color: #0095E9;
-  border: 2px solid #111;
-  min-height: 60px;
+  border-bottom: 2px solid #111;
 }
 .cso_modal__header__title {
+  display: flex;
+  align-items: center;
   background-color: #111;
   color: #fff;
   padding: 0.2rem 1rem;
-  min-height: 58px;
+  height: 60px;
 }
 .cso_modal__header__title h1 {
   margin: 0;
@@ -311,6 +315,126 @@ h1, h2, h3, h4, h5, p {
 }
 .cso_modal--yellow .cso_modal__header {
   background-color: #FDFFB1;
+}
+.cso_modal__body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr minmax(100px, 2fr);
+  height: calc(100% - 60px);
+  overflow-y: hidden;
+}
+.cso_modal__body__table {
+  border-bottom: 2px solid #111;
+  overflow-y: auto;
+}
+.cso_modal__body__table__head {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid #111;
+  background-color: #FDFFB1;
+}
+.cso_modal__body__table__head h3 {
+  margin: 0;
+}
+.cso_modal__body__table__head__cell {
+  padding: 0.5rem;
+}
+.cso_modal__body__table__head__cell:not(:last-child) {
+  border-right: 2px solid #111;
+}
+.cso_modal__body__table__rows {
+  padding: 0;
+}
+.cso_modal__body__table__rows li {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  list-style: none;
+  border-bottom: 2px solid #111;
+  cursor: url("/assets/img/icons/ico-cursor-hand.svg"), auto !important;
+}
+.cso_modal__body__table__rows li:hover {
+  background-color: #0095E9;
+  color: #fff;
+}
+.cso_modal__body__table__rows li.disabled {
+  pointer-events: none;
+  background-color: #ECECEC;
+  color: #AAA;
+}
+.cso_modal__body__table__rows li.disabled .cso_modal__body__table__rows__skills h4 {
+  background-color: #AAA;
+}
+.cso_modal__body__table__rows li div {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.cso_modal__body__table__rows li div:not(:last-child) {
+  border-right: 2px solid #111;
+}
+.cso_modal__body__table__rows li div p {
+  margin: 0;
+}
+.cso_modal__body__table__rows li h4 {
+  margin: 0;
+}
+.cso_modal__body__table__rows__skills {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.cso_modal__body__table__rows__skills h4 {
+  padding: 0.2rem 0.5rem;
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+}
+.cso_modal__body__preview {
+  padding: 1rem;
+  overflow-y: auto;
+}
+.cso_modal__body__preview__project {
+  display: none;
+}
+.cso_modal__body__preview__project.cso_show {
+  display: block;
+}
+.cso_modal__body__preview__project a {
+  font-weight: 700;
+}
+.cso_modal__body__preview__project__banner {
+  width: 100%;
+  border: 2px solid #111;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .cso_modal__body {
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr;
+  }
+  .cso_modal__body__table {
+    border-right: 2px solid #111;
+  }
+  .cso_modal__body__table__head__cell {
+    padding: 1rem;
+  }
+  .cso_modal__body__table__rows li div {
+    padding: 1rem;
+  }
+  .cso_modal__body__preview {
+    padding: 2rem 3rem;
+  }
+}
+
+.cso_slider--project {
+  padding: 2rem 0;
+}
+.cso_slider--project img {
+  border: 2px solid #111;
 }
 .cso_nav {
   display: flex;
