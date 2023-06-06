@@ -10,7 +10,10 @@
     &__title {
         background-color: $color-dark;
         color: $color-light;
-        padding: 0.2rem 1rem;
+        padding: 0.5rem 1rem;
+        h1 {
+            margin: 0;
+        }
     }
     &__options {
         display: flex;

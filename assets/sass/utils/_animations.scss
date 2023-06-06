@@ -43,10 +43,11 @@
 
 @keyframes modal {
     0% {
-        transform: translate(0, -5px);
+        transform: translate(0, 20px);
         opacity: 0;
     }
     100% {
+        transform: translate(0, 0);
         opacity: 1;
     }
 }

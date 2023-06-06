@@ -48,7 +48,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="cso_nav__options__mode dropdown">
+			<!-- <div class="cso_nav__options__mode dropdown">
 				<button class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 					<img src="assets/img/icons/ico-sun.svg" alt="modo claro">
 				</button>
@@ -56,7 +56,7 @@
 					<li><a class="dropdown-item" href="#">Modo Claro</a></li>
 					<li><a class="dropdown-item" href="#">Modo Oscuro</a></li>
 				</ul>
-			</div>
+			</div> -->
 		</div>
 	</nav>
 
@@ -83,7 +83,7 @@
 							<img src="assets/img/icons/ico-sun.svg" alt="modo claro">
 							<h3 data-translate="skills"></h3>
 						</div>
-						<div class="cso_file">
+						<div class="cso_file" data-modal="modalAbout">
 							<img src="assets/img/icons/ico-sun.svg" alt="modo claro">
 							<h3 data-translate="about"></h3>
 						</div>
@@ -106,15 +106,51 @@
 	</main>
 
 	<div id="modalProject" class="cso_modal">
-		<div class="cso_modal__header">
-			<div class="cso_modal__header__title">
-				<h1 data-translate="projects"></h1>
+		<div class="cso_modal__container">
+			<div class="cso_modal__header">
+				<div class="cso_modal__header__title">
+					<h1 data-translate="projects"></h1>
+				</div>
+				<div class="cso_modal__header__close" onclick="closeModal('modalProject')">
+					<img src="assets/img/icons/ico-close.svg" alt="">
+				</div>
 			</div>
-			<div class="cso_modal__header__close" onclick="closeModal('modalProject')">
-				<img src="assets/img/icons/ico-close.svg" alt="">
+			<div class="cso_modal__body">
+				<h3 data-translate="name"></h3>
 			</div>
 		</div>
-		asdf
+	</div>
+
+	<div id="modalSkills" class="cso_modal cso_modal--green">
+		<div class="cso_modal__container">
+			<div class="cso_modal__header">
+				<div class="cso_modal__header__title">
+					<h1 data-translate="skills"></h1>
+				</div>
+				<div class="cso_modal__header__close" onclick="closeModal('modalSkills')">
+					<img src="assets/img/icons/ico-close.svg" alt="">
+				</div>
+			</div>
+			<div class="cso_modal__body">
+				<h3 data-translate="name"></h3>
+			</div>
+		</div>
+	</div>
+
+	<div id="modalAbout" class="cso_modal cso_modal--yellow">
+		<div class="cso_modal__container">
+			<div class="cso_modal__header">
+				<div class="cso_modal__header__title">
+					<h1 data-translate="about"></h1>
+				</div>
+				<div class="cso_modal__header__close" onclick="closeModal('modalAbout')">
+					<img src="assets/img/icons/ico-close.svg" alt="">
+				</div>
+			</div>
+			<div class="cso_modal__body">
+				<h3 data-translate="name"></h3>
+			</div>
+		</div>
 	</div>
 
 	

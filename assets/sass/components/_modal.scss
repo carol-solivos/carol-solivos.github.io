@@ -4,11 +4,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 94vh;
+    height: 92vh;
     width: 96vw;
     background-color: $color-light;
     z-index: 10;
-    animation: modal 0.3s;
+    &__container {
+        animation: modal 0.3s;
+    }
     &.cso_show {
         display: block;
     }
@@ -20,10 +22,15 @@
         top: 0;
         background-color: $color-primary;
         border: 2px solid $color-border;
+        min-height: 60px;
         &__title {
             background-color: $color-dark;
             color: $color-light;
             padding: 0.2rem 1rem;
+            min-height: 58px;
+            h1 {
+                margin: 0;
+            }
         }
         &__close {
             display: flex;
@@ -39,6 +46,16 @@
             img {
                 width: 50%;
             }
+        }
+    }
+    &--green {
+        .#{$prefix}_modal__header {
+            background-color: $color-green;
+        }
+    }
+    &--yellow {
+        .#{$prefix}_modal__header {
+            background-color: $color-yellow;
         }
     }
     

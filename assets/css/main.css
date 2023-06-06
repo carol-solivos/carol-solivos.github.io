@@ -40,10 +40,11 @@
 }
 @keyframes modal {
   0% {
-    transform: translate(0, -5px);
+    transform: translate(0, 20px);
     opacity: 0;
   }
   100% {
+    transform: translate(0, 0);
     opacity: 1;
   }
 }
@@ -205,7 +206,7 @@ main {
   font-weight: 700;
   font-display: fallback;
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, p {
   font-family: "VT323", sans-serif;
 }
 
@@ -260,10 +261,12 @@ h1, h2, h3, h4 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 94vh;
+  height: 92vh;
   width: 96vw;
   background-color: #fff;
   z-index: 10;
+}
+.cso_modal__container {
   animation: modal 0.3s;
 }
 .cso_modal.cso_show {
@@ -277,11 +280,16 @@ h1, h2, h3, h4 {
   top: 0;
   background-color: #0095E9;
   border: 2px solid #111;
+  min-height: 60px;
 }
 .cso_modal__header__title {
   background-color: #111;
   color: #fff;
   padding: 0.2rem 1rem;
+  min-height: 58px;
+}
+.cso_modal__header__title h1 {
+  margin: 0;
 }
 .cso_modal__header__close {
   display: flex;
@@ -298,6 +306,12 @@ h1, h2, h3, h4 {
 .cso_modal__header__close img {
   width: 50%;
 }
+.cso_modal--green .cso_modal__header {
+  background-color: #00968D;
+}
+.cso_modal--yellow .cso_modal__header {
+  background-color: #FDFFB1;
+}
 .cso_nav {
   display: flex;
   align-items: center;
@@ -311,7 +325,10 @@ h1, h2, h3, h4 {
 .cso_nav__title {
   background-color: #111;
   color: #fff;
-  padding: 0.2rem 1rem;
+  padding: 0.5rem 1rem;
+}
+.cso_nav__title h1 {
+  margin: 0;
 }
 .cso_nav__options {
   display: flex;
