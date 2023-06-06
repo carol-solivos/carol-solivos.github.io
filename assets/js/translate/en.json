@@ -1,7 +1,23 @@
 {
     "title": "Carol's Portfolio",
     "profession": "Front-end Developer",
-    "projects": "Projects",
+    "projects": {
+        "category": "Projects",
+        "autocl": {
+            "name": "Auto.cl",
+            "title": "Auto.cl website",
+            "p1": "Front end development for Auto.cl client. Angular 14 and Angular Material were used as UI framework.",
+            "p2": "The main requirement was to create flows that customers could use to choose a car that suits their preferences. This was achieved through forms build with different steps that resulted in the spected match.",
+            "link": "Visit www.auto.cl"
+        },
+        "kaufmann": {
+            "name": "Kaufmann Framework",
+            "title": "Kaufmann Framework",
+            "p1": "Creation of a UI components system to reuse across many Angular and Liferay projects.",
+            "p2": "The project was built on Angular 14 and Ant design. An NPM package was created and shared through Azure Artifacts. For the user's instructions and details of each component the documentation was implemented with Storybook.",
+            "link": "Visit www.kaufmann.cl"
+        }
+    },
     "name": "Name",
     "skills": "Skills",
     "about": "About me"

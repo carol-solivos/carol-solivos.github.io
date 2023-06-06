@@ -34,20 +34,21 @@ fetch("./assets/js/translate/es.json")
 
 function setLang() {
   let translateList = document.querySelectorAll('[data-translate]');
+  let showIcon = currentLang === "es" ? esIcon : enIcon;
+  let hideIcon = currentLang === "es" ? enIcon : esIcon;
+  
+  showIcon[0].classList.add('cso_show');
+  showIcon[1].classList.add('cso_show');
+  hideIcon[0].classList.remove('cso_show');
+  hideIcon[1].classList.remove('cso_show');
+
   for (let item of translateList) {
-    if (currentLang === "en") {
-      item.innerHTML = enJSON[item.dataset.translate];
-      enIcon[0].classList.add('cso_show');
-      enIcon[1].classList.add('cso_show');
-      esIcon[0].classList.remove('cso_show');
-      esIcon[1].classList.remove('cso_show');
-    } else {
-      item.innerHTML = esJSON[item.dataset.translate];
-      esIcon[0].classList.add('cso_show');
-      esIcon[1].classList.add('cso_show');
-      enIcon[0].classList.remove('cso_show');
-      enIcon[1].classList.remove('cso_show');
-    }
+    let arrayDataset = item.dataset.translate.split(".");
+    let string = currentLang === "es" ? esJSON : enJSON;
+    arrayDataset.forEach(el => {
+      string = string[el]
+    });
+    item.innerHTML = string;
   }
 }
 
