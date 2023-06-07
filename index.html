@@ -19,7 +19,7 @@
 <body>
 	<nav class="cso_nav">
 		<div class="cso_nav__title">
-			<h1 data-translate="title">Portafolio de Carol</h1>
+			<h1 data-translate="title">Portafolio Carol</h1>
 		</div>
 		<div class="cso_nav__options">
 			<div class="cso_nav__options__lang dropdown">
@@ -145,11 +145,11 @@
 								<h4>Auto.cl</h4>
 							</div>
 							<div class="cso_modal__body__table__rows__skills">
-								<h4>Angular</h4>
-								<h4>Angular Material</h4>
-								<h4>SASS</h4>
-								<h4>TS</h4>
-								<h4>API</h4>
+								<h5>Angular</h5>
+								<h5>Angular Material</h5>
+								<h5>SASS</h5>
+								<h5>TS</h5>
+								<h5>API</h5>
 							</div>
 						</li>
 						<li onclick="showProject('projectKaufmann')">
@@ -157,12 +157,12 @@
 								<h4 data-translate="projects.kaufmann.name">Framework Kaufmann</h4>
 							</div>
 							<div class="cso_modal__body__table__rows__skills">
-								<h4>Angular</h4>
-								<h4>Storybook</h4>
-								<h4>NPM</h4>
-								<h4>Ant Design</h4>
-								<h4>Azure</h4>
-								<h4>API</h4>
+								<h5>Angular</h5>
+								<h5>Storybook</h5>
+								<h5>NPM</h5>
+								<h5>Ant Design</h5>
+								<h5>Azure</h5>
+								<h5>API</h5>
 							</div>
 						</li>
 						<li class="disabled">
@@ -170,9 +170,9 @@
 								<h4>SAYSA</h4>
 							</div>
 							<div class="cso_modal__body__table__rows__skills">
-								<h4>Wordpress</h4>
-								<h4>HTML</h4>
-								<h4>CSS</h4>
+								<h5>Wordpress</h5>
+								<h5>HTML</h5>
+								<h5>CSS</h5>
 							</div>
 						</li>
 						<li class="disabled">
@@ -180,18 +180,23 @@
 								<h4>Langford</h4>
 							</div>
 							<div class="cso_modal__body__table__rows__skills">
-								<h4>Angular</h4>
-								<h4>SASS</h4>
-								<h4>TS</h4>
-								<h4>Bootstrap</h4>
-								<h4>API</h4>
+								<h5>Angular</h5>
+								<h5>SASS</h5>
+								<h5>TS</h5>
+								<h5>Bootstrap</h5>
+								<h5>API</h5>
 							</div>
 						</li>
 					</ul>
 				</div>
 				<div class="cso_modal__body__preview">
 					<div class="cso_modal__body__preview__project cso_show" id="projectAutocl">
-						<img class="cso_modal__body__preview__project__banner" src="assets/img/header-project-auto.png" alt="imagen cabecera auto">
+						<picture>
+							<source media="(max-width: 768px)"
+							  srcset="assets/img/header-project-autocl-mob.png" />
+							<img class="cso_modal__body__preview__project__banner"
+							  src="assets/img/header-project-auto.png" alt="imagen cabecera auto"/>
+						</picture>
 						<h2 data-translate="projects.autocl.title">Sitio web Auto.cl</h2>
 						<p data-translate="projects.autocl.p1">Desarrollo Front end para cliente Auto.cl. Se utilizó Angular 14 y Angular Material como framework UI. </p>
 
@@ -210,7 +215,12 @@
 					</div>
 
 					<div class="cso_modal__body__preview__project" id="projectKaufmann">
-						<img class="cso_modal__body__preview__project__banner" src="assets/img/header-project-kaufmann.png" alt="imagen cabecera auto">
+						<picture>
+							<source media="(max-width: 768px)"
+							  srcset="assets/img/header-project-kaufmann-mob.png" />
+							<img class="cso_modal__body__preview__project__banner"
+							  src="assets/img/header-project-kaufmann.png" />
+						</picture>
 						<h2 data-translate="projects.kaufmann.title">Framework Kaufmann</h2>
 						<p data-translate="projects.kaufmann.p1">Se crea un sistema de componentes UI para reutilizar en sus distintos proyectos Angular y Liferay.</p>
 

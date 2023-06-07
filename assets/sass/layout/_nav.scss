@@ -10,7 +10,7 @@
     &__title {
         background-color: $color-dark;
         color: $color-light;
-        padding: 0.5rem 1rem;
+        padding: 0.5rem;
         h1 {
             margin: 0;
         }
@@ -21,7 +21,7 @@
         justify-content: flex-end;
         gap: 1rem;
         position: absolute;
-        right: 1rem;
+        right: 0;
         .dropdown-toggle {
             display: flex;
             align-items: center;
@@ -84,7 +84,11 @@
         }
     }
     @media (min-width: 768px) {
+        &__title {
+            padding: 0.5rem 1rem;
+        }
         &__options {
+            right: 1rem;
             &__lang {
                 img {
                     display: inline;
