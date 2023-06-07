@@ -1,0 +1,24 @@
+{
+    "title": "Portafolio de Carol",
+    "profession": "Desarrolladora Front-end",
+    "projects": {
+        "category": "Proyectos",
+        "autocl": {
+            "name": "Auto.cl",
+            "title": "Sitio web Auto.cl",
+            "p1": "Desarrollo Front end para cliente Auto.cl. Se utilizó Angular 14 y Angular Material como framework UI.",
+            "p2": "El requerimiento principal fue crear flujos para que los clientes pudieran elegir un auto que se acomode a sus preferencias. Esto se logró a través de formularios compuestos de distintos pasos que resultaban en las coincidencias encontradas.",
+            "link": "Visitar www.auto.cl"
+        },
+        "kaufmann": {
+            "name": "Framework Kaufmann",
+            "title": "Framework Kaufmann",
+            "p1": "Se crea un sistema de componentes UI para reutilizar en sus distintos proyectos Angular y Liferay.",
+            "p2": "El proyecto se construyó con Angular 14 y Ant design. Se creó una librería NPM compartida a través de Artefactos de Azure. Para las instrucciones de uso y detalles de cada componente se implementó la documentación con Storybook.",
+            "link": "Visitar www.kaufmann.cl"
+        }
+    },
+    "name": "Nombre",
+    "skills": "Herramientas",
+    "about": "Sobre mí"
+}

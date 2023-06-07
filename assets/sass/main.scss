@@ -1,0 +1,38 @@
+//utils
+@import "utils/_variables";
+@import "utils/_animations";
+
+// // //base
+@import "base/_reset";
+@import "base/_base";
+@import "base/_typography";
+
+
+// //components
+// @import "components/_accordion";
+// @import "components/_alerts";
+// @import "components/_badges";
+// @import "components/_banners";
+// @import "components/_boxes";
+// @import "components/_breadcrumbs";
+// @import "components/_buttons";
+// @import "components/_cards";
+// @import "components/_filters";
+@import "components/_file";
+// @import "components/_forms";
+// @import "components/_lists";
+@import "components/_modal";
+// @import "components/_paginator";
+// @import "components/_publications";
+@import "components/_slider";
+// @import "components/_side-menu";
+// @import "components/_tabs";
+// @import "components/_tables";
+// @import "components/_timeline";
+// @import "components/_video";
+
+//layout
+// @import "layout/_footer";
+// @import "layout/_header";
+@import "layout/_nav";
+// @import "layout/_sections";

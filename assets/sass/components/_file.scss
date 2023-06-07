@@ -1,0 +1,64 @@
+.#{$prefix}_file {
+    display: grid;
+    grid-template-rows: 100px min-content;
+    justify-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        &--projects {
+            position: relative;
+            &__doc {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &__cog {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-124%);
+                bottom: -8%;
+            }
+            &__pen {
+                position: absolute;
+                left: 50%;
+                transform: translateX(120%);
+            }
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+    &:hover, &:active {
+        cursor: url('/assets/img/icons/ico-cursor-hand.svg'), auto !important;
+        .#{$prefix}_file {
+            &__icon {
+                &--projects {
+                    &__doc {
+                        img {
+                            animation: plop 0.5s;
+                        }
+                    }
+                    &__cog {
+                        img {
+                            animation: spin 3s;
+                        }
+                    }
+                    &__pen {
+                        img {
+                            animation: pencil 2s;
+                        }
+                    }
+                }
+                &--linkedin {
+                    animation: plop 0.3s;
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+    }
+}

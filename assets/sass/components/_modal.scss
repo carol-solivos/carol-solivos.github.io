@@ -1,0 +1,186 @@
+.#{$prefix}_modal {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    &__container {
+        background-color: $color-light;
+        border: 2px solid $color-border;
+        height: 100%;
+        animation: modal 0.3s;
+    }
+    &.cso_show {
+        display: block;
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        background-color: $color-primary;
+        border-bottom: 2px solid $color-border;
+        &__title {
+            display: flex;
+            align-items: center;
+            background-color: $color-dark;
+            color: $color-light;
+            padding: 0.2rem 1rem;
+            height: 60px;
+            h1 {
+                margin: 0;
+            }
+        }
+        &__close {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+            border: 4px solid $color-dark;
+            background-color: $color-light;
+            height: 60px;
+            width: 60px;
+            cursor: url('/assets/img/icons/ico-cursor-hand.svg'), auto !important;
+            img {
+                width: 50%;
+            }
+        }
+    }
+    &--green {
+        .#{$prefix}_modal__header {
+            background-color: $color-green;
+        }
+    }
+    &--yellow {
+        .#{$prefix}_modal__header {
+            background-color: $color-yellow;
+        }
+    }
+    &__body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr minmax(100px, 2fr);
+        height: calc(100% - 60px);
+        overflow-y: hidden;
+        &__table {
+            border-bottom: 2px solid $color-border;
+            overflow-y: auto;
+            &__head {
+                display: grid;
+                grid-template-columns: 2fr 3fr;
+                align-items: center;
+                position: sticky;
+                top: 0;
+                border-bottom: 2px solid $color-border;
+                background-color: $color-yellow;
+                h3 {
+                    margin: 0;
+                }
+                &__cell {
+                    padding: 0.5rem;
+                    &:not(:last-child) {
+                        border-right: 2px solid $color-border;
+                    }
+                }
+            }
+            &__rows {
+                padding: 0;
+                li {
+                    display: grid;
+                    grid-template-columns: 2fr 3fr;
+                    list-style: none;
+                    border-bottom: 2px solid $color-border;
+                    cursor: url('/assets/img/icons/ico-cursor-hand.svg'), auto !important;
+                    &:hover {
+                        background-color: $color-primary;
+                        color: $color-light;
+                    }
+                    &.disabled {
+                        pointer-events: none;
+                        background-color: $color-secondary;
+                        color: $color-grey;
+                        .#{$prefix}_modal__body__table__rows__skills {
+                            h4 {
+                                background-color: $color-grey;
+                            }
+                        }
+                    }
+                    div {
+                        display: flex;
+                        align-items: center;
+                        padding: 0.5rem;
+                        &:not(:last-child) {
+                            border-right: 2px solid $color-border;
+                        }
+                        p {
+                            margin: 0;
+                        }
+                    }
+                    h4 {
+                        margin: 0;
+                    }
+                }
+                &__skills {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 0.3rem;
+                    h4 {
+                        padding: 0.2rem 0.5rem;
+                        background-color: $color-dark;
+                        color: $color-light;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        &__preview {
+            padding: 1rem;
+            overflow-y: auto;
+            &__project {
+                display: none;
+                &.cso_show {
+                    display: block;
+                }
+                a {
+                    font-weight: 700;
+                }
+                &__banner {
+                    width: 100%;
+                    border: 2px solid $color-dark;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+    
+    @media (min-width: 768px) {
+        &__body {
+            grid-template-columns: 2fr 3fr;
+            grid-template-rows: 1fr;
+            &__table {
+                border-right: 2px solid $color-border;
+                &__head {
+                    &__cell {
+                        padding: 1rem;
+                    }
+                }
+                &__rows {
+                    li {
+                        div {
+                            padding: 1rem;
+                        }
+                    }
+                }
+            }
+            &__preview {
+                padding: 2rem 3rem;
+            }
+        }
+    }
+}

@@ -1,37 +1,277 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	<title>Carol Sepúlveda Olivos Portafolio</title>
-	<link rel="stylesheet" href="assets/css/styles.css">
+	<meta name="description" content="Front end developer | Angular | Javascript | UI design system">
+	<title>Portafolio Carol</title>
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/libs/splidejs/splide.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500i,700" rel="stylesheet">
-  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/png">
+  	<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/png">
 	<!-- fontawesome -->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<script src="https://kit.fontawesome.com/98f2b148a3.js" crossorigin="anonymous"></script>
+	<script defer src="assets/js/libs/splidejs/splide.min.js"></script>
+	<script defer src="assets/js/app.js"></script>
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
-	<header id="menu">
-		<a href="#inicio"><div id="btn1" class="btnM">Inicio</div></a>
-		<a href="#portafolio"><div id="btn2" class="btnM">Portafolio</div></a>
-    <a href="#sobreMi"><div id="btn3" class="btnM">Sobre mí</div>  </a>
-    <a href="#contacto"><div id="btn4" class="btnM">Contacto</div></a>
-	</header>
+	<nav class="cso_nav">
+		<div class="cso_nav__title">
+			<h1 data-translate="title">Portafolio de Carol</h1>
+		</div>
+		<div class="cso_nav__options">
+			<div class="cso_nav__options__lang dropdown">
+				<button class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<div class="cso-es">
+						<img src="assets/img/icons/ico-flag-chile.svg" alt="bandera español">
+						<h3>ES</h3>
+					</div>
+					<div class="cso-en">
+						<img src="assets/img/icons/ico-flag-uk.svg" alt="bandera inglés">
+						<h3>EN</h3>
+					</div>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a class="dropdown-item cso_show cso-es" href="#" id="csoEs">
+							<img src="assets/img/icons/ico-flag-chile.svg" alt="modo claro">
+							<h3>ES</h3>
+							<img class="cso_nav__options__lang__check" src="assets/img/icons/ico-ok.svg" alt="modo claro">
+						</a>
+					</li>
+					<li>
+						<a class="dropdown-item cso-en" href="#" id="csoEn">
+							<img src="assets/img/icons/ico-flag-uk.svg" alt="modo claro">
+							<h3>EN</h3>
+							<img class="cso_nav__options__lang__check" src="assets/img/icons/ico-ok.svg" alt="modo claro">
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- <div class="cso_nav__options__mode dropdown">
+				<button class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<img src="assets/img/icons/ico-sun.svg" alt="modo claro">
+				</button>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="#">Modo Claro</a></li>
+					<li><a class="dropdown-item" href="#">Modo Oscuro</a></li>
+				</ul>
+			</div> -->
+		</div>
+	</nav>
 
-	<div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-					<!-- Modal Structure -->
-					<a href="http://www.saysa.cl/">asdf</a>
-    </div>
-  </div>
+	<main id="csoMain">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="cso_auto-fill">
+						<div class="cso_file" data-modal="modalProject">
+							<div class="cso_file__icon cso_file__icon--projects">
+								<div class="cso_file__icon--projects__doc">
+									<img src="assets/img/icons/ico-doc.svg" alt="documento">
+								</div>
+								<div class="cso_file__icon--projects__cog">
+									<img src="assets/img/icons/ico-cog.svg" alt="tuerca" width="60" height="60">
+								</div>
+								<div class="cso_file__icon--projects__pen">
+									<img src="assets/img/icons/ico-pen.svg" alt="lapiz">
+								</div>
+							</div>
+							<h3 data-translate="projects.category"></h3>							  
+						</div>
+						<!-- <div class="cso_file" data-modal="modalSkills">
+							<img src="assets/img/icons/ico-sun.svg" alt="modo claro">
+							<h3 data-translate="skills"></h3>
+						</div>
+						<div class="cso_file" data-modal="modalAbout">
+							<img src="assets/img/icons/ico-sun.svg" alt="modo claro">
+							<h3 data-translate="about"></h3>
+						</div>
+						<div class="cso_file">
+							<img src="assets/img/icons/ico-sun.svg" alt="modo claro">
+							<h3>Github</h3>
+						</div> -->
+
+						<a href="https://codepen.io/carol-solivos" class="nodecoration" target="_blank">
+							<div class="cso_file">
+								<div class="cso_file__icon cso_file__icon--linkedin">
+									<img src="assets/img/icons/ico-codepen.svg" alt="icono codepen">
+								</div>
+								<h3>Codepen</h3>
+							</div>
+						</a>
+
+						<a href="https://www.linkedin.com/in/carol-sepulveda-olivos/" class="nodecoration" target="_blank">
+							<div class="cso_file">
+								<div class="cso_file__icon cso_file__icon--linkedin">
+									<img src="assets/img/icons/ico-linkedin.svg" alt="icono linkedin">
+								</div>
+								<h3>Linkedin</h3>
+							</div>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<div id="modalProject" class="cso_modal">
+		<div class="cso_modal__container">
+			<div class="cso_modal__header">
+				<div class="cso_modal__header__title">
+					<h1 data-translate="projects.category"></h1>
+				</div>
+				<div class="cso_modal__header__close" onclick="closeModal('modalProject')">
+					<img src="assets/img/icons/ico-close.svg" alt="">
+				</div>
+			</div>
+			<div class="cso_modal__body">
+				
+				<div class="cso_modal__body__table">
+					<div class="cso_modal__body__table__head">
+						<div class="cso_modal__body__table__head__cell">
+							<h3 data-translate="name"></h3>
+						</div>
+						<div class="cso_modal__body__table__head__cell">
+							<h3 data-translate="skills"></h3>
+						</div>
+					</div>
+					<ul class="cso_modal__body__table__rows">
+						<li onclick="showProject('projectAutocl')">
+							<div class="cso_modal__body__table__rows__name">
+								<h4>Auto.cl</h4>
+							</div>
+							<div class="cso_modal__body__table__rows__skills">
+								<h4>Angular</h4>
+								<h4>Angular Material</h4>
+								<h4>SASS</h4>
+								<h4>TS</h4>
+								<h4>API</h4>
+							</div>
+						</li>
+						<li onclick="showProject('projectKaufmann')">
+							<div class="cso_modal__body__table__rows__name">
+								<h4 data-translate="projects.kaufmann.name">Framework Kaufmann</h4>
+							</div>
+							<div class="cso_modal__body__table__rows__skills">
+								<h4>Angular</h4>
+								<h4>Storybook</h4>
+								<h4>NPM</h4>
+								<h4>Ant Design</h4>
+								<h4>Azure</h4>
+								<h4>API</h4>
+							</div>
+						</li>
+						<li class="disabled">
+							<div class="cso_modal__body__table__rows__name">
+								<h4>SAYSA</h4>
+							</div>
+							<div class="cso_modal__body__table__rows__skills">
+								<h4>Wordpress</h4>
+								<h4>HTML</h4>
+								<h4>CSS</h4>
+							</div>
+						</li>
+						<li class="disabled">
+							<div class="cso_modal__body__table__rows__name">
+								<h4>Langford</h4>
+							</div>
+							<div class="cso_modal__body__table__rows__skills">
+								<h4>Angular</h4>
+								<h4>SASS</h4>
+								<h4>TS</h4>
+								<h4>Bootstrap</h4>
+								<h4>API</h4>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="cso_modal__body__preview">
+					<div class="cso_modal__body__preview__project cso_show" id="projectAutocl">
+						<img class="cso_modal__body__preview__project__banner" src="assets/img/header-project-auto.png" alt="imagen cabecera auto">
+						<h2 data-translate="projects.autocl.title">Sitio web Auto.cl</h2>
+						<p data-translate="projects.autocl.p1">Desarrollo Front end para cliente Auto.cl. Se utilizó Angular 14 y Angular Material como framework UI. </p>
+
+						<p data-translate="projects.autocl.p2">El requerimiento principal fue crear flujos para que los clientes pudieran elegir un auto que se acomode a sus preferencias. Esto se logró a través de formularios compuestos de distintos pasos que resultaban en las coincidencias encontradas.</p>
+						<a href="https://www.auto.cl/" target="_blank" data-translate="projects.autocl.link">Visitar www.auto.cl</a>
+
+						<!-- <section class="splide cso_slider--project" aria-label="Splide Basic HTML Example" id="sliderProjectAuto">
+							<div class="splide__track">
+								  <ul class="splide__list">
+									  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+									  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+									  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+								  </ul>
+							</div>
+						</section> -->
+					</div>
+
+					<div class="cso_modal__body__preview__project" id="projectKaufmann">
+						<img class="cso_modal__body__preview__project__banner" src="assets/img/header-project-kaufmann.png" alt="imagen cabecera auto">
+						<h2 data-translate="projects.kaufmann.title">Framework Kaufmann</h2>
+						<p data-translate="projects.kaufmann.p1">Se crea un sistema de componentes UI para reutilizar en sus distintos proyectos Angular y Liferay.</p>
+
+						<p data-translate="projects.kaufmann.p2">El proyecto se construyó con Angular 14 y Ant design. Se creó una librería NPM compartida a través de Artefactos de Azure. Para las instrucciones de uso y detalles de cada componente se implementó la documentación con Storybook.</p>
+						<a data-translate="projects.kaufmann.link" href="https://www.kaufmann.cl/" target="_blank">Visitar www.kaufmann.cl</a>
+
+						<!-- <section class="splide cso_slider--project" aria-label="Splide Basic HTML Example" id="sliderProjectKaufmann">
+							<div class="splide__track">
+								  <ul class="splide__list">
+									  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+									  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+									  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+								  </ul>
+							</div>
+						</section> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="modalSkills" class="cso_modal cso_modal--green">
+		<div class="cso_modal__container">
+			<div class="cso_modal__header">
+				<div class="cso_modal__header__title">
+					<h1 data-translate="skills"></h1>
+				</div>
+				<div class="cso_modal__header__close" onclick="closeModal('modalSkills')">
+					<img src="assets/img/icons/ico-close.svg" alt="">
+				</div>
+			</div>
+			<div class="cso_modal__body">
+				<h3 data-translate="name"></h3>
+			</div>
+		</div>
+	</div>
+
+	<div id="modalAbout" class="cso_modal cso_modal--yellow">
+		<div class="cso_modal__container">
+			<div class="cso_modal__header">
+				<div class="cso_modal__header__title">
+					<h1 data-translate="about"></h1>
+				</div>
+				<div class="cso_modal__header__close" onclick="closeModal('modalAbout')">
+					<img src="assets/img/icons/ico-close.svg" alt="">
+				</div>
+			</div>
+			<div class="cso_modal__body">
+				<h3 data-translate="name"></h3>
+			</div>
+		</div>
+	</div>
+
+	
+	  
+	  
+	
+	<!-- <a href="https://www.chess.com/member/carol_kiki" target="_blank">chess</a> -->
+
 	<!-- sección inicio -->
-	<section id="inicio" class="panel" data-color="grey" data-active="btn1">
+	<!-- <section id="inicio" class="panel" data-color="grey" data-active="btn1">
 		<div class="foto">
 			<img src="assets/img/perfil.png" alt="">
 			<div>
@@ -51,16 +291,15 @@
 				<text text-anchor="middle" x="50%" y="50%">Sepúlveda Olivos</text>
 			</svg>
 			</div>
-			<h5> Desarrolladora Front-end <span>&</span> Diseñadora Gráfica</h5>
+			<h5 class="cs_translate" data-translate="profession"></h5>
 			<br>
 			<div id="seeMore"><a href="#portafolio"><i class="fa fa-arrow-down"></i> Aquí puedes ver mi trabajo</a></div>           
 		</div>
-	</section>
+	</section> -->
 	<!-- seccion portafolio -->
-	<section id="portafolio" class="panel" data-color="cyan" data-active="btn2">
+	<!-- <section id="portafolio" class="panel" data-color="cyan" data-active="btn2">
 		<div class="carousel">            
 			<a class="carousel-item" href="http://www.saysa.cl" target="_blank">
-				<!-- <a class="carousel-item modal-trigger" href="#modal1"> -->
 				<div class="overlay">
 					<h5>Sitio Saysa</h5>
 					<p>Wordpress, diseño y desarrollo, animaciones, HTML, CSS y responsive. <span>Ver más ></span></p>
@@ -110,9 +349,9 @@
 				<img src="assets/img/imag-portafolio-bici.jpg">
 			</a>
 		</div>
-	</section>
+	</section> -->
 	<!-- seccion portafolio -->
-	<section id="sobreMi" class="panel" data-color="green" data-active="btn3">      
+	<!-- <section id="sobreMi" class="panel" data-color="green" data-active="btn3">      
 		<div class="der">
 			<h4>Código e interfaz <img src="assets/img/corazon.svg" alt=""> </h4>
 			<p>
@@ -135,9 +374,9 @@
 				<a href="#"><i class="fab fa-wordpress"></i></a> 
 			</div>   
 		</div>
-	</section>
+	</section> -->
 	<!-- seccion sobreMi -->
-	<section id="contacto" class="panel" data-color="magenta" data-active="btn4">
+	<!-- <section id="contacto" class="panel" data-color="magenta" data-active="btn4">
 		<div class="izq">        
 			<svg viewBox="0 0 2000 500">
 				<text text-anchor="middle" x="50%" y="50%">hablemos!</text>
@@ -148,13 +387,9 @@
 			<p><a href="https://cl.linkedin.com/in/carol-sepulveda-olivos" target="_blank" rel="noopener noreferrer"><i class="icon-fa fab fa-linkedin"></i> cl.linkedin.com/in/carol-sepulveda-olivos</a></p> 
 			</div>             
 		</div>   
-	</section>
+	</section> -->
 	
-	<!-- jquery -->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <script src="assets/js/app.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/animationInicio.js"></script>
 </body>

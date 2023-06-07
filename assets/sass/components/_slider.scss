@@ -1,0 +1,12 @@
+.#{$prefix}_slider {
+    &--project {
+        padding: 2rem 0;
+        img {
+            border: 2px solid $color-dark;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        
+    }
+}
