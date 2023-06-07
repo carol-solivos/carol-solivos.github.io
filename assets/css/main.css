@@ -22,15 +22,15 @@
     transform-origin: bottom;
   }
   20% {
-    transform: rotate(30deg) translate(-35px, 12px);
+    transform: rotate(30deg) translate(-35px, 8px);
     transform-origin: bottom;
   }
   50% {
-    transform: rotate(30deg) translate(0px, -5px);
+    transform: rotate(30deg) translate(0px, -8px);
     transform-origin: bottom;
   }
   80% {
-    transform: rotate(30deg) translate(-30px, 32px);
+    transform: rotate(26deg) translate(-30px, 12px);
     transform-origin: bottom;
   }
   100% {
@@ -66,6 +66,11 @@ body {
 
 a, button {
   cursor: url("/assets/img/icons/ico-cursor-hand.svg"), auto !important;
+}
+
+a.nodecoration {
+  color: inherit;
+  text-decoration: none;
 }
 
 main {
@@ -223,6 +228,9 @@ h1, h2, h3, h4, h5 {
   gap: 1rem;
 }
 .cso_file__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
 .cso_file__icon--projects {
@@ -244,6 +252,9 @@ h1, h2, h3, h4, h5 {
   left: 50%;
   transform: translateX(120%);
 }
+.cso_file__icon img {
+  max-width: 100%;
+}
 .cso_file:hover, .cso_file:active {
   cursor: url("/assets/img/icons/ico-cursor-hand.svg"), auto !important;
 }
@@ -256,14 +267,17 @@ h1, h2, h3, h4, h5 {
 .cso_file:hover .cso_file__icon--projects__pen img, .cso_file:active .cso_file__icon--projects__pen img {
   animation: pencil 2s;
 }
+.cso_file:hover .cso_file__icon--linkedin, .cso_file:active .cso_file__icon--linkedin {
+  animation: plop 0.3s;
+}
 .cso_modal {
   display: none;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 92vh;
-  width: 96vw;
+  height: 100vh;
+  width: 100vw;
   z-index: 10;
 }
 .cso_modal__container {
@@ -480,6 +494,9 @@ h1, h2, h3, h4, h5 {
 .cso_nav__options__lang div.cso_show {
   display: flex;
 }
+.cso_nav__options__lang div > img {
+  display: none;
+}
 .cso_nav__options__lang__check {
   max-width: 1rem;
 }
@@ -511,6 +528,14 @@ h1, h2, h3, h4, h5 {
 }
 .cso_nav .dropdown-menu li:not(:last-child) {
   border-bottom: 2px solid #111;
+}
+@media (min-width: 768px) {
+  .cso_nav__options__lang img {
+    display: inline;
+  }
+  .cso_nav__options__lang div > img {
+    display: inline;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

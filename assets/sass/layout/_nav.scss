@@ -40,6 +40,9 @@
                 &.cso_show {
                     display: flex;
                 }
+                > img {
+                    display: none;
+                }
             }
             &__check {
                 max-width: 1rem;
@@ -79,5 +82,21 @@
                 border-bottom: 2px solid $color-border;
             }
         }
+    }
+    @media (min-width: 768px) {
+        &__options {
+            &__lang {
+                img {
+                    display: inline;
+                }
+                div {
+                    > img {
+                        display: inline;
+                    }
+                }
+            }
+            
+        }
+        
     }
 }

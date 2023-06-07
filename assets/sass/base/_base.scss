@@ -10,6 +10,11 @@ a, button {
   cursor: url('/assets/img/icons/ico-cursor-hand.svg'), auto !important;
 }
 
+a.nodecoration {
+  color: inherit;
+  text-decoration: none;
+}
+
 main {
   display: flex;
   align-items: center;

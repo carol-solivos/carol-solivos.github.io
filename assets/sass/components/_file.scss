@@ -5,6 +5,9 @@
     padding: 1rem;
     gap: 1rem;
     &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         &--projects {
             position: relative;
@@ -24,6 +27,9 @@
                 left: 50%;
                 transform: translateX(120%);
             }
+        }
+        img {
+            max-width: 100%;
         }
     }
     &:hover, &:active {
@@ -46,6 +52,9 @@
                             animation: pencil 2s;
                         }
                     }
+                }
+                &--linkedin {
+                    animation: plop 0.3s;
                 }
             }
         }
