@@ -276,8 +276,8 @@ h1, h2, h3, h4, h5 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 100vh;
-  width: 100vw;
+  height: 94vh;
+  width: 96vw;
   z-index: 10;
 }
 .cso_modal__container {
@@ -304,7 +304,7 @@ h1, h2, h3, h4, h5 {
   background-color: #111;
   color: #fff;
   padding: 0.2rem 1rem;
-  height: 60px;
+  height: 50px;
 }
 .cso_modal__header__title h1 {
   margin: 0;
@@ -317,8 +317,8 @@ h1, h2, h3, h4, h5 {
   right: 0;
   border: 4px solid #111;
   background-color: #fff;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   cursor: url("/assets/img/icons/ico-cursor-hand.svg"), auto !important;
 }
 .cso_modal__header__close img {
@@ -343,7 +343,7 @@ h1, h2, h3, h4, h5 {
 }
 .cso_modal__body__table__head {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
   position: sticky;
   top: 0;
@@ -354,7 +354,7 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 .cso_modal__body__table__head__cell {
-  padding: 0.5rem;
+  padding: 0.3rem;
 }
 .cso_modal__body__table__head__cell:not(:last-child) {
   border-right: 2px solid #111;
@@ -364,7 +364,7 @@ h1, h2, h3, h4, h5 {
 }
 .cso_modal__body__table__rows li {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 1fr 2fr;
   list-style: none;
   border-bottom: 2px solid #111;
   cursor: url("/assets/img/icons/ico-cursor-hand.svg"), auto !important;
@@ -401,8 +401,8 @@ h1, h2, h3, h4, h5 {
   flex-wrap: wrap;
   gap: 0.3rem;
 }
-.cso_modal__body__table__rows__skills h4 {
-  padding: 0.2rem 0.5rem;
+.cso_modal__body__table__rows__skills h5 {
+  padding: 0 0.5rem;
   background-color: #111;
   color: #fff;
   margin: 0;
@@ -410,6 +410,8 @@ h1, h2, h3, h4, h5 {
 .cso_modal__body__preview {
   padding: 1rem;
   overflow-y: auto;
+  background-color: #D8FFD5;
+  border-bottom: 2px solid #111;
 }
 .cso_modal__body__preview__project {
   display: none;
@@ -426,6 +428,14 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
+  .cso_modal__header__title {
+    padding: 0.2rem 1rem;
+    height: 60px;
+  }
+  .cso_modal__header__close {
+    height: 60px;
+    width: 60px;
+  }
   .cso_modal__body {
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 1fr;
@@ -438,6 +448,9 @@ h1, h2, h3, h4, h5 {
   }
   .cso_modal__body__table__rows li div {
     padding: 1rem;
+  }
+  .cso_modal__body__table__rows__skills h5 {
+    padding: 0.2rem 0.5rem;
   }
   .cso_modal__body__preview {
     padding: 2rem 3rem;
@@ -463,7 +476,7 @@ h1, h2, h3, h4, h5 {
 .cso_nav__title {
   background-color: #111;
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
 }
 .cso_nav__title h1 {
   margin: 0;
@@ -474,7 +487,7 @@ h1, h2, h3, h4, h5 {
   justify-content: flex-end;
   gap: 1rem;
   position: absolute;
-  right: 1rem;
+  right: 0;
 }
 .cso_nav__options .dropdown-toggle {
   display: flex;
@@ -530,6 +543,12 @@ h1, h2, h3, h4, h5 {
   border-bottom: 2px solid #111;
 }
 @media (min-width: 768px) {
+  .cso_nav__title {
+    padding: 0.5rem 1rem;
+  }
+  .cso_nav__options {
+    right: 1rem;
+  }
   .cso_nav__options__lang img {
     display: inline;
   }
