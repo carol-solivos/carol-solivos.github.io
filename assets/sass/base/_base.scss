@@ -27,7 +27,7 @@ main {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       align-items: stretch;
-      gap: 30px;
+      gap: 2rem;
       width: 100%;
     }
     &-fit--xl {
@@ -41,7 +41,7 @@ main {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
         align-items: stretch;
-        gap: 30px;
+        gap: 0.5rem;
         width: 100%;
     }
     &-fill--xl {
@@ -58,7 +58,8 @@ main {
     &_auto {
       &-fill {
           grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      }
+          gap: 2rem;
+        }
     }
   }
 }

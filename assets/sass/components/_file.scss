@@ -2,7 +2,6 @@
     display: grid;
     grid-template-rows: 100px min-content;
     justify-items: center;
-    padding: 1rem;
     gap: 1rem;
     &__icon {
         display: flex;
@@ -53,7 +52,7 @@
                         }
                     }
                 }
-                &--linkedin {
+                &--linkedin, &--codepen, &--github {
                     animation: plop 0.3s;
                 }
             }

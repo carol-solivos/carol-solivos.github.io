@@ -83,7 +83,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   align-items: stretch;
-  gap: 30px;
+  gap: 2rem;
   width: 100%;
 }
 .cso_auto-fit--xl {
@@ -97,7 +97,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   align-items: stretch;
-  gap: 30px;
+  gap: 0.5rem;
   width: 100%;
 }
 .cso_auto-fill--xl {
@@ -110,6 +110,7 @@ main {
 @media (min-width: 768px) {
   .cso_auto-fill {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
   }
 }
 
@@ -224,7 +225,6 @@ h1, h2, h3, h4, h5 {
   display: grid;
   grid-template-rows: 100px min-content;
   justify-items: center;
-  padding: 1rem;
   gap: 1rem;
 }
 .cso_file__icon {
@@ -267,7 +267,7 @@ h1, h2, h3, h4, h5 {
 .cso_file:hover .cso_file__icon--projects__pen img, .cso_file:active .cso_file__icon--projects__pen img {
   animation: pencil 2s;
 }
-.cso_file:hover .cso_file__icon--linkedin, .cso_file:active .cso_file__icon--linkedin {
+.cso_file:hover .cso_file__icon--linkedin, .cso_file:hover .cso_file__icon--codepen, .cso_file:hover .cso_file__icon--github, .cso_file:active .cso_file__icon--linkedin, .cso_file:active .cso_file__icon--codepen, .cso_file:active .cso_file__icon--github {
   animation: plop 0.3s;
 }
 .cso_modal {
@@ -453,6 +453,8 @@ h1, h2, h3, h4, h5 {
     padding: 0.2rem 0.5rem;
   }
   .cso_modal__body__preview {
+    position: relative;
+    top: unset;
     padding: 2rem 3rem;
   }
 }
