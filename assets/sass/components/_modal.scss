@@ -140,6 +140,8 @@
             }
         }
         &__preview {
+            // position: fixed;
+            // top: 0;
             padding: 1rem;
             overflow-y: auto;
             background-color: $color-green-light;
@@ -196,6 +198,8 @@
                 }
             }
             &__preview {
+                position: relative;
+                top: unset;
                 padding: 2rem 3rem;
             }
         }
