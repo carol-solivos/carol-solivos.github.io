@@ -1,10 +1,10 @@
 .#{$prefix}_modal {
     display: none;
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
-    height: 94vh;
+    transform: translateX(-50%);
+    height: 98vh;
     width: 96vw;
     z-index: 10;
     &__container {
