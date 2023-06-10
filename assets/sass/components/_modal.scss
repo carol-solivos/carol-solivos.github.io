@@ -166,6 +166,8 @@
         }
         > .#{$prefix}_auto-fill {
             padding: 2rem;
+            overflow-y: auto;
+            height: 100%;
         }
     }
     
