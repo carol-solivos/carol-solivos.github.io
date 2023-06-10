@@ -1,0 +1,31 @@
+.#{$prefix}_card {
+    &-tool {
+        display: grid;
+        grid-template-rows: max-content min-content 1fr;
+        justify-items: center; 
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 1rem;
+        background-color: $color-secondary;
+        border: 2px solid $color-border;
+        &__skills {
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            h5 {
+                padding: 0 0.5rem;
+                background-color: $color-dark;
+                color: $color-light;
+                margin: 0;
+            }
+        }
+        img {
+            max-width: 100%;
+            max-height: 100px;
+            object-fit: contain;
+        }
+    }
+}

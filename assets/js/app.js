@@ -10,10 +10,9 @@ let modalTriggers = document.querySelectorAll('[data-modal]');
 let modalProject = document.getElementById("modalProject");
 let modalProjectContent = document.getElementsByClassName("cso_modal__body__preview__project");
 
+// language
 esBtn.addEventListener("click", function(){changeLang("es")}, false);
 enBtn.addEventListener("click", function(){changeLang("en")}, false);
-
-
 
 fetch("./assets/js/translate/en.json")
   .then((res) => res.json())
@@ -57,6 +56,17 @@ function changeLang(lang) {
   setLang();
 }
 
+// animation icons
+let initAnimationIcons = document.getElementsByClassName("init-animation");
+const elementsArray = Array.from(initAnimationIcons);
+function removeClass() {
+  elementsArray.forEach((element) => {
+    element.classList.remove("init-animation");
+  });
+}
+setTimeout(removeClass, 2000);
+
+// modals
 for (let item of modalTriggers) {
   item.addEventListener("click", function(){showModal(item.dataset.modal)}, false);
 }

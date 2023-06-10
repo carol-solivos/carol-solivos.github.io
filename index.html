@@ -68,7 +68,7 @@
 				<div class="col-12">
 					<div class="cso_auto-fill">
 						<div class="cso_file" data-modal="modalProject">
-							<div class="cso_file__icon cso_file__icon--projects">
+							<div class="cso_file__icon cso_file__icon--projects init-animation">
 								<div class="cso_file__icon--projects__doc">
 									<img src="assets/img/icons/ico-doc.svg" alt="documento">
 								</div>
@@ -79,20 +79,24 @@
 									<img src="assets/img/icons/ico-pen.svg" alt="lapiz">
 								</div>
 							</div>
-							<h3 data-translate="projects.category"></h3>							  
+							<h3 data-translate="projects.category">Proyectos</h3>							  
 						</div>
-						<!-- <div class="cso_file" data-modal="modalSkills">
-							<img src="assets/img/icons/ico-sun.svg" alt="modo claro">
-							<h3 data-translate="skills"></h3>
+
+						<div class="cso_file" data-modal="modalSkills">
+							<div class="cso_file__icon cso_file__icon--tools init-animation">
+								<img src="assets/img/icons/ico-tools.png" alt="icono tools">
+							</div>
+							<h3 data-translate="skills">Herramientas</h3>
 						</div>
-						<div class="cso_file" data-modal="modalAbout">
+						
+						<!--<div class="cso_file" data-modal="modalAbout">
 							<img src="assets/img/icons/ico-sun.svg" alt="modo claro">
 							<h3 data-translate="about"></h3>
 						</div> -->
 
 						<a href="https://github.com/carol-solivos" class="nodecoration" target="_blank">
 							<div class="cso_file">
-								<div class="cso_file__icon cso_file__icon--github">
+								<div class="cso_file__icon cso_file__icon--github init-animation">
 									<img src="assets/img/icons/ico-github.png" alt="icono github">
 								</div>
 								<h3>Github</h3>
@@ -101,7 +105,7 @@
 
 						<a href="https://codepen.io/carol-solivos" class="nodecoration" target="_blank">
 							<div class="cso_file">
-								<div class="cso_file__icon cso_file__icon--codepen">
+								<div class="cso_file__icon cso_file__icon--codepen init-animation">
 									<img src="assets/img/icons/ico-codepen.svg" alt="icono codepen">
 								</div>
 								<h3>Codepen</h3>
@@ -110,7 +114,7 @@
 
 						<a href="https://www.linkedin.com/in/carol-sepulveda-olivos/" class="nodecoration" target="_blank">
 							<div class="cso_file">
-								<div class="cso_file__icon cso_file__icon--linkedin">
+								<div class="cso_file__icon cso_file__icon--linkedin init-animation">
 									<img src="assets/img/icons/ico-linkedin.svg" alt="icono linkedin">
 								</div>
 								<h3>Linkedin</h3>
@@ -134,113 +138,114 @@
 				</div>
 			</div>
 			<div class="cso_modal__body">
-				
-				<div class="cso_modal__body__table">
-					<div class="cso_modal__body__table__head">
-						<div class="cso_modal__body__table__head__cell">
-							<h3 data-translate="name"></h3>
+				<div class="cso_modal__body__explorer">
+					<div class="cso_modal__body__explorer__table">
+						<div class="cso_modal__body__explorer__table__head">
+							<div class="cso_modal__body__explorer__table__head__cell">
+								<h3 data-translate="name"></h3>
+							</div>
+							<div class="cso_modal__body__explorer__table__head__cell">
+								<h3 data-translate="skills"></h3>
+							</div>
 						</div>
-						<div class="cso_modal__body__table__head__cell">
-							<h3 data-translate="skills"></h3>
+						<ul class="cso_modal__body__explorer__table__rows">
+							<li onclick="showProject('projectAutocl')">
+								<div class="cso_modal__body__explorer__table__rows__name">
+									<h4>Auto.cl</h4>
+								</div>
+								<div class="cso_modal__body__explorer__table__rows__skills">
+									<h5>Angular</h5>
+									<h5>Angular Material</h5>
+									<h5>SASS</h5>
+									<h5>TS</h5>
+									<h5>API</h5>
+								</div>
+							</li>
+							<li onclick="showProject('projectKaufmann')">
+								<div class="cso_modal__body__explorer__table__rows__name">
+									<h4 data-translate="projects.kaufmann.name">Framework Kaufmann</h4>
+								</div>
+								<div class="cso_modal__body__explorer__table__rows__skills">
+									<h5>Angular</h5>
+									<h5>Storybook</h5>
+									<h5>NPM</h5>
+									<h5>Ant Design</h5>
+									<h5>Azure</h5>
+									<h5>API</h5>
+								</div>
+							</li>
+							<li class="disabled">
+								<div class="cso_modal__body__explorer__table__rows__name">
+									<h4>SAYSA</h4>
+								</div>
+								<div class="cso_modal__body__explorer__table__rows__skills">
+									<h5>Wordpress</h5>
+									<h5>HTML</h5>
+									<h5>CSS</h5>
+								</div>
+							</li>
+							<li class="disabled">
+								<div class="cso_modal__body__explorer__table__rows__name">
+									<h4>Langford</h4>
+								</div>
+								<div class="cso_modal__body__explorer__table__rows__skills">
+									<h5>Angular</h5>
+									<h5>SASS</h5>
+									<h5>TS</h5>
+									<h5>Bootstrap</h5>
+									<h5>API</h5>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="cso_modal__body__explorer__preview">
+						<div class="cso_modal__body__explorer__preview__project cso_show" id="projectAutocl">
+							<picture>
+								<source media="(max-width: 768px)"
+								  srcset="assets/img/header-project-autocl-mob.png" />
+								<img class="cso_modal__body__explorer__preview__project__banner"
+								  src="assets/img/header-project-auto.png" alt="imagen cabecera auto"/>
+							</picture>
+							<h2 data-translate="projects.autocl.title">Sitio web Auto.cl</h2>
+							<p data-translate="projects.autocl.p1">Desarrollo Front end para cliente Auto.cl. Se utilizó Angular 14 y Angular Material como framework UI. </p>
+	
+							<p data-translate="projects.autocl.p2">El requerimiento principal fue crear flujos para que los clientes pudieran elegir un auto que se acomode a sus preferencias. Esto se logró a través de formularios compuestos de distintos pasos que resultaban en las coincidencias encontradas.</p>
+							<a href="https://www.auto.cl/" target="_blank" data-translate="projects.autocl.link">Visitar www.auto.cl</a>
+	
+							<!-- <section class="splide cso_slider--project" aria-label="Splide Basic HTML Example" id="sliderProjectAuto">
+								<div class="splide__track">
+									  <ul class="splide__list">
+										  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+										  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+										  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+									  </ul>
+								</div>
+							</section> -->
 						</div>
-					</div>
-					<ul class="cso_modal__body__table__rows">
-						<li onclick="showProject('projectAutocl')">
-							<div class="cso_modal__body__table__rows__name">
-								<h4>Auto.cl</h4>
-							</div>
-							<div class="cso_modal__body__table__rows__skills">
-								<h5>Angular</h5>
-								<h5>Angular Material</h5>
-								<h5>SASS</h5>
-								<h5>TS</h5>
-								<h5>API</h5>
-							</div>
-						</li>
-						<li onclick="showProject('projectKaufmann')">
-							<div class="cso_modal__body__table__rows__name">
-								<h4 data-translate="projects.kaufmann.name">Framework Kaufmann</h4>
-							</div>
-							<div class="cso_modal__body__table__rows__skills">
-								<h5>Angular</h5>
-								<h5>Storybook</h5>
-								<h5>NPM</h5>
-								<h5>Ant Design</h5>
-								<h5>Azure</h5>
-								<h5>API</h5>
-							</div>
-						</li>
-						<li class="disabled">
-							<div class="cso_modal__body__table__rows__name">
-								<h4>SAYSA</h4>
-							</div>
-							<div class="cso_modal__body__table__rows__skills">
-								<h5>Wordpress</h5>
-								<h5>HTML</h5>
-								<h5>CSS</h5>
-							</div>
-						</li>
-						<li class="disabled">
-							<div class="cso_modal__body__table__rows__name">
-								<h4>Langford</h4>
-							</div>
-							<div class="cso_modal__body__table__rows__skills">
-								<h5>Angular</h5>
-								<h5>SASS</h5>
-								<h5>TS</h5>
-								<h5>Bootstrap</h5>
-								<h5>API</h5>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<div class="cso_modal__body__preview">
-					<div class="cso_modal__body__preview__project cso_show" id="projectAutocl">
-						<picture>
-							<source media="(max-width: 768px)"
-							  srcset="assets/img/header-project-autocl-mob.png" />
-							<img class="cso_modal__body__preview__project__banner"
-							  src="assets/img/header-project-auto.png" alt="imagen cabecera auto"/>
-						</picture>
-						<h2 data-translate="projects.autocl.title">Sitio web Auto.cl</h2>
-						<p data-translate="projects.autocl.p1">Desarrollo Front end para cliente Auto.cl. Se utilizó Angular 14 y Angular Material como framework UI. </p>
-
-						<p data-translate="projects.autocl.p2">El requerimiento principal fue crear flujos para que los clientes pudieran elegir un auto que se acomode a sus preferencias. Esto se logró a través de formularios compuestos de distintos pasos que resultaban en las coincidencias encontradas.</p>
-						<a href="https://www.auto.cl/" target="_blank" data-translate="projects.autocl.link">Visitar www.auto.cl</a>
-
-						<!-- <section class="splide cso_slider--project" aria-label="Splide Basic HTML Example" id="sliderProjectAuto">
-							<div class="splide__track">
-								  <ul class="splide__list">
-									  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
-									  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
-									  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
-								  </ul>
-							</div>
-						</section> -->
-					</div>
-
-					<div class="cso_modal__body__preview__project" id="projectKaufmann">
-						<picture>
-							<source media="(max-width: 768px)"
-							  srcset="assets/img/header-project-kaufmann-mob.png" />
-							<img class="cso_modal__body__preview__project__banner"
-							  src="assets/img/header-project-kaufmann.png" />
-						</picture>
-						<h2 data-translate="projects.kaufmann.title">Framework Kaufmann</h2>
-						<p data-translate="projects.kaufmann.p1">Se crea un sistema de componentes UI para reutilizar en sus distintos proyectos Angular y Liferay.</p>
-
-						<p data-translate="projects.kaufmann.p2">El proyecto se construyó con Angular 14 y Ant design. Se creó una librería NPM compartida a través de Artefactos de Azure. Para las instrucciones de uso y detalles de cada componente se implementó la documentación con Storybook.</p>
-						<a data-translate="projects.kaufmann.link" href="https://www.kaufmann.cl/" target="_blank">Visitar www.kaufmann.cl</a>
-
-						<!-- <section class="splide cso_slider--project" aria-label="Splide Basic HTML Example" id="sliderProjectKaufmann">
-							<div class="splide__track">
-								  <ul class="splide__list">
-									  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
-									  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
-									  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
-								  </ul>
-							</div>
-						</section> -->
+	
+						<div class="cso_modal__body__explorer__preview__project" id="projectKaufmann">
+							<picture>
+								<source media="(max-width: 768px)"
+								  srcset="assets/img/header-project-kaufmann-mob.png" />
+								<img class="cso_modal__body__explorer__preview__project__banner"
+								  src="assets/img/header-project-kaufmann.png" />
+							</picture>
+							<h2 data-translate="projects.kaufmann.title">Framework Kaufmann</h2>
+							<p data-translate="projects.kaufmann.p1">Se crea un sistema de componentes UI para reutilizar en sus distintos proyectos Angular y Liferay.</p>
+	
+							<p data-translate="projects.kaufmann.p2">El proyecto se construyó con Angular 14 y Ant design. Se creó una librería NPM compartida a través de Artefactos de Azure. Para las instrucciones de uso y detalles de cada componente se implementó la documentación con Storybook.</p>
+							<a data-translate="projects.kaufmann.link" href="https://www.kaufmann.cl/" target="_blank">Visitar www.kaufmann.cl</a>
+	
+							<!-- <section class="splide cso_slider--project" aria-label="Splide Basic HTML Example" id="sliderProjectKaufmann">
+								<div class="splide__track">
+									  <ul class="splide__list">
+										  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+										  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+										  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+									  </ul>
+								</div>
+							</section> -->
+						</div>
 					</div>
 				</div>
 			</div>
@@ -258,7 +263,33 @@
 				</div>
 			</div>
 			<div class="cso_modal__body">
-				<h3 data-translate="name"></h3>
+				<div class="cso_auto-fill">
+					<div class="cso_card-tool">
+						<img src="assets/img/logo-angular.png" alt="logo angular">
+						<h3>Angular</h3>
+						<div class="cso_card-tool__skills">
+							<h5>Libraries</h5>
+							<h5>Material</h5>
+							<h5>Reactive forms</h5>
+							<h5>Typescript</h5>
+						</div>
+					</div>
+
+					<div class="cso_card-tool">
+						<img src="assets/img/logo-js.png" alt="logo javscript">
+						<h3>Javacript</h3>
+					</div>
+
+					<div class="cso_card-tool">
+						<img src="assets/img/logo-sass.png" alt="logo javscript">
+						<h3>SASS</h3>
+					</div>
+
+					<div class="cso_card-tool">
+						<img src="assets/img/HTML5_Logo_512.png" alt="logo javscript">
+						<h3>HTML</h3>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
