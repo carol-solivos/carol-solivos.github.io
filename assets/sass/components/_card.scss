@@ -1,7 +1,7 @@
 .#{$prefix}_card {
     &-tool {
         display: grid;
-        grid-template-rows: max-content min-content 1fr;
+        grid-template-rows: max-content min-content auto;
         justify-items: center; 
         position: relative;
         z-index: 1;
@@ -9,6 +9,7 @@
         padding: 1rem;
         background-color: $color-secondary;
         border: 2px solid $color-border;
+        min-width: 200px;
         &__skills {
             display: flex;
             align-items: center;

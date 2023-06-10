@@ -102,7 +102,7 @@ main {
 }
 .cso_auto-fill--xl {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   align-items: stretch;
   gap: 30px;
   width: 100%;
@@ -223,7 +223,7 @@ h1, h2, h3, h4, h5 {
 
 .cso_card-tool {
   display: grid;
-  grid-template-rows: max-content min-content 1fr;
+  grid-template-rows: max-content min-content auto;
   justify-items: center;
   position: relative;
   z-index: 1;
@@ -231,6 +231,7 @@ h1, h2, h3, h4, h5 {
   padding: 1rem;
   background-color: #ECECEC;
   border: 2px solid #111;
+  min-width: 200px;
 }
 .cso_card-tool__skills {
   display: flex;
@@ -474,6 +475,8 @@ h1, h2, h3, h4, h5 {
 }
 .cso_modal__body > .cso_auto-fill {
   padding: 2rem;
+  overflow-y: auto;
+  height: 100%;
 }
 @media (min-width: 768px) {
   .cso_modal__header__title {
