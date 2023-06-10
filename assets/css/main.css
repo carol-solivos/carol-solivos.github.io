@@ -8,12 +8,13 @@
 }
 @keyframes plop {
   0% {
+    transform: scale(1);
+  }
+  30% {
     transform: scale(0.6);
-    transform-origin: bottom;
   }
   100% {
     transform: scale(1);
-    transform-origin: bottom;
   }
 }
 @keyframes pencil {
@@ -58,7 +59,6 @@
 
 body {
   color: #111;
-  background-color: #ECECEC !important;
   height: 100vh;
   cursor: url("/assets/img/icons/ico-arrow-old.svg"), auto;
   font-family: "Courier New", Courier, monospace !important;
@@ -221,6 +221,36 @@ h1, h2, h3, h4, h5 {
   font-family: "VT323", sans-serif;
 }
 
+.cso_card-tool {
+  display: grid;
+  grid-template-rows: max-content min-content 1fr;
+  justify-items: center;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 1rem;
+  background-color: #ECECEC;
+  border: 2px solid #111;
+}
+.cso_card-tool__skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.cso_card-tool__skills h5 {
+  padding: 0 0.5rem;
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+}
+.cso_card-tool img {
+  max-width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+}
+
 .cso_file {
   display: grid;
   grid-template-rows: 100px min-content;
@@ -255,6 +285,18 @@ h1, h2, h3, h4, h5 {
 .cso_file__icon img {
   max-width: 100%;
 }
+.cso_file__icon.init-animation .cso_file__icon--projects__doc img {
+  animation: plop 0.5s;
+}
+.cso_file__icon.init-animation .cso_file__icon--projects__cog img {
+  animation: spin 3s;
+}
+.cso_file__icon.init-animation .cso_file__icon--projects__pen img {
+  animation: pencil 2s;
+}
+.cso_file__icon.init-animation.cso_file__icon--linkedin, .cso_file__icon.init-animation.cso_file__icon--tools, .cso_file__icon.init-animation.cso_file__icon--codepen, .cso_file__icon.init-animation.cso_file__icon--github {
+  animation: plop 0.5s;
+}
 .cso_file:hover, .cso_file:active {
   cursor: url("/assets/img/icons/ico-cursor-hand.svg"), auto !important;
 }
@@ -267,7 +309,7 @@ h1, h2, h3, h4, h5 {
 .cso_file:hover .cso_file__icon--projects__pen img, .cso_file:active .cso_file__icon--projects__pen img {
   animation: pencil 2s;
 }
-.cso_file:hover .cso_file__icon--linkedin, .cso_file:hover .cso_file__icon--codepen, .cso_file:hover .cso_file__icon--github, .cso_file:active .cso_file__icon--linkedin, .cso_file:active .cso_file__icon--codepen, .cso_file:active .cso_file__icon--github {
+.cso_file:hover .cso_file__icon--tools, .cso_file:hover .cso_file__icon--linkedin, .cso_file:hover .cso_file__icon--codepen, .cso_file:hover .cso_file__icon--github, .cso_file:active .cso_file__icon--tools, .cso_file:active .cso_file__icon--linkedin, .cso_file:active .cso_file__icon--codepen, .cso_file:active .cso_file__icon--github {
   animation: plop 0.3s;
 }
 .cso_modal {
@@ -331,17 +373,20 @@ h1, h2, h3, h4, h5 {
   background-color: #FDFFB1;
 }
 .cso_modal__body {
+  height: calc(100% - 60px);
+}
+.cso_modal__body__explorer {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr minmax(100px, 2fr);
-  height: calc(100% - 60px);
   overflow-y: hidden;
+  height: 100%;
 }
-.cso_modal__body__table {
+.cso_modal__body__explorer__table {
   border-bottom: 2px solid #111;
   overflow-y: auto;
 }
-.cso_modal__body__table__head {
+.cso_modal__body__explorer__table__head {
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
@@ -350,82 +395,85 @@ h1, h2, h3, h4, h5 {
   border-bottom: 2px solid #111;
   background-color: #FDFFB1;
 }
-.cso_modal__body__table__head h3 {
+.cso_modal__body__explorer__table__head h3 {
   margin: 0;
 }
-.cso_modal__body__table__head__cell {
+.cso_modal__body__explorer__table__head__cell {
   padding: 0.3rem;
 }
-.cso_modal__body__table__head__cell:not(:last-child) {
+.cso_modal__body__explorer__table__head__cell:not(:last-child) {
   border-right: 2px solid #111;
 }
-.cso_modal__body__table__rows {
+.cso_modal__body__explorer__table__rows {
   padding: 0;
 }
-.cso_modal__body__table__rows li {
+.cso_modal__body__explorer__table__rows li {
   display: grid;
   grid-template-columns: 1fr 2fr;
   list-style: none;
   border-bottom: 2px solid #111;
   cursor: url("/assets/img/icons/ico-cursor-hand.svg"), auto !important;
 }
-.cso_modal__body__table__rows li:hover {
+.cso_modal__body__explorer__table__rows li:hover {
   background-color: #0095E9;
   color: #fff;
 }
-.cso_modal__body__table__rows li.disabled {
+.cso_modal__body__explorer__table__rows li.disabled {
   pointer-events: none;
   background-color: #ECECEC;
   color: #AAA;
 }
-.cso_modal__body__table__rows li.disabled .cso_modal__body__table__rows__skills h4 {
+.cso_modal__body__explorer__table__rows li.disabled .cso_modal__body__table__rows__skills h4 {
   background-color: #AAA;
 }
-.cso_modal__body__table__rows li div {
+.cso_modal__body__explorer__table__rows li div {
   display: flex;
   align-items: center;
   padding: 0.5rem;
 }
-.cso_modal__body__table__rows li div:not(:last-child) {
+.cso_modal__body__explorer__table__rows li div:not(:last-child) {
   border-right: 2px solid #111;
 }
-.cso_modal__body__table__rows li div p {
+.cso_modal__body__explorer__table__rows li div p {
   margin: 0;
 }
-.cso_modal__body__table__rows li h4 {
+.cso_modal__body__explorer__table__rows li h4 {
   margin: 0;
 }
-.cso_modal__body__table__rows__skills {
+.cso_modal__body__explorer__table__rows__skills {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.3rem;
 }
-.cso_modal__body__table__rows__skills h5 {
+.cso_modal__body__explorer__table__rows__skills h5 {
   padding: 0 0.5rem;
   background-color: #111;
   color: #fff;
   margin: 0;
 }
-.cso_modal__body__preview {
+.cso_modal__body__explorer__preview {
   padding: 1rem;
   overflow-y: auto;
   background-color: #D8FFD5;
   border-bottom: 2px solid #111;
 }
-.cso_modal__body__preview__project {
+.cso_modal__body__explorer__preview__project {
   display: none;
 }
-.cso_modal__body__preview__project.cso_show {
+.cso_modal__body__explorer__preview__project.cso_show {
   display: block;
 }
-.cso_modal__body__preview__project a {
+.cso_modal__body__explorer__preview__project a {
   font-weight: 700;
 }
-.cso_modal__body__preview__project__banner {
+.cso_modal__body__explorer__preview__project__banner {
   width: 100%;
   border: 2px solid #111;
   margin-bottom: 1rem;
+}
+.cso_modal__body > .cso_auto-fill {
+  padding: 2rem;
 }
 @media (min-width: 768px) {
   .cso_modal__header__title {
@@ -436,23 +484,23 @@ h1, h2, h3, h4, h5 {
     height: 60px;
     width: 60px;
   }
-  .cso_modal__body {
+  .cso_modal__body__explorer {
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 1fr;
   }
-  .cso_modal__body__table {
+  .cso_modal__body__explorer__table {
     border-right: 2px solid #111;
   }
-  .cso_modal__body__table__head__cell {
+  .cso_modal__body__explorer__table__head__cell {
     padding: 1rem;
   }
-  .cso_modal__body__table__rows li div {
+  .cso_modal__body__explorer__table__rows li div {
     padding: 1rem;
   }
-  .cso_modal__body__table__rows__skills h5 {
+  .cso_modal__body__explorer__table__rows__skills h5 {
     padding: 0.2rem 0.5rem;
   }
-  .cso_modal__body__preview {
+  .cso_modal__body__explorer__preview {
     position: relative;
     top: unset;
     padding: 2rem 3rem;

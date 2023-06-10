@@ -30,6 +30,28 @@
         img {
             max-width: 100%;
         }
+        &.init-animation {
+            .#{$prefix}_file__icon--projects {
+                &__doc {
+                    img {
+                        animation: plop 0.5s;
+                    }
+                }
+                &__cog {
+                    img {
+                        animation: spin 3s;
+                    }
+                }
+                &__pen {
+                    img {
+                        animation: pencil 2s;
+                    }
+                }
+            }
+            &.#{$prefix}_file__icon--linkedin, &.#{$prefix}_file__icon--tools, &.#{$prefix}_file__icon--codepen, &.#{$prefix}_file__icon--github {
+                animation: plop 0.5s;
+            }
+        }
     }
     &:hover, &:active {
         cursor: url('/assets/img/icons/ico-cursor-hand.svg'), auto !important;
@@ -52,7 +74,7 @@
                         }
                     }
                 }
-                &--linkedin, &--codepen, &--github {
+                &--tools, &--linkedin, &--codepen, &--github {
                     animation: plop 0.3s;
                 }
             }
