@@ -5,10 +5,6 @@ let enBtn = document.getElementById("csoEn");
 let esBtn = document.getElementById("csoEs");
 let enIcon = document.getElementsByClassName("cso-en");
 let esIcon = document.getElementsByClassName("cso-es");
-// modals
-let modalTriggers = document.querySelectorAll('[data-modal]');
-let modalProject = document.getElementById("modalProject");
-let modalProjectContent = document.getElementsByClassName("cso_modal__body__preview__project");
 
 // language
 esBtn.addEventListener("click", function(){changeLang("es")}, false);
@@ -67,6 +63,10 @@ function removeClass() {
 setTimeout(removeClass, 2000);
 
 // modals
+let modalTriggers = document.querySelectorAll('[data-modal]');
+let modalProject = document.getElementById("modalProject");
+let modalProjectPreview = document.getElementsByClassName("cso_modal__body__explorer__preview__project");
+
 for (let item of modalTriggers) {
   item.addEventListener("click", function(){showModal(item.dataset.modal)}, false);
 }
@@ -76,7 +76,8 @@ function showModal(modalId) {
 }
 
 function closeModal(modalId) {
-  document.getElementById(modalId).classList.remove("cso_show")
+  document.getElementById(modalId).classList.remove("cso_show");
+  modalPreview.classList.remove("cso_active");
 }
 
 let sliderProject = document.getElementsByClassName("cso_slider--project");
@@ -104,15 +105,16 @@ if (sliderProject) {
   }
 }
 
-function showProject(modalId) {
-  for (let item of modalProjectContent) {
+let explorerRows = document.querySelectorAll(".cso_modal__body__explorer__table__rows li");
+function showProject(modalId, el) {
+  console.log(modalId);
+  Array.from(explorerRows).forEach(x=> x.classList.remove("cso_active"))
+  for (let item of modalProjectPreview) {
     item.classList.remove("cso_show");
   }
+  el.classList.add("cso_active");
+  modalPreview.classList.add("cso_active");
   document.getElementById(modalId).classList.add("cso_show");
-  setTimeout(() => {    
-
-  }, 1000);
-
 }
 
 // const sections = document.getElementsByClassName("panel");

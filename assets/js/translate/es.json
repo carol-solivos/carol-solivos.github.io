@@ -3,6 +3,7 @@
     "profession": "Desarrolladora Front-end",
     "projects": {
         "category": "Proyectos",
+        "detail": "Detalle",
         "autocl": {
             "name": "Auto.cl",
             "title": "Sitio web Auto.cl",

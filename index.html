@@ -149,7 +149,7 @@
 							</div>
 						</div>
 						<ul class="cso_modal__body__explorer__table__rows">
-							<li onclick="showProject('projectAutocl')">
+							<li class="cso_active" onclick="showProject('projectAutocl', this)">
 								<div class="cso_modal__body__explorer__table__rows__name">
 									<h4>Auto.cl</h4>
 								</div>
@@ -161,7 +161,7 @@
 									<h5>API</h5>
 								</div>
 							</li>
-							<li onclick="showProject('projectKaufmann')">
+							<li onclick="showProject('projectKaufmann', this)">
 								<div class="cso_modal__body__explorer__table__rows__name">
 									<h4 data-translate="projects.kaufmann.name">Framework Kaufmann</h4>
 								</div>
@@ -198,7 +198,16 @@
 							</li>
 						</ul>
 					</div>
-					<div class="cso_modal__body__explorer__preview">
+
+					<div class="cso_modal__body__explorer__preview cso_modal--green" id="modalPreview">
+						<div class="cso_modal__header">
+							<div class="cso_modal__header__title">
+								<h1 data-translate="projects.detail"></h1>
+							</div>
+							<div class="cso_modal__header__close" onclick="closeModal('modalPreview')">
+								<img src="assets/img/icons/ico-close.svg" alt="">
+							</div>
+						</div>
 						<div class="cso_modal__body__explorer__preview__project cso_show" id="projectAutocl">
 							<picture>
 								<source media="(max-width: 768px)"
@@ -263,7 +272,7 @@
 				</div>
 			</div>
 			<div class="cso_modal__body">
-				<div class="cso_auto-fill--xl">
+				<div class="cso_auto-fill--xl cso_modal__body__items">
 					<div class="cso_card-tool">
 						<img src="assets/img/logo-angular.png" alt="logo angular">
 						<h3>Angular</h3>
