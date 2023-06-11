@@ -231,7 +231,9 @@ h1, h2, h3, h4, h5 {
   padding: 1rem;
   background-color: #ECECEC;
   border: 2px solid #111;
-  min-width: 200px;
+  min-width: 180px;
+  max-width: 260px;
+  max-height: 450px;
 }
 .cso_card-tool__skills {
   display: flex;
@@ -340,6 +342,7 @@ h1, h2, h3, h4, h5 {
   top: 0;
   background-color: #0095E9;
   border-bottom: 2px solid #111;
+  z-index: 6;
 }
 .cso_modal__header__title {
   display: flex;
@@ -374,13 +377,15 @@ h1, h2, h3, h4, h5 {
   background-color: #FDFFB1;
 }
 .cso_modal__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: calc(100% - 60px);
+  overflow-y: auto;
 }
 .cso_modal__body__explorer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr minmax(100px, 2fr);
-  overflow-y: hidden;
   height: 100%;
 }
 .cso_modal__body__explorer__table {
@@ -411,6 +416,7 @@ h1, h2, h3, h4, h5 {
 .cso_modal__body__explorer__table__rows li {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  position: relative;
   list-style: none;
   border-bottom: 2px solid #111;
   cursor: url("/assets/img/icons/ico-cursor-hand.svg"), auto !important;
@@ -430,7 +436,7 @@ h1, h2, h3, h4, h5 {
 .cso_modal__body__explorer__table__rows li div {
   display: flex;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
 .cso_modal__body__explorer__table__rows li div:not(:last-child) {
   border-right: 2px solid #111;
@@ -440,6 +446,20 @@ h1, h2, h3, h4, h5 {
 }
 .cso_modal__body__explorer__table__rows li h4 {
   margin: 0;
+}
+.cso_modal__body__explorer__table__rows li.cso_active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -2px;
+  transform: translateY(-50%);
+  height: 30px;
+  width: 20px;
+  background-image: url("/assets/img/icons/ico-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
 }
 .cso_modal__body__explorer__table__rows__skills {
   display: flex;
@@ -454,13 +474,19 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 .cso_modal__body__explorer__preview {
-  padding: 1rem;
+  display: none;
+  position: fixed;
+  top: 0;
   overflow-y: auto;
   background-color: #D8FFD5;
   border-bottom: 2px solid #111;
+  z-index: 10;
+  height: 100%;
+  animation: modal 0.3s;
 }
 .cso_modal__body__explorer__preview__project {
   display: none;
+  padding: 1rem;
 }
 .cso_modal__body__explorer__preview__project.cso_show {
   display: block;
@@ -473,9 +499,12 @@ h1, h2, h3, h4, h5 {
   border: 2px solid #111;
   margin-bottom: 1rem;
 }
-.cso_modal__body > .cso_auto-fill {
-  padding: 2rem;
-  overflow-y: auto;
+.cso_modal__body__explorer__preview.cso_active {
+  display: block;
+}
+.cso_modal__body__items {
+  padding: 1rem;
+  justify-items: center;
   height: 100%;
 }
 @media (min-width: 768px) {
@@ -498,15 +527,29 @@ h1, h2, h3, h4, h5 {
     padding: 1rem;
   }
   .cso_modal__body__explorer__table__rows li div {
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 2rem;
+  }
+  .cso_modal__body__explorer__table__rows li.cso_active::before {
+    left: 10px;
   }
   .cso_modal__body__explorer__table__rows__skills h5 {
     padding: 0.2rem 0.5rem;
   }
   .cso_modal__body__explorer__preview {
+    display: block;
     position: relative;
     top: unset;
+    height: 100%;
+    animation: unset;
+  }
+  .cso_modal__body__explorer__preview__project {
     padding: 2rem 3rem;
+  }
+  .cso_modal__body__explorer__preview .cso_modal__header {
+    display: none;
+  }
+  .cso_modal__body__items {
+    padding: 2rem;
   }
 }
 

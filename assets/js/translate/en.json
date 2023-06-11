@@ -3,6 +3,7 @@
     "profession": "Front-end Developer",
     "projects": {
         "category": "Projects",
+        "detail": "Detail",
         "autocl": {
             "name": "Auto.cl",
             "title": "Auto.cl website",
