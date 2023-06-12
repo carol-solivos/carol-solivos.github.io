@@ -11,7 +11,7 @@
         background-color: $color-light;
         border: 2px solid $color-border;
         height: 100%;
-        animation: modal 0.3s;
+        animation: modal 0.5s;
     }
     &.cso_show {
         display: block;
@@ -119,7 +119,7 @@
                         div {
                             display: flex;
                             align-items: center;
-                            padding: 0.5rem 0.5rem 0.5rem 1rem;
+                            padding: 0.5rem 0.5rem 0.5rem 1.5rem;
                             &:not(:last-child) {
                                 border-right: 2px solid $color-border;
                             }
@@ -143,6 +143,7 @@
                             background-repeat: no-repeat;
                             background-size: 50%;
                             background-position: center;
+                            animation: pulse 1.5s infinite ease-out;
                         }
                     }
                     &__skills {
@@ -165,23 +166,35 @@
                 top: 0;
                 overflow-y: auto;
                 background-color: $color-green-light;
-                border-bottom: 2px solid $color-dark;
+                border: 2px solid $color-dark;
                 z-index: 10;
                 height: 100%;
-                animation: modal 0.3s;
+                animation: modal 0.5s;
                 &__project {
                     display: none;
-                    padding: 1rem;
+                    &__content {
+                        padding: 1rem;
+                        a {
+                            font-weight: 700;
+                        }
+                        &__banner {
+                            width: 100%;
+                            border: 2px solid $color-dark;
+                            margin-bottom: 1rem;
+                        }
+                    }
                     &.cso_show {
                         display: block;
                     }
-                    a {
-                        font-weight: 700;
-                    }
-                    &__banner {
-                        width: 100%;
-                        border: 2px solid $color-dark;
-                        margin-bottom: 1rem;
+                }
+                .#{$prefix}_modal__header {
+                    &__close {
+                        right: unset;
+                        left: 0;
+                        img {
+                            transform: rotate(180deg);
+                            width: 35%;
+                        }
                     }
                 }
                 &.cso_active {
@@ -239,13 +252,17 @@
                     position: relative;
                     top: unset;
                     height: 100%;
-                    &__project {
-                        padding: 2rem 3rem;
-                    }
-                    .#{$prefix}_modal__header {
-                        display: none;
-                    }
+                    border: none;
+                    border-bottom: 2px solid $color-dark;
                     animation: unset;
+                    &__project {
+                        &__content {
+                            padding: 2rem 3rem;
+                        }
+                        .#{$prefix}_modal__header {
+                            display: none;
+                        }
+                    }
                 }
             }
             &__items {
