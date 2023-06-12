@@ -174,7 +174,7 @@
 									<h5>API</h5>
 								</div>
 							</li>
-							<li class="disabled">
+							<li onclick="showProject('projectSaysa', this)">
 								<div class="cso_modal__body__explorer__table__rows__name">
 									<h4>SAYSA</h4>
 								</div>
@@ -200,60 +200,106 @@
 					</div>
 
 					<div class="cso_modal__body__explorer__preview cso_modal--green" id="modalPreview">
-						<div class="cso_modal__header">
-							<div class="cso_modal__header__title">
-								<h1 data-translate="projects.detail"></h1>
-							</div>
-							<div class="cso_modal__header__close" onclick="closeModal('modalPreview')">
-								<img src="assets/img/icons/ico-close.svg" alt="">
-							</div>
-						</div>
 						<div class="cso_modal__body__explorer__preview__project cso_show" id="projectAutocl">
-							<picture>
-								<source media="(max-width: 768px)"
-								  srcset="assets/img/header-project-autocl-mob.png" />
-								<img class="cso_modal__body__explorer__preview__project__banner"
-								  src="assets/img/header-project-auto.png" alt="imagen cabecera auto"/>
-							</picture>
-							<h2 data-translate="projects.autocl.title">Sitio web Auto.cl</h2>
-							<p data-translate="projects.autocl.p1">Desarrollo Front end para cliente Auto.cl. Se utilizó Angular 14 y Angular Material como framework UI. </p>
-	
-							<p data-translate="projects.autocl.p2">El requerimiento principal fue crear flujos para que los clientes pudieran elegir un auto que se acomode a sus preferencias. Esto se logró a través de formularios compuestos de distintos pasos que resultaban en las coincidencias encontradas.</p>
-							<a href="https://www.auto.cl/" target="_blank" data-translate="projects.autocl.link">Visitar www.auto.cl</a>
-	
-							<!-- <section class="splide cso_slider--project" aria-label="Splide Basic HTML Example" id="sliderProjectAuto">
-								<div class="splide__track">
-									  <ul class="splide__list">
-										  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
-										  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
-										  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
-									  </ul>
+							<div class="cso_modal__header">
+								<div class="cso_modal__header__title">
+									<h1 data-translate="projects.autocl.name"></h1>
 								</div>
-							</section> -->
+								<div class="cso_modal__header__close" onclick="closeModal('modalPreview')">
+									<img src="assets/img/icons/ico-arrow.svg" alt="icono volver">
+								</div>
+							</div>
+							<div class="cso_modal__body__explorer__preview__project__content">
+								<picture>
+									<source media="(max-width: 768px)"
+									  srcset="assets/img/header-project-autocl-mob.png" />
+									<img class="cso_modal__body__explorer__preview__project__content__banner"
+									  src="assets/img/header-project-auto.png" alt="imagen cabecera auto"/>
+								</picture>
+								<h2 data-translate="projects.autocl.title">Sitio web Auto.cl</h2>
+								<p data-translate="projects.autocl.p1">Desarrollo Front end para cliente Auto.cl. Se utilizó Angular 14 y Angular Material como framework UI. </p>
+		
+								<p data-translate="projects.autocl.p2">El requerimiento principal fue crear flujos para que los clientes pudieran elegir un auto que se acomode a sus preferencias. Esto se logró a través de formularios compuestos de distintos pasos que resultaban en las coincidencias encontradas.</p>
+								<a href="https://www.auto.cl/" target="_blank" data-translate="projects.autocl.link">Visitar www.auto.cl</a>
+		
+								<!-- <section class="splide cso_slider--project" aria-label="Splide Basic HTML Example" id="sliderProjectAuto">
+									<div class="splide__track">
+										  <ul class="splide__list">
+											  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+											  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+											  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+										  </ul>
+									</div>
+								</section> -->
+							</div>
 						</div>
 	
 						<div class="cso_modal__body__explorer__preview__project" id="projectKaufmann">
-							<picture>
-								<source media="(max-width: 768px)"
-								  srcset="assets/img/header-project-kaufmann-mob.png" />
-								<img class="cso_modal__body__explorer__preview__project__banner"
-								  src="assets/img/header-project-kaufmann.png" />
-							</picture>
-							<h2 data-translate="projects.kaufmann.title">Framework Kaufmann</h2>
-							<p data-translate="projects.kaufmann.p1">Se crea un sistema de componentes UI para reutilizar en sus distintos proyectos Angular y Liferay.</p>
-	
-							<p data-translate="projects.kaufmann.p2">El proyecto se construyó con Angular 14 y Ant design. Se creó una librería NPM compartida a través de Artefactos de Azure. Para las instrucciones de uso y detalles de cada componente se implementó la documentación con Storybook.</p>
-							<a data-translate="projects.kaufmann.link" href="https://www.kaufmann.cl/" target="_blank">Visitar www.kaufmann.cl</a>
-	
-							<!-- <section class="splide cso_slider--project" aria-label="Splide Basic HTML Example" id="sliderProjectKaufmann">
-								<div class="splide__track">
-									  <ul class="splide__list">
-										  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
-										  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
-										  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
-									  </ul>
+							<div class="cso_modal__header">
+								<div class="cso_modal__header__title">
+									<h1 data-translate="projects.kaufmann.name"></h1>
 								</div>
-							</section> -->
+								<div class="cso_modal__header__close" onclick="closeModal('modalPreview')">
+									<img src="assets/img/icons/ico-arrow.svg" alt="icono volver">
+								</div>
+							</div>
+							<div class="cso_modal__body__explorer__preview__project__content">
+								<picture>
+									<source media="(max-width: 768px)"
+									  srcset="assets/img/header-project-kaufmann-mob.png" />
+									<img class="cso_modal__body__explorer__preview__project__content__banner"
+									  src="assets/img/header-project-kaufmann.png" />
+								</picture>
+								<h2 data-translate="projects.kaufmann.title">Framework UI para Kaufmann</h2>
+								<p data-translate="projects.kaufmann.p1">Se crea un sistema de componentes UI para reutilizar en sus distintos proyectos Angular y Liferay.</p>
+		
+								<p data-translate="projects.kaufmann.p2">El proyecto se construyó con Angular 14 y Ant design. Se creó una librería NPM compartida a través de Artefactos de Azure. Para las instrucciones de uso y detalles de cada componente se implementó la documentación con Storybook.</p>
+								<a data-translate="projects.kaufmann.link" href="https://www.kaufmann.cl/" target="_blank">Visitar www.kaufmann.cl</a>
+		
+								<!-- <section class="splide cso_slider--project" aria-label="Splide Basic HTML Example" id="sliderProjectKaufmann">
+									<div class="splide__track">
+										  <ul class="splide__list">
+											  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+											  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+											  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+										  </ul>
+									</div>
+								</section> -->
+							</div>
+						</div>
+
+						<div class="cso_modal__body__explorer__preview__project" id="projectSaysa">
+							<div class="cso_modal__header">
+								<div class="cso_modal__header__title">
+									<h1 data-translate="projects.saysa.name"></h1>
+								</div>
+								<div class="cso_modal__header__close" onclick="closeModal('modalPreview')">
+									<img src="assets/img/icons/ico-arrow.svg" alt="icono volver">
+								</div>
+							</div>
+							<div class="cso_modal__body__explorer__preview__project__content">
+								<picture>
+									<source media="(max-width: 768px)"
+									  srcset="assets/img/header-project-saysa-mob.png" />
+									<img class="cso_modal__body__explorer__preview__project__content__banner"
+									  src="assets/img/header-project-saysa.png" />
+								</picture>
+								<h2 data-translate="projects.saysa.title">Sitio web SAYSA</h2>
+								<p data-translate="projects.saysa.p1">Rediseño, desarrollo y mantención del sitio web de SAYSA, empresa de iluminación arquitectónica.</p>
+		
+								<p data-translate="projects.saysa.p2">Se editó una plantilla base y se configuraron componentes personalizados con HTML y CSS.</p>
+								<a data-translate="projects.saysa.link" href="https://www.saysa.cl/" target="_blank">Visitar www.saysa.cl</a>
+		
+								<!-- <section class="splide cso_slider--project" aria-label="Splide Basic HTML Example" id="sliderProjectKaufmann">
+									<div class="splide__track">
+										  <ul class="splide__list">
+											  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+											  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+											  <li class="splide__slide"><img src="assets/img/icons/ico-doc.svg" alt="documento"></li>
+										  </ul>
+									</div>
+								</section> -->
+							</div>
 						</div>
 					</div>
 				</div>

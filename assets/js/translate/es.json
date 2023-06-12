@@ -13,10 +13,17 @@
         },
         "kaufmann": {
             "name": "Framework Kaufmann",
-            "title": "Framework Kaufmann",
+            "title": "Framework UI para Kaufmann",
             "p1": "Se crea un sistema de componentes UI para reutilizar en sus distintos proyectos Angular y Liferay.",
             "p2": "El proyecto se construyó con Angular 14 y Ant design. Se creó una librería NPM compartida a través de Artefactos de Azure. Para las instrucciones de uso y detalles de cada componente se implementó la documentación con Storybook.",
             "link": "Visitar www.kaufmann.cl"
+        },
+        "saysa": {
+            "name": "SAYSA",
+            "title": "Sitio web SAYSA",
+            "p1": "Rediseño, desarrollo y mantención del sitio web de SAYSA, empresa de iluminación arquitectónica.",
+            "p2": "Se editó una plantilla base y se configuraron componentes personalizados con HTML y CSS.",
+            "link": "Visitar www.saysa.cl"
         }
     },
     "name": "Nombre",
