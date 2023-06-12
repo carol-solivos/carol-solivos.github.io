@@ -1,7 +1,7 @@
 .#{$prefix}_card {
     &-tool {
         display: grid;
-        grid-template-rows: max-content min-content auto;
+        grid-template-rows: max-content min-content min-content;
         justify-items: center; 
         position: relative;
         z-index: 1;
@@ -11,13 +11,15 @@
         border: 2px solid $color-border;
         min-width: 180px;
         max-width: 260px;
-        max-height: 450px;
+        max-height: 300px;
+        box-shadow: 4px 4px #000;
         &__skills {
             display: flex;
             align-items: center;
+            align-content: flex-start;
             justify-content: center; 
             flex-wrap: wrap;
-            gap: 0.3rem;
+            gap: 0.5rem;
             h5 {
                 padding: 0 0.5rem;
                 background-color: $color-dark;
