@@ -24,6 +24,13 @@
             "p1": "Rediseño, desarrollo y mantención del sitio web de SAYSA, empresa de iluminación arquitectónica.",
             "p2": "Se editó una plantilla base y se configuraron componentes personalizados con HTML y CSS.",
             "link": "Visitar www.saysa.cl"
+        },
+        "langford": {
+            "name": "Langford",
+            "title": "LMS Método Lanford",
+            "p1": "El proyecto consistió en desarrollar un Sistema de gestión de aprendizaje en el que existen 2 tipos de usuario, alumno y profesor.",
+            "p2": "Sus funcionalidades principales eran registrar evaluaciones y ejercitaciones de los alumnos, y que los profesores administraran los resultados.",
+            "link": ""
         }
     },
     "name": "Nombre",
