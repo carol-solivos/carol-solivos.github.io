@@ -64,19 +64,48 @@ setTimeout(removeClass, 2000);
 
 // modals
 let modalTriggers = document.querySelectorAll('[data-modal]');
+let modals = document.getElementsByClassName('cso_modal');
 let modalProject = document.getElementById("modalProject");
 let modalProjectPreview = document.getElementsByClassName("cso_modal__body__explorer__preview__project");
+
+let params = new URLSearchParams(window.location.search);
+let modalOpened = params.get('modal');
+if (modalOpened) {
+  closeModal();
+}
+
+window.addEventListener('popstate', function(event) {
+  let currentParams = new URLSearchParams(window.location.search);
+  currentParams.get('modal') ? openModal(currentParams.get('modal')) : closeModal();
+});
 
 for (let item of modalTriggers) {
   item.addEventListener("click", function(){showModal(item.dataset.modal)}, false);
 }
 
 function showModal(modalId) {
-  document.getElementById(modalId).classList.add("cso_show")
+  let url = new URL(window.location.href);
+  let params = new URLSearchParams(url.search);
+  params.append('modal', modalId);
+  url.search = params.toString();
+  let newUrl = url.toString();
+  window.history.pushState({ path: newUrl }, '', newUrl);
+  openModal(modalId);
 }
 
-function closeModal(modalId) {
-  document.getElementById(modalId).classList.remove("cso_show");
+function openModal(modalId) {
+  document.getElementById(modalId).classList.add("cso_show");
+}
+
+function closeModal() {
+  for (let modal of modals) {
+    modal.classList.remove("cso_show");
+  }
+  modalPreview.classList.remove("cso_active");
+  window.history.replaceState({page: "/"}, "", "/");
+}
+
+function closeModalPreview() {
   modalPreview.classList.remove("cso_active");
 }
 
@@ -107,7 +136,6 @@ if (sliderProject) {
 
 let explorerRows = document.querySelectorAll(".cso_modal__body__explorer__table__rows li");
 function showProject(modalId, el) {
-  console.log(modalId);
   Array.from(explorerRows).forEach(x=> x.classList.remove("cso_active"))
   for (let item of modalProjectPreview) {
     item.classList.remove("cso_show");
